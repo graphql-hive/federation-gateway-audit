@@ -70,7 +70,7 @@
     "@apollo/gateway": "2.10.0",
     "@apollo/server": "4.11.3",
     "@types/async-retry": "1.4.9",
-    "@types/express": "5.0.0",
+    "@types/express": "5.0.1",
     "@types/node": "22.10.6",
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.33",
