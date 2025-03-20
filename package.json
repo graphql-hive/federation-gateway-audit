@@ -82,6 +82,6 @@
     "wgc": "0.75.10"
   },
   "overrides": {
-    "cross-spawn": "6.0.6"
+    "cross-spawn": "7.0.6"
   }
 }
