@@ -39,7 +39,7 @@ node
 non-resolvable-interface-object
 .......
 null-keys
-X
+.
 override-type-interface
 ....
 override-with-requires
@@ -53,13 +53,13 @@ XX
 provides-on-union
 XX
 requires-interface
-..X..
+.....
 requires-requires
 .....
 requires-with-argument
 .XXXX
 requires-with-fragments
-XXXXXX
+......
 shared-root
 ..
 simple-entity-call
@@ -83,5 +83,5 @@ union-intersection
 
 ---
 Total: 179
-Passed: 157
-Failed: 22
+Passed: 165
+Failed: 14
