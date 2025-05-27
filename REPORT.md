@@ -7,7 +7,7 @@
 | [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 179    |    🟢 41    |
 |         [Apollo Router](https://www.apollographql.com/)         |    97.77%     | 🟢 175 ❌ 4  | 🟢 39 ❌ 2  |
 |        [Apollo Gateway](https://www.apollographql.com/)         |    97.21%     | 🟢 174 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    92.18%     | 🟢 165 ❌ 14 | 🟢 34 ❌ 7  |
+|             [Cosmo Router](https://wundergraph.com)             |    94.97%     | 🟢 170 ❌ 9  | 🟢 36 ❌ 5  |
 |            [Grafbase Gateway](https://grafbase.com)             |    91.62%     | 🟢 164 ❌ 15 | 🟢 36 ❌ 5  |
 |                [Inigo Gateway](https://inigo.io)                |    49.72%     | 🟢 89 ❌ 90  | 🟢 12 ❌ 29 |
 
@@ -336,7 +336,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢❌</pre>
+<pre>🟢🟢🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -364,7 +364,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/requires-requires">requires-requires</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
-<pre>🟢❌❌❌❌</pre>
+<pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/shared-root">shared-root</a>

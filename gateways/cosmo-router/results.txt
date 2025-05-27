@@ -29,7 +29,7 @@ interface-object-with-requires
 keys-mashup
 .
 mutations
-..X
+...
 mysterious-external
 ..
 nested-provides
@@ -57,7 +57,7 @@ requires-interface
 requires-requires
 .....
 requires-with-argument
-.XXXX
+.....
 requires-with-fragments
 ......
 shared-root
@@ -83,5 +83,5 @@ union-intersection
 
 ---
 Total: 179
-Passed: 165
-Failed: 14
+Passed: 170
+Failed: 9

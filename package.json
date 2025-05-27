@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@apollo/gateway": "2.10.2",
-    "@apollo/server": "4.12.0",
+    "@apollo/server": "4.12.1",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.1",
     "@types/node": "22.13.10",
@@ -79,7 +79,7 @@
     "prettier": "3.5.3",
     "tsx": "4.19.3",
     "typescript": "5.8.2",
-    "wgc": "0.78.3"
+    "wgc": "0.82.3"
   },
   "overrides": {
     "cross-spawn": "7.0.6"
