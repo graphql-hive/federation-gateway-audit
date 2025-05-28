@@ -554,13 +554,14 @@ async function runTest(args: {
   testStream.compose(tap).pipe(logStream);
   testStream.compose(dotan);
   if (args.junit) {
+    const junitPath = resolvePath({ cwd: args.cwd }, `${args.test}-${args.junit}`);
+    console.log("Writing JUnit XML to", junitPath);
     const junitStream = createWriteStream(
-      resolvePath({ cwd: args.cwd }, args.junit),
+      junitPath,
       {
         flags: "w+",
       }
     );
-    console.log("Writing JUnit XML to", args.junit);
     testStream.compose(junit).pipe(junitStream);
   }
 
