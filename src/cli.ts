@@ -560,6 +560,7 @@ async function runTest(args: {
         flags: "w+",
       }
     );
+    console.log("Writing JUnit XML to", args.junit);
     testStream.compose(junit).pipe(junitStream);
   }
 
