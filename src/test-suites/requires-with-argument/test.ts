@@ -97,6 +97,49 @@ export default [
   ),
   createTest(
     /* GraphQL */ `
+      query {
+        feed {
+          comments(limit: 3) {
+            isCommentSpam
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        feed: [
+          {
+            comments: [
+              {
+                isCommentSpam: false,
+              },
+              {
+                isCommentSpam: false,
+              },
+              {
+                isCommentSpam: true,
+              },
+            ],
+          },
+          {
+            comments: [
+              {
+                isCommentSpam: false,
+              },
+              {
+                isCommentSpam: false,
+              },
+              {
+                isCommentSpam: false,
+              },
+            ],
+          },
+        ],
+      },
+    }
+  ),
+  createTest(
+    /* GraphQL */ `
       query ($limit: Int = 1) {
         feed {
           author {

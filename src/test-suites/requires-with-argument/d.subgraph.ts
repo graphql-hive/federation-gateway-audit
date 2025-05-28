@@ -19,6 +19,7 @@ export default createSubgraph("d", {
       id: ID!
       date: String
       authorId: ID @external
+      sameCommentOnOtherPosts: [Post]
     }
 
     type Author {
@@ -91,6 +92,15 @@ export default createSubgraph("d", {
         return {
           id: comment.id,
         };
+      },
+      sameCommentOnOtherPosts({ id: commentId }: { id: string }) {
+        const comment = comments.find((c) => c.id === commentId);
+        if (!comment) {
+          return [];
+        }
+        return comments
+          .filter((c) => c.body === comment.body && c.postId !== comment.postId)
+          .map((c) => ({ id: c.postId }));
       },
     },
   },

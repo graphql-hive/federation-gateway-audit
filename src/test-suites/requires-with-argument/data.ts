@@ -61,6 +61,12 @@ export const comments = [
     authorId: "a1",
     body: "c6-body",
   },
+  {
+    id: "c7",
+    postId: "p2",
+    authorId: "a1",
+    body: "c3-body",
+  },
 ];
 
 export const authors = [
