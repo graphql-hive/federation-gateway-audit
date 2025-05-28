@@ -39,7 +39,7 @@ const tests = await fetchTests(TESTS_ENDPOINT);
 let index = 0;
 describe(TEST_SUITE, () => {
   for (const { query, expected: expectedResult } of tests) {
-    test(`${index++}`, async () => {
+    test(`${TEST_SUITE}_${index++}`, async () => {
       const response = await graphql(GRAPHQL_ENDPOINT, query);
 
       const errorsOptional = typeof expectedResult.errors !== "boolean";
