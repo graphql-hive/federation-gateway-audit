@@ -523,6 +523,7 @@ async function runTest(args: {
   process.stdout.write(`${args.test}\n`);
   process.env.TESTS_ENDPOINT = `http://localhost:${args.port}/${args.test}/tests`;
   process.env.GRAPHQL_ENDPOINT = args.graphql;
+  process.env.TEST_SUITE = args.test;
 
   const logStream = createWriteStream(
     resolvePath({ cwd: args.cwd }, `./logs/${args.test}-tests.log`),
