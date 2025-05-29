@@ -1,7 +1,7 @@
 import { ExecutionResult } from "graphql";
 import type { createTest } from "./testkit.js";
 import { diff } from "jest-diff";
-import { test } from "node:test";
+import { test, describe } from "node:test";
 import { deepStrictEqual } from "node:assert";
 
 async function fetchTests(endpoint: string) {
