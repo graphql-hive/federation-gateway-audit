@@ -523,7 +523,6 @@ async function runTest(args: {
   process.stdout.write(`${args.test}\n`);
   process.env.TESTS_ENDPOINT = `http://localhost:${args.port}/${args.test}/tests`;
   process.env.GRAPHQL_ENDPOINT = args.graphql;
-  process.env.TEST_SUITE = args.test;
 
   const logStream = createWriteStream(
     resolvePath({ cwd: args.cwd }, `./logs/${args.test}-tests.log`),
@@ -555,7 +554,7 @@ async function runTest(args: {
   testStream.compose(tap).pipe(logStream);
   testStream.compose(dotan);
   if (args.junit) {
-    const junitPath = resolvePath({ cwd: args.cwd }, `${args.test}-${args.junit}`);
+    const junitPath = resolvePath({ cwd: args.cwd }, `reports/${args.test}.xml`);
     console.log("Writing JUnit XML to", junitPath);
     const junitStream = createWriteStream(
       junitPath,

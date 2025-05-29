@@ -24,7 +24,6 @@ async function fetchTests(endpoint: string) {
 }
 
 const TESTS_ENDPOINT = process.env.TESTS_ENDPOINT;
-const TEST_SUITE = process.env.TEST_SUITE;
 const GRAPHQL_ENDPOINT = process.env.GRAPHQL_ENDPOINT;
 
 assert(TESTS_ENDPOINT, "TESTS_ENDPOINT is required");
@@ -37,45 +36,43 @@ console.log(`\n`);
 const tests = await fetchTests(TESTS_ENDPOINT);
 
 let index = 0;
-describe(TEST_SUITE, () => {
-  for (const { query, expected: expectedResult } of tests) {
-    test(`${TEST_SUITE}_${index++}`, async () => {
-      const response = await graphql(GRAPHQL_ENDPOINT, query);
+for (const { query, expected: expectedResult } of tests) {
+  test(`${index++}`, async () => {
+    const response = await graphql(GRAPHQL_ENDPOINT, query);
 
-      const errorsOptional = typeof expectedResult.errors !== "boolean";
+    const errorsOptional = typeof expectedResult.errors !== "boolean";
 
-      const received = {
-        data: response.data ?? null,
-        errors: errorsOptional ? null : response.errors?.length ? true : false,
-      };
+    const received = {
+      data: response.data ?? null,
+      errors: errorsOptional ? null : response.errors?.length ? true : false,
+    };
 
-      const expected = {
-        data: expectedResult.data ?? null,
-        errors: errorsOptional ? null : (expectedResult.errors ?? false),
-      };
+    const expected = {
+      data: expectedResult.data ?? null,
+      errors: errorsOptional ? null : (expectedResult.errors ?? false),
+    };
 
-      let retryCount = 0;
-      const maxRetries = 2;
-      let testPassed = false;
+    let retryCount = 0;
+    const maxRetries = 2;
+    let testPassed = false;
 
-      while (retryCount <= maxRetries && !testPassed) {
-        try {
-          deepStrictEqual(
-            received,
-            expected,
-            [`Test failed for query`, query, diff(expected, received)].join("\n")
-          );
-          testPassed = true;
-        } catch (error) {
-          if (retryCount === maxRetries) {
-            throw error;
-          }
-          retryCount++;
+    while (retryCount <= maxRetries && !testPassed) {
+      try {
+        deepStrictEqual(
+          received,
+          expected,
+          [`Test failed for query`, query, diff(expected, received)].join("\n")
+        );
+        testPassed = true;
+      } catch (error) {
+        if (retryCount === maxRetries) {
+          throw error;
         }
+        retryCount++;
       }
-    });
-  }
-});
+    }
+  });
+}
 
 function graphql(endpoint: string, query: string) {
   return fetch(endpoint, {
