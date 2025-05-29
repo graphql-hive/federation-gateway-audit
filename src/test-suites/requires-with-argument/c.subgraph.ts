@@ -73,12 +73,13 @@ export default createSubgraph("c", {
           id: comment.id,
           authorId: comment.authorId,
           body: comment.body,
-          isCommentSpam: ref.sameCommentOnOtherPosts?.length
-            ? ref.sameCommentOnOtherPosts?.every((p) =>
-                // making sure that the ref contains the full "@requires"
-                p.comments.every((c) => c.id)
-              )
-            : false,
+          isCommentSpam:
+            // making sure there there are other comments
+            ref.sameCommentOnOtherPosts?.length &&
+            ref.sameCommentOnOtherPosts?.every((p) =>
+              // making sure that the ref contains the full "@requires"
+              p.comments.every((c) => c.id)
+            ),
         };
       },
     },
