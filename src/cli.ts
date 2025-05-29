@@ -554,7 +554,7 @@ async function runTest(args: {
   testStream.compose(tap).pipe(logStream);
   testStream.compose(dotan);
   if (args.junit) {
-    const junitPath = resolvePath({ cwd: args.cwd }, `reports/${args.test}.xml`);
+    const junitPath = resolvePath({ cwd: args.cwd }, `junit-reports/TEST-${args.test}.xml`);
     const junitStream = createWriteStream(
       junitPath,
       {
