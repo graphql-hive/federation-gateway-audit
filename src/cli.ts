@@ -555,7 +555,6 @@ async function runTest(args: {
   testStream.compose(dotan);
   if (args.junit) {
     const junitPath = resolvePath({ cwd: args.cwd }, `reports/${args.test}.xml`);
-    console.log("Writing JUnit XML to", junitPath);
     const junitStream = createWriteStream(
       junitPath,
       {
