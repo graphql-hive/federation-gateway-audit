@@ -247,7 +247,7 @@ yargs(hideBin(process.argv))
         })
         .option("junit", {
           describe: "Write test results to a JUnit XML file",
-          type: "string",
+          type: "boolean",
         })
         .demandOption("test")
         .demandOption("graphql")
@@ -355,7 +355,7 @@ yargs(hideBin(process.argv))
         })
         .option("junit", {
           describe: "Write test results to a JUnit XML file",
-          type: "string",
+          type: "boolean",
         })
         .option("write", {
           describe: "Write test results to a file",
@@ -517,7 +517,7 @@ async function runTest(args: {
   healthcheck?: string;
   port: number;
   reporter?: "dot" | "tap";
-  junit?: string;
+  junit?: boolean;
   cwd: string;
 }): Promise<Array<"." | "X">> {
   process.stdout.write(`${args.test}\n`);
