@@ -8,6 +8,7 @@ export default [
           upc
           name
           shippingEstimate
+          isExpensiveCategory
         }
       }
     `,
@@ -18,11 +19,13 @@ export default [
             upc: "p1",
             name: "p-name-1",
             shippingEstimate: 110,
+            isExpensiveCategory: false,
           },
           {
             upc: "p2",
             name: "p-name-2",
             shippingEstimate: 440,
+            isExpensiveCategory: true,
           },
         ],
       },
@@ -88,49 +91,6 @@ export default [
             comments: [
               {
                 id: "c4",
-              },
-            ],
-          },
-        ],
-      },
-    }
-  ),
-  createTest(
-    /* GraphQL */ `
-      query {
-        feed {
-          comments(limit: 3) {
-            isCommentSpam
-          }
-        }
-      }
-    `,
-    {
-      data: {
-        feed: [
-          {
-            comments: [
-              {
-                isCommentSpam: false,
-              },
-              {
-                isCommentSpam: false,
-              },
-              {
-                isCommentSpam: true,
-              },
-            ],
-          },
-          {
-            comments: [
-              {
-                isCommentSpam: false,
-              },
-              {
-                isCommentSpam: false,
-              },
-              {
-                isCommentSpam: false,
               },
             ],
           },

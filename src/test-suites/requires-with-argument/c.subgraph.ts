@@ -15,18 +15,12 @@ export default createSubgraph("c", {
 
     type Post @key(fields: "id") {
       id: ID!
-      comments(limit: Int!): [Comment] @external
     }
 
     type Comment @key(fields: "id") {
       id: ID!
       authorId: ID
       body: String!
-      sameCommentOnOtherPosts: [Post] @external
-      isCommentSpam: Boolean
-        @requires(
-          fields: "sameCommentOnOtherPosts { comments(limit: 50) { id } }"
-        )
     }
   `,
   resolvers: {
@@ -59,11 +53,8 @@ export default createSubgraph("c", {
       },
     },
     Comment: {
-      __resolveReference(ref: {
-        id: string;
-        sameCommentOnOtherPosts?: { comments: { id: string }[] }[];
-      }) {
-        const comment = comments.find((c) => c.id === ref.id);
+      __resolveReference(key: { id: string }) {
+        const comment = comments.find((c) => c.id === key.id);
 
         if (!comment) {
           return null;
@@ -73,13 +64,6 @@ export default createSubgraph("c", {
           id: comment.id,
           authorId: comment.authorId,
           body: comment.body,
-          isCommentSpam:
-            // making sure there there are other comments
-            ref.sameCommentOnOtherPosts?.length &&
-            ref.sameCommentOnOtherPosts?.every((p) =>
-              // making sure that the ref contains the full "@requires"
-              p.comments.every((c) => c.id)
-            ),
         };
       },
     },

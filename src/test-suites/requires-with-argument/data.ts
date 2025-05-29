@@ -4,12 +4,18 @@ export const products = [
     name: "p-name-1",
     price: 11,
     weight: 1,
+    category: {
+      averagePrice: 11,
+    },
   },
   {
     upc: "p2",
     name: "p-name-2",
     price: 22,
     weight: 2,
+    category: {
+      averagePrice: 22,
+    },
   },
 ];
 
@@ -60,12 +66,6 @@ export const comments = [
     postId: "p2",
     authorId: "a1",
     body: "c6-body",
-  },
-  {
-    id: "c7",
-    postId: "p2",
-    authorId: "a1",
-    body: "c3-body",
   },
 ];
 
