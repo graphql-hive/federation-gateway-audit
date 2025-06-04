@@ -11,13 +11,13 @@ export default createSubgraph("b", {
 
     type Post @key(fields: "id") {
       id: ID!
-      authorId: ID @requires(fields: "comments { authorId }")
-      comments: Comment
+      author: Author
+      isJohn: Boolean @requires(fields: "author { name }")
     }
 
-    type Comment @key(fields: "id") {
+    type Author @key(fields: "id") {
       id: ID!
-      authorId: ID @external
+      name: String! @external
     }
   `,
   resolvers: {

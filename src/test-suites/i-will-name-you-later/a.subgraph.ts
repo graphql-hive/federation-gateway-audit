@@ -15,18 +15,13 @@ export default createSubgraph("a", {
 
     type Post @key(fields: "id") {
       id: ID!
-      authorId: ID @external
-      author: Author @requires(fields: "authorId")
+      isJohn: Boolean @external
+      isNotJohn: Boolean @requires(fields: "isJohn")
     }
 
-    type Comment @key(fields: "id") {
+    type Author @key(fields: "id") {
       id: ID!
-      authorId: ID
-    }
-
-    type Author {
-      id: ID!
-      name: String
+      name: String!
     }
   `,
   resolvers: {
