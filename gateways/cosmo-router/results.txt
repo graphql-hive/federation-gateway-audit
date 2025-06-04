@@ -7,13 +7,13 @@ circular-reference-interface
 complex-entity-call
 X
 corrupted-supergraph-node-id
-X....X....
+..........
 enum-intersection
 .....
 fed1-external-extends
 ....
 fed1-external-extends-resolvable
-X
+.
 fed1-external-extension
 ....
 fed2-external-extends
@@ -25,11 +25,11 @@ include-skip
 input-object-intersection
 ...
 interface-object-with-requires
-XX..XXX
+.......
 keys-mashup
 .
 mutations
-..X
+...
 mysterious-external
 ..
 nested-provides
@@ -37,11 +37,11 @@ nested-provides
 node
 .
 non-resolvable-interface-object
-....X.X
+.......
 null-keys
-X
+.
 override-type-interface
-.X..
+....
 override-with-requires
 ....
 parent-entity-call
@@ -53,13 +53,13 @@ XX
 provides-on-union
 XX
 requires-interface
-..X..
+.....
 requires-requires
 .....
 requires-with-argument
-XXXXX
+.....
 requires-with-fragments
-XXXXXX
+......
 shared-root
 ..
 simple-entity-call
@@ -67,21 +67,21 @@ simple-entity-call
 simple-inaccessible
 ....
 simple-interface-object
-.X...XXXX.XXX
+.............
 simple-override
 ..
 simple-requires-provides
 ............
 typename
-....X.
+......
 unavailable-override
 ..
 union-interface-distributed
-X......
+.......
 union-intersection
-...XX..X
+........
 
 ---
 Total: 179
-Passed: 132
-Failed: 47
+Passed: 170
+Failed: 9

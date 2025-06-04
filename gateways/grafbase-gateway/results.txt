@@ -41,7 +41,7 @@ non-resolvable-interface-object
 null-keys
 .
 override-type-interface
-X...
+XXXX
 override-with-requires
 ....
 parent-entity-call
@@ -83,5 +83,5 @@ union-intersection
 
 ---
 Total: 179
-Passed: 167
-Failed: 12
+Passed: 164
+Failed: 15
