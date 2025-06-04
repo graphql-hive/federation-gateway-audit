@@ -15,18 +15,18 @@ export default createSubgraph("a", {
 
     type Post @key(fields: "id") {
       id: ID!
-      comments(limit: Int!): [Comment] @external
+      authorId: ID @external
+      author: Author @requires(fields: "authorId")
     }
 
     type Comment @key(fields: "id") {
       id: ID!
       authorId: ID
-      body: String!
-      sameCommentOnOtherPosts: [Post] @external
-      isCommentSpam: Boolean
-        @requires(
-          fields: "sameCommentOnOtherPosts { comments(limit: 50) { id } }"
-        )
+    }
+
+    type Author {
+      id: ID!
+      name: String
     }
   `,
   resolvers: {
