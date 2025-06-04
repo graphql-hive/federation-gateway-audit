@@ -1,5 +1,5 @@
 import { createSubgraph } from "../../subgraph.js";
-import { authors, comments, posts } from "./data.js";
+import { posts } from "./data.js";
 
 export default createSubgraph("b", {
   typeDefs: /* GraphQL */ `
@@ -11,89 +11,35 @@ export default createSubgraph("b", {
 
     type Post @key(fields: "id") {
       id: ID!
-      author: Author
-      isJohn: Boolean @requires(fields: "author { name }")
+      author: Author!
+      byNovice: Boolean! @requires(fields: "author { yearsOfExperience }")
     }
 
     type Author @key(fields: "id") {
       id: ID!
-      name: String! @external
+      yearsOfExperience: Int! @external
     }
   `,
   resolvers: {
     Post: {
-      __resolveReference(key: {
+      __resolveReference(ref: {
         id: string;
-        comments?: Array<{ authorId: string }>;
+        author?: { yearsOfExperience: number };
       }) {
-        const post = posts.find((p) => p.id === key.id);
-
+        const post = posts.find((post) => post.id === ref.id);
         if (!post) {
           return null;
         }
-
-        if (key.comments) {
-          if (key.comments.length !== 3) {
-            throw new Error("Expected 3 comments");
-          }
-
-          return {
-            id: post.id,
-            authorId: key.comments?.[2].authorId,
-          };
-        }
-
         return {
           id: post.id,
+          author: {
+            id: post.author.id,
+            ...ref.author,
+          },
         };
       },
-      author(post: { authorId?: string }) {
-        if (!post.authorId) {
-          return null;
-        }
-
-        const author = authors.find((a) => a.id === post.authorId);
-
-        if (!author) {
-          return null;
-        }
-
-        return {
-          id: author.id,
-          name: author.name,
-        };
-      },
-      comments(post: { id: string }, { limit }: { limit: number }) {
-        const coms = comments
-          .filter((comment) => comment.postId === post.id)
-          .slice(0, limit)
-          .map((c) => ({
-            id: c.id,
-          }));
-
-        return coms;
-      },
-    },
-    Comment: {
-      __resolveReference(key: { id: string }) {
-        const comment = comments.find((c) => c.id === key.id);
-
-        if (!comment) {
-          return null;
-        }
-
-        return {
-          id: comment.id,
-        };
-      },
-      sameCommentOnOtherPosts({ id: commentId }: { id: string }) {
-        const comment = comments.find((c) => c.id === commentId);
-        if (!comment) {
-          return [];
-        }
-        return comments
-          .filter((c) => c.body === comment.body && c.postId !== comment.postId)
-          .map((c) => ({ id: c.postId }));
+      byNovice(post: { author: { yearsOfExperience: number } }) {
+        return post.author.yearsOfExperience < 10;
       },
     },
   },

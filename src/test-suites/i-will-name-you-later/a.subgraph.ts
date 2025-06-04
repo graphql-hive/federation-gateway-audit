@@ -1,5 +1,5 @@
 import { createSubgraph } from "../../subgraph.js";
-import { comments, posts } from "./data.js";
+import { authors, posts } from "./data.js";
 
 export default createSubgraph("a", {
   typeDefs: /* GraphQL */ `
@@ -15,13 +15,14 @@ export default createSubgraph("a", {
 
     type Post @key(fields: "id") {
       id: ID!
-      isJohn: Boolean @external
-      isNotJohn: Boolean @requires(fields: "isJohn")
+      byNovice: Boolean! @external
+      byExpert: Boolean! @requires(fields: "byNovice")
     }
 
     type Author @key(fields: "id") {
       id: ID!
       name: String!
+      yearsOfExperience: Int!
     }
   `,
   resolvers: {
@@ -31,49 +32,39 @@ export default createSubgraph("a", {
       },
     },
     Post: {
-      __resolveReference(key: { id: string }) {
-        const post = posts.find((post) => post.id === key.id);
-
+      __resolveReference(ref: { id: string; byNovice?: boolean }) {
+        const post = posts.find((post) => post.id === ref.id);
         if (!post) {
           return null;
         }
-
+        if (ref.byNovice == null) {
+          return {
+            id: post.id,
+          };
+        }
         return {
           id: post.id,
+          byNovice: ref.byNovice,
         };
       },
-      comments(post: { id: string }, { limit }: { limit: number }) {
-        return comments
-          .filter((comment) => comment.postId === post.id)
-          .slice(0, limit)
-          .map((c) => ({
-            id: c.id,
-            authorId: c.authorId,
-            body: c.body,
-          }));
-      },
-    },
-    Comment: {
-      __resolveReference(ref: {
-        id: string;
-        sameCommentOnOtherPosts?: { comments: { id: string }[] }[];
-      }) {
-        const comment = comments.find((c) => c.id === ref.id);
-
-        if (!comment) {
+      byExpert(post: { byNovice: boolean }) {
+        if (post.byNovice == null) {
+          // ensuring requires is not skipped
           return null;
         }
-
+        return !post.byNovice;
+      },
+    },
+    Author: {
+      __resolveReference(ref: { id: string }) {
+        const author = authors.find((author) => author.id === ref.id);
+        if (!author) {
+          return null;
+        }
         return {
-          id: comment.id,
-          authorId: comment.authorId,
-          body: comment.body,
-          isCommentSpam: ref.sameCommentOnOtherPosts?.length
-            ? ref.sameCommentOnOtherPosts?.every((p) =>
-                // making sure that the ref contains the full "@requires"
-                p.comments.every((c) => c.id)
-              )
-            : false,
+          id: author.id,
+          name: author.name,
+          yearsOfExperience: author.yearsOfExperience,
         };
       },
     },

@@ -5,9 +5,7 @@ export default [
     /* GraphQL */ `
       {
         feed {
-          author {
-            id
-          }
+          byNovice
         }
       }
     `,
@@ -15,14 +13,31 @@ export default [
       data: {
         feed: [
           {
-            author: {
-              id: "a2",
-            },
+            byNovice: true,
           },
           {
-            author: {
-              id: "a1",
-            },
+            byNovice: false,
+          },
+        ],
+      },
+    }
+  ),
+  createTest(
+    /* GraphQL */ `
+      {
+        feed {
+          byExpert
+        }
+      }
+    `,
+    {
+      data: {
+        feed: [
+          {
+            byExpert: false,
+          },
+          {
+            byExpert: true,
           },
         ],
       },
