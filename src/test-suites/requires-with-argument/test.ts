@@ -8,6 +8,7 @@ export default [
           upc
           name
           shippingEstimate
+          isExpensiveCategory
         }
       }
     `,
@@ -18,11 +19,13 @@ export default [
             upc: "p1",
             name: "p-name-1",
             shippingEstimate: 110,
+            isExpensiveCategory: false,
           },
           {
             upc: "p2",
             name: "p-name-2",
             shippingEstimate: 440,
+            isExpensiveCategory: true,
           },
         ],
       },

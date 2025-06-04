@@ -19,12 +19,23 @@ export default createSubgraph("a", {
           price(currency: "USD") weight
           """
         )
+      category: Category @external
+      isExpensiveCategory: Boolean
+        @requires(
+          fields: """
+          category { averagePrice(currency: "USD") }
+          """
+        )
+    }
+
+    type Category @external {
+      averagePrice(currency: String!): Int
     }
   `,
   resolvers: {
     Product: {
       __resolveReference(
-        key: { upc: string; price: number; weight: number } | { upc: string },
+        key: { upc: string; price: number; weight: number } | { upc: string }
       ) {
         const product = products.find((p) => p.upc === key.upc);
 
@@ -37,15 +48,20 @@ export default createSubgraph("a", {
             upc: product.upc,
             weight: key.weight,
             price: key.price,
+            category: product.category,
           };
         }
 
         return {
           upc: product.upc,
+          category: product.category,
         };
       },
       shippingEstimate(product: { price: number; weight: number }) {
         return product.price * product.weight * 10;
+      },
+      isExpensiveCategory(product: { category: { averagePrice: number } }) {
+        return product.category.averagePrice > 11;
       },
     },
   },
