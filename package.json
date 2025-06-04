@@ -64,7 +64,7 @@
     "kill-port-process": "3.2.1",
     "wait-on": "8.0.3",
     "detect-port": "2.1.0",
-    "yargs": "17.7.2"
+    "yargs": "18.0.0"
   },
   "devDependencies": {
     "@apollo/gateway": "2.11.0",
