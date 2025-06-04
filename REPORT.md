@@ -4,12 +4,12 @@
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 179    |    🟢 41    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.77%     | 🟢 175 ❌ 4  | 🟢 39 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.21%     | 🟢 174 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    94.97%     | 🟢 170 ❌ 9  | 🟢 36 ❌ 5  |
-|            [Grafbase Gateway](https://grafbase.com)             |    91.62%     | 🟢 164 ❌ 15 | 🟢 36 ❌ 5  |
-|                [Inigo Gateway](https://inigo.io)                |    49.72%     | 🟢 89 ❌ 90  | 🟢 12 ❌ 29 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    98.90%     | 🟢 179 ❌ 2  | 🟢 41 ❌ 1  |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.79%     | 🟢 177 ❌ 4  | 🟢 40 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    97.24%     | 🟢 176 ❌ 5  | 🟢 39 ❌ 3  |
+|             [Cosmo Router](https://wundergraph.com)             |    95.03%     | 🟢 172 ❌ 9  | 🟢 37 ❌ 5  |
+|            [Grafbase Gateway](https://grafbase.com)             |    91.71%     | 🟢 166 ❌ 15 | 🟢 37 ❌ 5  |
+|                [Inigo Gateway](https://inigo.io)                |    49.17%     | 🟢 89 ❌ 92  | 🟢 12 ❌ 30 |
 
 ## Detailed Results
 
@@ -80,6 +80,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>❌❌</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -172,6 +174,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
@@ -266,6 +270,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -359,6 +365,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>❌❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -452,6 +460,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>🟢❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -544,6 +554,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>❌❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>❌❌❌❌❌</pre>
