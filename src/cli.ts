@@ -184,7 +184,7 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
 
       const gatewayExit = Promise.withResolvers<void>();
       let gatewayExited = false;
@@ -278,7 +278,7 @@ yargs(hideBin(process.argv))
         mkdirSync(resolvePath(argv, "./logs"));
       }
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
       const logStream = createWriteStream(
         resolvePath(argv, `./logs/${argv.test}-gateway.log`),
         {
@@ -407,7 +407,7 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
       for await (const id of ids) {
-        await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+        await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
         const logStream = createWriteStream(
           resolvePath(argv, `./logs/${id}-gateway.log`),
           {
@@ -523,6 +523,7 @@ async function runTest(args: {
   process.stdout.write(`${args.test}\n`);
   process.env.TESTS_ENDPOINT = `http://localhost:${args.port}/${args.test}/tests`;
   process.env.GRAPHQL_ENDPOINT = args.graphql;
+  process.env.TEST_SUITE = args.test;
 
   const logStream = createWriteStream(
     resolvePath({ cwd: args.cwd }, `./logs/${args.test}-tests.log`),
@@ -553,8 +554,16 @@ async function runTest(args: {
   testStream.compose(args.reporter === "tap" ? tap : dot).pipe(process.stdout);
   testStream.compose(tap).pipe(logStream);
   testStream.compose(dotan);
+
   if (args.junit) {
-    const junitPath = resolvePath({ cwd: args.cwd }, `reports/${args.test}.xml`);
+    const reportsDir = resolvePath({ cwd: args.cwd }, "reports");
+    if (!existsSync(reportsDir)) {
+      mkdirSync(reportsDir, { recursive: true });
+    }
+    const junitPath = join(
+      reportsDir,
+      `${args.test}.xml`
+    );
     const junitStream = createWriteStream(
       junitPath,
       {
@@ -587,6 +596,9 @@ async function* dot(source: any) {
   let columns = getLineLength();
   const failedTests = [];
   for await (const { type, data } of source) {
+    if (data?.details?.type === "suite") {
+      continue;
+    }
     if (type === "test:pass") {
       yield styleText("green", ".");
     }
