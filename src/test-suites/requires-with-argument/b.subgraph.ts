@@ -15,6 +15,11 @@ export default createSubgraph("b", {
       name: String
       price(currency: String!): Int
       weight: Int
+      category: Category
+    }
+
+    type Category {
+      averagePrice(currency: String!): Int
     }
   `,
   resolvers: {
@@ -25,6 +30,7 @@ export default createSubgraph("b", {
           name: p.name,
           price: p.price,
           weight: p.weight,
+          category: p.category,
         }));
       },
     },
@@ -41,6 +47,7 @@ export default createSubgraph("b", {
           name: product.name,
           price: product.price,
           weight: product.weight,
+          category: product.category,
         };
       },
     },
