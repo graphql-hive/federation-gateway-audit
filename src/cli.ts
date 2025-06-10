@@ -579,7 +579,10 @@ async function runTest(args: {
 function createDotReporter(resolve: (value: Array<"." | "X">) => void) {
   const report: Array<"." | "X"> = [];
   return async function* dot(source: Parameters<typeof tap>[0]) {
-    for await (const { type } of source) {
+    for await (const { type, data } of source) {
+      if (data != null && 'details' in data && data.details?.type === "suite") {
+        continue;
+      }
       if (type === "test:pass") {
         report.push(".");
       }
@@ -591,12 +594,12 @@ function createDotReporter(resolve: (value: Array<"." | "X">) => void) {
   };
 }
 
-async function* dot(source: any) {
+async function* dot(source: Parameters<typeof tap>[0]) {
   let count = 0;
   let columns = getLineLength();
   const failedTests = [];
   for await (const { type, data } of source) {
-    if (data?.details?.type === "suite") {
+    if (data != null && 'details' in data && data.details?.type === "suite") {
       continue;
     }
     if (type === "test:pass") {
