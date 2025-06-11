@@ -85,7 +85,7 @@ function graphql(endpoint: string, query: string) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query }),
-    signal: AbortSignal.timeout(2000),
+    signal: AbortSignal.timeout(10_000),
   }).then((response) => response.json()) as Promise<ExecutionResult>;
 }
 
