@@ -77,11 +77,11 @@ typename
 unavailable-override
 ..
 union-interface-distributed
-.......
+..........
 union-intersection
-........
+........X..X
 
 ---
-Total: 179
-Passed: 164
-Failed: 15
+Total: 186
+Passed: 169
+Failed: 17

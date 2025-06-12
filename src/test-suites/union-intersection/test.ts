@@ -248,4 +248,154 @@ export default [
       },
     },
   ),
+  // this part involves entity calls
+  createTest(
+    /* GraphQL */ `
+      query {
+        aMedia {
+          ... on Movie {
+            title
+            bTitle
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        aMedia: {},
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
+      query {
+        aMedia {
+          ... on Book {
+            title
+            aTitle
+            bTitle
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        aMedia: {
+          title: media.title,
+          aTitle: media.aTitle,
+          bTitle: media.bTitle,
+        },
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
+      query {
+        viewer {
+          media {
+            __typename
+            ... on Song {
+              title
+              aTitle
+            }
+            ... on Movie {
+              title
+              bTitle
+            }
+            ... on Book {
+              title
+              aTitle
+              bTitle
+            }
+          }
+          book {
+            __typename
+            ... on Song {
+              title
+              aTitle
+            }
+            ... on Movie {
+              title
+              bTitle
+            }
+            ... on Book {
+              title
+              aTitle
+              bTitle
+            }
+          }
+          song {
+            __typename
+            ... on Song {
+              title
+              aTitle
+            }
+            ... on Movie {
+              title
+              bTitle
+            }
+            ... on Book {
+              title
+              aTitle
+              bTitle
+            }
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        viewer: {
+          media: {
+            __typename: "Book",
+            title: "The Lord of the Rings",
+            aTitle: "A: The Lord of the Rings",
+            bTitle: "B: The Lord of the Rings",
+          },
+          book: {
+            __typename: "Book",
+            title: "The Lord of the Rings",
+            aTitle: "A: The Lord of the Rings",
+            bTitle: "B: The Lord of the Rings",
+          },
+          song: {
+            __typename: "Song",
+            title: "Song Title",
+            aTitle: "A: Song Title",
+          },
+        },
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
+      query {
+        viewer {
+          aMedia {
+            ... on Movie {
+              title
+              bTitle
+            }
+          }
+          bMedia {
+            ... on Movie {
+              title
+              bTitle
+            }
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        viewer: {
+          aMedia: {},
+          bMedia: {
+            title: "A Movie Title",
+            bTitle: "B Movie Title",
+          },
+        },
+      },
+    },
+  ),
 ];

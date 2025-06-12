@@ -79,6 +79,85 @@ export default [
   ),
   createTest(
     /* GraphQL */ `
+      query {
+        nodes {
+          ... on Node {
+            id
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        nodes: [
+          {
+            id: "toaster1",
+          },
+          {
+            id: "toaster2",
+          },
+        ],
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
+      query {
+        nodes {
+          ... on Node {
+            ... on WithWarranty {
+              warranty
+            }
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        nodes: [
+          {
+            warranty: 3,
+          },
+          {
+            warranty: 4,
+          },
+        ],
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
+      query {
+        nodes {
+          ... on Node {
+            id
+            ... on Node {
+              id
+              ... on WithWarranty {
+                warranty
+              }
+            }
+          }
+        }
+      }
+    `,
+    {
+      data: {
+        nodes: [
+          {
+            id: "toaster1",
+            warranty: 3,
+          },
+          {
+            id: "toaster2",
+            warranty: 4,
+          },
+        ],
+      },
+    },
+  ),
+  createTest(
+    /* GraphQL */ `
       {
         toasters {
           ...ToasterFragment
