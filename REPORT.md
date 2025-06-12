@@ -4,12 +4,12 @@
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 179    |    🟢 41    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.77%     | 🟢 175 ❌ 4  | 🟢 39 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.21%     | 🟢 174 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    94.97%     | 🟢 170 ❌ 9  | 🟢 36 ❌ 5  |
-|            [Grafbase Gateway](https://grafbase.com)             |    91.62%     | 🟢 164 ❌ 15 | 🟢 36 ❌ 5  |
-|                [Inigo Gateway](https://inigo.io)                |    49.72%     | 🟢 89 ❌ 90  | 🟢 12 ❌ 29 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 186    |    🟢 41    |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.85%     | 🟢 182 ❌ 4  | 🟢 39 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    97.31%     | 🟢 181 ❌ 5  | 🟢 38 ❌ 3  |
+|             [Cosmo Router](https://wundergraph.com)             |    95.16%     | 🟢 177 ❌ 9  | 🟢 36 ❌ 5  |
+|            [Grafbase Gateway](https://grafbase.com)             |    90.86%     | 🟢 169 ❌ 17 | 🟢 35 ❌ 6  |
+|                [Inigo Gateway](https://inigo.io)                |    48.92%     | 🟢 91 ❌ 95  | 🟢 12 ❌ 29 |
 
 ## Detailed Results
 
@@ -105,9 +105,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 </details>
 
 <a id="apollo-router"></a>
@@ -198,9 +198,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 </details>
 
 <a id="apollo-gateway"></a>
@@ -291,9 +291,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 </details>
 
 <a id="cosmo-router"></a>
@@ -384,9 +384,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 </details>
 
 <a id="grafbase-gateway"></a>
@@ -477,9 +477,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢❌🟢🟢❌</pre>
 </details>
 
 <a id="inigo-gateway"></a>
@@ -570,7 +570,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
 <pre>❌🟢</pre>
 <a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>❌❌🟢🟢🟢🟢🟢</pre>
+<pre>❌❌🟢🟢❌❌🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>❌❌❌❌❌❌❌❌</pre>
+<pre>❌❌❌❌❌❌❌❌❌🟢❌❌</pre>
 </details>

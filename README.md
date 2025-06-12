@@ -10,12 +10,12 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 179    |    🟢 41    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.77%     | 🟢 175 ❌ 4  | 🟢 39 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.21%     | 🟢 174 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    94.97%     | 🟢 170 ❌ 9  | 🟢 36 ❌ 5  |
-|            [Grafbase Gateway](https://grafbase.com)             |    91.62%     | 🟢 164 ❌ 15 | 🟢 36 ❌ 5  |
-|                [Inigo Gateway](https://inigo.io)                |    49.72%     | 🟢 89 ❌ 90  | 🟢 12 ❌ 29 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 186    |    🟢 41    |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.85%     | 🟢 182 ❌ 4  | 🟢 39 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    97.31%     | 🟢 181 ❌ 5  | 🟢 38 ❌ 3  |
+|             [Cosmo Router](https://wundergraph.com)             |    95.16%     | 🟢 177 ❌ 9  | 🟢 36 ❌ 5  |
+|            [Grafbase Gateway](https://grafbase.com)             |    90.86%     | 🟢 169 ❌ 17 | 🟢 35 ❌ 6  |
+|                [Inigo Gateway](https://inigo.io)                |    48.92%     | 🟢 91 ❌ 95  | 🟢 12 ❌ 29 |
 
 <!-- gateways:end -->
 
@@ -65,7 +65,7 @@ First of all, you need to install and prepare the gateways. You can do this by r
 make install
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Be aware that `Node` and `npm` are required to run the whole setup.
 
 ### Testing all gateways

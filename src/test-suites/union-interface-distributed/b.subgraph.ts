@@ -10,7 +10,11 @@ export default createSubgraph("b", {
       id: ID!
     }
 
-    type Oven implements Node @key(fields: "id") {
+    interface WithWarranty {
+      warranty: Int
+    }
+
+    type Oven implements Node & WithWarranty @key(fields: "id") {
       id: ID!
       warranty: Int
     }

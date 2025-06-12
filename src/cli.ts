@@ -17,7 +17,7 @@ import detectPort from "detect-port";
 import { spawn } from "node:child_process";
 import { hideBin } from "yargs/helpers";
 import { run } from "node:test";
-import { tap } from "node:test/reporters";
+import { junit, tap } from "node:test/reporters";
 import { styleText } from "node:util";
 import { killPortProcess } from "kill-port-process";
 import { dirname, extname, join } from "node:path";
@@ -184,7 +184,7 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
 
       const gatewayExit = Promise.withResolvers<void>();
       let gatewayExited = false;
@@ -245,6 +245,10 @@ yargs(hideBin(process.argv))
           choices: ["dot", "tap"],
           default: "tap",
         })
+        .option("junit", {
+          describe: "Write test results to a JUnit XML file",
+          type: "boolean",
+        })
         .demandOption("test")
         .demandOption("graphql")
         .demandOption("healthcheck")
@@ -274,7 +278,7 @@ yargs(hideBin(process.argv))
         mkdirSync(resolvePath(argv, "./logs"));
       }
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
       const logStream = createWriteStream(
         resolvePath(argv, `./logs/${argv.test}-gateway.log`),
         {
@@ -301,6 +305,7 @@ yargs(hideBin(process.argv))
       const result = await runTest({
         ...argv,
         reporter: argv.reporter === "tap" ? "tap" : "dot",
+        junit: argv.junit,
         port,
       });
 
@@ -347,6 +352,10 @@ yargs(hideBin(process.argv))
           describe: "Choose a reporter",
           choices: ["dot", "tap"],
           default: "dot",
+        })
+        .option("junit", {
+          describe: "Write test results to a JUnit XML file",
+          type: "boolean",
         })
         .option("write", {
           describe: "Write test results to a file",
@@ -398,7 +407,7 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
       for await (const id of ids) {
-        await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
+        await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
         const logStream = createWriteStream(
           resolvePath(argv, `./logs/${id}-gateway.log`),
           {
@@ -428,6 +437,7 @@ yargs(hideBin(process.argv))
           healthcheck: argv.healthcheck,
           port: argv.port,
           reporter: argv.reporter === "tap" ? "tap" : "dot",
+          junit: argv.junit,
           cwd: argv.cwd,
         });
         results.push({ id, result });
@@ -507,11 +517,13 @@ async function runTest(args: {
   healthcheck?: string;
   port: number;
   reporter?: "dot" | "tap";
+  junit?: boolean;
   cwd: string;
 }): Promise<Array<"." | "X">> {
   process.stdout.write(`${args.test}\n`);
   process.env.TESTS_ENDPOINT = `http://localhost:${args.port}/${args.test}/tests`;
   process.env.GRAPHQL_ENDPOINT = args.graphql;
+  process.env.TEST_SUITE = args.test;
 
   const logStream = createWriteStream(
     resolvePath({ cwd: args.cwd }, `./logs/${args.test}-tests.log`),
@@ -543,13 +555,34 @@ async function runTest(args: {
   testStream.compose(tap).pipe(logStream);
   testStream.compose(dotan);
 
+  if (args.junit) {
+    const reportsDir = resolvePath({ cwd: args.cwd }, "reports");
+    if (!existsSync(reportsDir)) {
+      mkdirSync(reportsDir, { recursive: true });
+    }
+    const junitPath = join(
+      reportsDir,
+      `${args.test}.xml`
+    );
+    const junitStream = createWriteStream(
+      junitPath,
+      {
+        flags: "w+",
+      }
+    );
+    testStream.compose(junit).pipe(junitStream);
+  }
+
   return promise;
 }
 
 function createDotReporter(resolve: (value: Array<"." | "X">) => void) {
   const report: Array<"." | "X"> = [];
   return async function* dot(source: Parameters<typeof tap>[0]) {
-    for await (const { type } of source) {
+    for await (const { type, data } of source) {
+      if (data != null && 'details' in data && data.details?.type === "suite") {
+        continue;
+      }
       if (type === "test:pass") {
         report.push(".");
       }
@@ -561,11 +594,14 @@ function createDotReporter(resolve: (value: Array<"." | "X">) => void) {
   };
 }
 
-async function* dot(source: any) {
+async function* dot(source: Parameters<typeof tap>[0]) {
   let count = 0;
   let columns = getLineLength();
   const failedTests = [];
   for await (const { type, data } of source) {
+    if (data != null && 'details' in data && data.details?.type === "suite") {
+      continue;
+    }
     if (type === "test:pass") {
       yield styleText("green", ".");
     }

@@ -22,11 +22,15 @@ export default createSubgraph("a", {
       id: ID!
     }
 
+    interface WithWarranty {
+      warranty: Int
+    }
+
     type Oven @key(fields: "id") {
       id: ID!
     }
 
-    type Toaster implements Node @key(fields: "id") {
+    type Toaster implements Node & WithWarranty @key(fields: "id") {
       id: ID!
       warranty: Int
     }
