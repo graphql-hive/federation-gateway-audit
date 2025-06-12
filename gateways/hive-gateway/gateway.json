@@ -1,7 +1,7 @@
 {
   "name": "Hive Gateway",
   "repository": "https://github.com/graphql-hive/gateway",
-  "website": "https://the-guild.dev/graphql/hive/docs/gateway",
+  "website": "https://the-guild.dev/graphql/hive/gateway",
   "graphql": "http://127.0.0.1:4000/graphql",
   "health": "http://127.0.0.1:4000/healthcheck"
 }
