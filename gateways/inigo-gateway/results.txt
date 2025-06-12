@@ -77,11 +77,11 @@ XXXXXX
 unavailable-override
 X.
 union-interface-distributed
-XX.....
+XX..XX....
 union-intersection
-XXXXXXXX
+XXXXXXXXX.XX
 
 ---
-Total: 179
-Passed: 89
-Failed: 90
+Total: 186
+Passed: 91
+Failed: 95
