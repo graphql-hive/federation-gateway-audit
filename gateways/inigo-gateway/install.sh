@@ -57,10 +57,23 @@ download_binaries() {
     say ""
 
     _gateway_outfile="./inigo_gateway"
-    _gateway="$_dir/inigo_gateway"
+    _gateway_primary="$_dir/inigo_gateway"
+    _gateway_fallback="$_dir/gateway" # Fallback path
+
+    if [ -f "$_gateway_primary" ]; then
+        _gateway="$_gateway_primary"
+    elif [ -f "$_gateway_fallback" ]; then
+        say "Found gateway binary at $_gateway_fallback (primary $_gateway_primary not found)"
+        _gateway="$_gateway_fallback"
+    else
+        say "ERROR: Could not find gateway binary at $_gateway_primary or $_gateway_fallback in $_dir"
+        say "Contents of $_dir:"
+        ls -l "$_dir"
+        exit 1
+    fi
 
     say "Moving $_gateway to $_gateway_outfile ..."
-    mv "$_gateway" "$_gateway_outfile"
+    ensure mv "$_gateway" "$_gateway_outfile"
 
     _retval=$?
 
