@@ -4,12 +4,12 @@
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 187    |    🟢 41    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.86%     | 🟢 183 ❌ 4  | 🟢 39 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.33%     | 🟢 182 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    95.19%     | 🟢 178 ❌ 9  | 🟢 36 ❌ 5  |
-|            [Grafbase Gateway](https://grafbase.com)             |    90.91%     | 🟢 170 ❌ 17 | 🟢 35 ❌ 6  |
-|                [Inigo Gateway](https://inigo.io)                |    48.66%     | 🟢 91 ❌ 96  | 🟢 12 ❌ 29 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 188    |    🟢 41    |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.87%     | 🟢 184 ❌ 4  | 🟢 39 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    97.34%     | 🟢 183 ❌ 5  | 🟢 38 ❌ 3  |
+|             [Cosmo Router](https://wundergraph.com)             |    95.21%     | 🟢 179 ❌ 9  | 🟢 36 ❌ 5  |
+|            [Grafbase Gateway](https://grafbase.com)             |    90.43%     | 🟢 170 ❌ 18 | 🟢 34 ❌ 7  |
+|                [Inigo Gateway](https://inigo.io)                |    48.94%     | 🟢 92 ❌ 96  | 🟢 12 ❌ 29 |
 
 ## Detailed Results
 
@@ -57,7 +57,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -150,7 +150,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>❌</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -243,7 +243,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>❌</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -336,7 +336,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢</pre>
+<pre>🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -429,7 +429,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢</pre>
+<pre>🟢🟢🟢❌</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>
@@ -522,7 +522,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/keys-mashup">keys-mashup</a>
 <pre>❌</pre>
 <a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢❌</pre>
+<pre>🟢🟢❌🟢</pre>
 <a href="./src/test-suites/mysterious-external">mysterious-external</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/nested-provides">nested-provides</a>

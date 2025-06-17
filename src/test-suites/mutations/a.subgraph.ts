@@ -1,7 +1,9 @@
 import { createSubgraph } from "../../subgraph.js";
 import {
+  addCategory,
   addProduct,
   deleteProduct,
+  getCategories,
   getProducts,
   initProducts,
   multiplyNumber,
@@ -10,10 +12,14 @@ import {
 export default createSubgraph("a", {
   typeDefs: /* GraphQL */ `
     extend schema
-      @link(url: "https://specs.apollo.dev/federation/v2.3", import: ["@key"])
+      @link(
+        url: "https://specs.apollo.dev/federation/v2.3"
+        import: ["@key", "@shareable"]
+      )
 
     type Mutation {
       addProduct(input: AddProductInput!): Product!
+      addCategory(name: String!, requestId: String!): Category! @shareable
       multiply(by: Int!, requestId: String!): Int!
     }
 
@@ -32,11 +38,15 @@ export default createSubgraph("a", {
       name: String!
       price: Float!
     }
+
+    type Category @key(fields: "id") {
+      id: ID!
+    }
   `,
   resolvers: {
     Query: {
       async product(_: {}, { id }: { id: string }) {
-        await initProducts();
+        initProducts();
         const product = (await getProducts()).find((p) => p.id === id);
 
         if (!product) {
@@ -50,7 +60,7 @@ export default createSubgraph("a", {
         };
       },
       async products() {
-        await initProducts();
+        initProducts();
         return getProducts();
       },
     },
@@ -77,6 +87,18 @@ export default createSubgraph("a", {
       ) {
         return addProduct(input.name, input.price);
       },
+      async addCategory(
+        _: {},
+        {
+          name,
+          requestId,
+        }: {
+          name: string;
+          requestId: string;
+        },
+      ) {
+        return addCategory(name, requestId);
+      },
     },
     Product: {
       async __resolveReference(key: { id: string }) {
@@ -93,6 +115,20 @@ export default createSubgraph("a", {
           id: product.id,
           name: product.name,
           price: product.price,
+        };
+      },
+    },
+    Category: {
+      __resolveReference(key: { id: string }) {
+        const categories = getCategories();
+        const category = categories.find((p) => p.id === key.id);
+
+        if (!category) {
+          return null;
+        }
+
+        return {
+          id: category.id,
         };
       },
     },
