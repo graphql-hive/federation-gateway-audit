@@ -79,7 +79,7 @@
     "prettier": "3.5.3",
     "tsx": "4.19.4",
     "typescript": "5.8.3",
-    "wgc": "0.84.0"
+    "wgc": "0.84.1"
   },
   "overrides": {
     "cross-spawn": "7.0.6"
