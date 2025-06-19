@@ -30,6 +30,7 @@ export function createSubgraph(
         schema: lazySchema(),
         graphqlEndpoint: "*",
         logging: false,
+        maskedErrors: false,
       });
     }
 
