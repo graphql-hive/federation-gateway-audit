@@ -52,8 +52,8 @@
     "postinstall": "npx tsc --project tsconfig.json --noCheck --noResolve"
   },
   "dependencies": {
-    "@apollo/composition": "2.11.0",
-    "@apollo/subgraph": "2.11.0",
+    "@apollo/composition": "2.11.2",
+    "@apollo/subgraph": "2.11.2",
     "async-retry": "1.3.3",
     "dotenv": "16.5.0",
     "fets": "0.8.5",
@@ -67,7 +67,7 @@
     "yargs": "18.0.0"
   },
   "devDependencies": {
-    "@apollo/gateway": "2.11.0",
+    "@apollo/gateway": "2.11.2",
     "@apollo/server": "4.12.2",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.3",
