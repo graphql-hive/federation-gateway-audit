@@ -10,12 +10,12 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 188    |    🟢 41    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.87%     | 🟢 184 ❌ 4  | 🟢 39 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.34%     | 🟢 183 ❌ 5  | 🟢 38 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    95.21%     | 🟢 179 ❌ 9  | 🟢 36 ❌ 5  |
-|            [Grafbase Gateway](https://grafbase.com)             |    90.43%     | 🟢 170 ❌ 18 | 🟢 34 ❌ 7  |
-|                [Inigo Gateway](https://inigo.io)                |    48.94%     | 🟢 92 ❌ 96  | 🟢 12 ❌ 29 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 189    |    🟢 42    |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.88%     | 🟢 185 ❌ 4  | 🟢 40 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    97.35%     | 🟢 184 ❌ 5  | 🟢 39 ❌ 3  |
+|             [Cosmo Router](https://wundergraph.com)             |    94.71%     | 🟢 179 ❌ 10 | 🟢 36 ❌ 6  |
+|            [Grafbase Gateway](https://grafbase.com)             |    90.48%     | 🟢 171 ❌ 18 | 🟢 35 ❌ 7  |
+|                [Inigo Gateway](https://inigo.io)                |    48.68%     | 🟢 92 ❌ 97  | 🟢 12 ❌ 30 |
 
 <!-- gateways:end -->
 
