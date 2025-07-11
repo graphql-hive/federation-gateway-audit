@@ -24,6 +24,8 @@ include-skip
 ....
 input-object-intersection
 ...
+interface-object-indirect-extension
+X
 interface-object-with-requires
 .......
 keys-mashup
@@ -51,7 +53,7 @@ parent-entity-call-complex
 provides-on-interface
 XX
 provides-on-union
-.X
+..
 requires-interface
 .....
 requires-requires
@@ -82,6 +84,6 @@ union-intersection
 ........X..X
 
 ---
-Total: 188
-Passed: 170
+Total: 189
+Passed: 171
 Failed: 18

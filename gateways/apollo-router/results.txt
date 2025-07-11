@@ -24,6 +24,8 @@ include-skip
 ....
 input-object-intersection
 ...
+interface-object-indirect-extension
+.
 interface-object-with-requires
 .......
 keys-mashup
@@ -82,6 +84,6 @@ union-intersection
 ............
 
 ---
-Total: 188
-Passed: 184
+Total: 189
+Passed: 185
 Failed: 4
