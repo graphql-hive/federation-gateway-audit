@@ -82,8 +82,10 @@ union-interface-distributed
 ..........
 union-intersection
 ............
+union-overfetching
+X
 
 ---
-Total: 189
+Total: 190
 Passed: 184
-Failed: 5
+Failed: 6

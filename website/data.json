@@ -2,79 +2,79 @@
   {
     "name": "Hive Gateway",
     "cases": {
-      "total": 189,
-      "passed": 189,
+      "total": 190,
+      "passed": 190,
       "failed": 0
     },
     "suites": {
-      "total": 42,
-      "passed": 42,
+      "total": 43,
+      "passed": 43,
       "failed": 0
     }
   },
   {
     "name": "Apollo Router",
     "cases": {
-      "total": 189,
-      "passed": 185,
+      "total": 190,
+      "passed": 186,
       "failed": 4
     },
     "suites": {
-      "total": 42,
-      "passed": 40,
+      "total": 43,
+      "passed": 41,
       "failed": 2
     }
   },
   {
     "name": "Apollo Gateway",
     "cases": {
-      "total": 189,
+      "total": 190,
       "passed": 184,
-      "failed": 5
+      "failed": 6
     },
     "suites": {
-      "total": 42,
+      "total": 43,
       "passed": 39,
-      "failed": 3
+      "failed": 4
     }
   },
   {
     "name": "Cosmo Router",
     "cases": {
-      "total": 189,
-      "passed": 179,
+      "total": 190,
+      "passed": 180,
       "failed": 10
     },
     "suites": {
-      "total": 42,
-      "passed": 36,
+      "total": 43,
+      "passed": 37,
       "failed": 6
     }
   },
   {
     "name": "Grafbase Gateway",
     "cases": {
-      "total": 189,
+      "total": 190,
       "passed": 171,
-      "failed": 18
+      "failed": 19
     },
     "suites": {
-      "total": 42,
+      "total": 43,
       "passed": 35,
-      "failed": 7
+      "failed": 8
     }
   },
   {
     "name": "Inigo Gateway",
     "cases": {
-      "total": 189,
+      "total": 190,
       "passed": 92,
-      "failed": 97
+      "failed": 98
     },
     "suites": {
-      "total": 42,
+      "total": 43,
       "passed": 12,
-      "failed": 30
+      "failed": 31
     }
   }
 ]

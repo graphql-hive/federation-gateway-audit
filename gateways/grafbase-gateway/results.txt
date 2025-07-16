@@ -53,7 +53,7 @@ parent-entity-call-complex
 provides-on-interface
 XX
 provides-on-union
-..
+.X
 requires-interface
 .....
 requires-requires
@@ -82,8 +82,10 @@ union-interface-distributed
 ..........
 union-intersection
 ........X..X
+union-overfetching
+.
 
 ---
-Total: 189
+Total: 190
 Passed: 171
-Failed: 18
+Failed: 19

@@ -4,12 +4,12 @@
 
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 189    |    🟢 42    |
-|         [Apollo Router](https://www.apollographql.com/)         |    97.88%     | 🟢 185 ❌ 4  | 🟢 40 ❌ 2  |
-|        [Apollo Gateway](https://www.apollographql.com/)         |    97.35%     | 🟢 184 ❌ 5  | 🟢 39 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    94.71%     | 🟢 179 ❌ 10 | 🟢 36 ❌ 6  |
-|            [Grafbase Gateway](https://grafbase.com)             |    90.48%     | 🟢 171 ❌ 18 | 🟢 35 ❌ 7  |
-|                [Inigo Gateway](https://inigo.io)                |    48.68%     | 🟢 92 ❌ 97  | 🟢 12 ❌ 30 |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 190    |    🟢 43    |
+|         [Apollo Router](https://www.apollographql.com/)         |    97.89%     | 🟢 186 ❌ 4  | 🟢 41 ❌ 2  |
+|        [Apollo Gateway](https://www.apollographql.com/)         |    96.84%     | 🟢 184 ❌ 6  | 🟢 39 ❌ 4  |
+|             [Cosmo Router](https://wundergraph.com)             |    94.74%     | 🟢 180 ❌ 10 | 🟢 37 ❌ 6  |
+|            [Grafbase Gateway](https://grafbase.com)             |    90.00%     | 🟢 171 ❌ 19 | 🟢 35 ❌ 8  |
+|                [Inigo Gateway](https://inigo.io)                |    48.42%     | 🟢 92 ❌ 98  | 🟢 12 ❌ 31 |
 
 ## Detailed Results
 
@@ -110,6 +110,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢</pre>
 </details>
 
 <a id="apollo-router"></a>
@@ -205,6 +207,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢</pre>
 </details>
 
 <a id="apollo-gateway"></a>
@@ -300,6 +304,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌</pre>
 </details>
 
 <a id="cosmo-router"></a>
@@ -395,6 +401,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢</pre>
 </details>
 
 <a id="grafbase-gateway"></a>
@@ -461,7 +469,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
-<pre>🟢🟢</pre>
+<pre>🟢❌</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -490,6 +498,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢❌🟢🟢❌</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢</pre>
 </details>
 
 <a id="inigo-gateway"></a>
@@ -585,4 +595,6 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>❌❌🟢🟢❌❌🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>❌❌❌❌❌❌❌❌❌🟢❌❌</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌</pre>
 </details>
