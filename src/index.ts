@@ -4,6 +4,7 @@ import { createServer } from "node:http";
 async function getTestCases(router: ReturnType<typeof createRouter>) {
   const testCases = await Promise.all(
     [
+      import("./test-suites/union-overfetching/index.js"),
       import("./test-suites/union-intersection/index.js"),
       import("./test-suites/simple-entity-call/index.js"),
       import("./test-suites/complex-entity-call/index.js"),
