@@ -5,6 +5,7 @@ homepage:
 supergraph:
   listen: "0.0.0.0:4000"
   introspection: true
+experimental_type_conditioned_fetching: true
 plugins:
   # Enable with the header, Apollo-Expose-Query-Plan: true
   experimental.expose_query_plan: true
