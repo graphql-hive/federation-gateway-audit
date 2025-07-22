@@ -32,7 +32,11 @@ export default createSubgraph("agency", {
     },
     Group: {
       __resolveReference(key: { id: string }) {
-        return { id: key.id, name: "Group " + key.id, email: "group" + key.id + "@example.com" };
+        return {
+          id: key.id,
+          name: "Group " + key.id,
+          email: "group" + key.id + "@example.com",
+        };
       },
     },
   },
