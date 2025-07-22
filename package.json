@@ -75,7 +75,7 @@
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.33",
     "express": "5.1.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "tsx": "4.19.4",
     "typescript": "5.8.3",
     "wgc": "0.83.3"

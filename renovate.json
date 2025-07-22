@@ -3,5 +3,11 @@
   "extends": [
     "config:recommended",
     "github>the-guild-org/shared-config:renovate"
-  ]
+  ],
+  "rebaseWhen": "behind-base-branch",
+  "automerge": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }

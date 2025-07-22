@@ -18,5 +18,5 @@ export const product = {
     id: "1",
     street: "123 Main St",
     city: "Springfield",
-  }
+  },
 };

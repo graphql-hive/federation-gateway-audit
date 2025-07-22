@@ -40,7 +40,7 @@ export default [
           category: {
             id: "1",
             name: "Category 1",
-          }
+          },
         },
       },
     },
@@ -85,7 +85,7 @@ export default [
             category: {
               id: "1",
               name: "Category 1",
-            }
+            },
           },
         ],
       },
