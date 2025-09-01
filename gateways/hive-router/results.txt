@@ -1,11 +1,11 @@
 abstract-types
 ..................
 child-type-mismatch
-XXX.
+....
 circular-reference-interface
 ..
 complex-entity-call
-X
+.
 corrupted-supergraph-node-id
 ..........
 enum-intersection
@@ -25,9 +25,9 @@ include-skip
 input-object-intersection
 ...
 interface-object-indirect-extension
-X
+.
 interface-object-with-requires
-XXXXXXX
+.......
 keys-mashup
 .
 mutations
@@ -49,11 +49,11 @@ override-with-requires
 parent-entity-call
 .
 parent-entity-call-complex
-X
+.
 provides-on-interface
-XX
+..
 provides-on-union
-XX
+..
 requires-interface
 .....
 requires-requires
@@ -85,5 +85,5 @@ union-intersection
 
 ---
 Total: 189
-Passed: 172
-Failed: 17
+Passed: 189
+Failed: 0

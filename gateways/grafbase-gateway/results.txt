@@ -31,7 +31,7 @@ interface-object-with-requires
 keys-mashup
 .
 mutations
-...X
+....
 mysterious-external
 ..
 nested-provides
@@ -51,7 +51,7 @@ parent-entity-call
 parent-entity-call-complex
 .
 provides-on-interface
-XX
+..
 provides-on-union
 ..
 requires-interface
@@ -85,5 +85,5 @@ union-intersection
 
 ---
 Total: 189
-Passed: 171
-Failed: 18
+Passed: 174
+Failed: 15
