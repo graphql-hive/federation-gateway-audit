@@ -11,10 +11,11 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 |                             Gateway                             | Compatibility |  Test Cases  | Test Suites |
 | :-------------------------------------------------------------: | :-----------: | :----------: | :---------: |
 | [Hive Gateway](https://the-guild.dev/graphql/hive/docs/gateway) |    100.00%    |    🟢 189    |    🟢 42    |
+|      [Hive Router](https://github.com/graphql-hive/router)      |    100.00%    |    🟢 189    |    🟢 42    |
 |         [Apollo Router](https://www.apollographql.com/)         |    97.88%     | 🟢 185 ❌ 4  | 🟢 40 ❌ 2  |
 |        [Apollo Gateway](https://www.apollographql.com/)         |    97.35%     | 🟢 184 ❌ 5  | 🟢 39 ❌ 3  |
-|             [Cosmo Router](https://wundergraph.com)             |    94.71%     | 🟢 179 ❌ 10 | 🟢 36 ❌ 6  |
-|            [Grafbase Gateway](https://grafbase.com)             |    90.48%     | 🟢 171 ❌ 18 | 🟢 35 ❌ 7  |
+|            [Grafbase Gateway](https://grafbase.com)             |    92.06%     | 🟢 174 ❌ 15 | 🟢 37 ❌ 5  |
+|             [Cosmo Router](https://wundergraph.com)             |    91.01%     | 🟢 172 ❌ 17 | 🟢 35 ❌ 7  |
 |                [Inigo Gateway](https://inigo.io)                |    48.68%     | 🟢 92 ❌ 97  | 🟢 12 ❌ 30 |
 
 <!-- gateways:end -->

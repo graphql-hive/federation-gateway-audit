@@ -13,6 +13,19 @@
     }
   },
   {
+    "name": "Hive Router",
+    "cases": {
+      "total": 189,
+      "passed": 189,
+      "failed": 0
+    },
+    "suites": {
+      "total": 42,
+      "passed": 42,
+      "failed": 0
+    }
+  },
+  {
     "name": "Apollo Router",
     "cases": {
       "total": 189,
@@ -39,24 +52,24 @@
     }
   },
   {
-    "name": "Cosmo Router",
-    "cases": {
-      "total": 189,
-      "passed": 179,
-      "failed": 10
-    },
-    "suites": {
-      "total": 42,
-      "passed": 36,
-      "failed": 6
-    }
-  },
-  {
     "name": "Grafbase Gateway",
     "cases": {
       "total": 189,
-      "passed": 171,
-      "failed": 18
+      "passed": 174,
+      "failed": 15
+    },
+    "suites": {
+      "total": 42,
+      "passed": 37,
+      "failed": 5
+    }
+  },
+  {
+    "name": "Cosmo Router",
+    "cases": {
+      "total": 189,
+      "passed": 172,
+      "failed": 17
     },
     "suites": {
       "total": 42,
