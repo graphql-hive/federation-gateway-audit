@@ -37,7 +37,7 @@ function resolvePath(
   argv: {
     cwd: string;
   },
-  path: string
+  path: string,
 ) {
   if (path.startsWith("/")) {
     return path;
@@ -48,7 +48,7 @@ function resolvePath(
 yargs(hideBin(process.argv))
   .scriptName("graphql-federation-audit")
   .epilogue(
-    "for more information, find our manual at https://github.com/the-guild-org/federation-compatibility"
+    "for more information, find our manual at https://github.com/the-guild-org/federation-compatibility",
   )
   .version(readVersion() ?? "local")
   .recommendCommands()
@@ -69,7 +69,7 @@ yargs(hideBin(process.argv))
     async (argv) => {
       await serve(argv.port);
       console.log("Server started on port", argv.port);
-    }
+    },
   )
   .command(
     "supergraph",
@@ -88,7 +88,7 @@ yargs(hideBin(process.argv))
     },
     async (argv) => {
       const res = await fetch(
-        `http://localhost:${argv.port}/${argv.test}/supergraph`
+        `http://localhost:${argv.port}/${argv.test}/supergraph`,
       );
 
       if (!res.ok) {
@@ -100,7 +100,7 @@ yargs(hideBin(process.argv))
 
       writeFileSync(resolvePath(argv, "supergraph.graphql"), await res.text());
       process.exit(0);
-    }
+    },
   )
   .command(
     "subgraphs",
@@ -134,7 +134,7 @@ yargs(hideBin(process.argv))
 
       writeFileSync(resolvePath(argv, "subgraphs.json"), await res.text());
       process.exit(0);
-    }
+    },
   )
   .command(
     "start",
@@ -184,7 +184,7 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
 
       const gatewayExit = Promise.withResolvers<void>();
       let gatewayExited = false;
@@ -208,7 +208,7 @@ yargs(hideBin(process.argv))
       });
 
       await gatewayExit.promise;
-    }
+    },
   )
   .command(
     "test-suite",
@@ -278,12 +278,12 @@ yargs(hideBin(process.argv))
         mkdirSync(resolvePath(argv, "./logs"));
       }
 
-      await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
+      await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
       const logStream = createWriteStream(
         resolvePath(argv, `./logs/${argv.test}-gateway.log`),
         {
           flags: "w+",
-        }
+        },
       );
 
       const gatewayExit = Promise.withResolvers<void>();
@@ -320,7 +320,7 @@ yargs(hideBin(process.argv))
       } else {
         process.exit(0);
       }
-    }
+    },
   )
   .command(
     "test",
@@ -407,12 +407,12 @@ yargs(hideBin(process.argv))
 
       process.stdout.write("\n");
       for await (const id of ids) {
-        await killPortIfRunning(readPort(argv.graphql)).catch(() => { });
+        await killPortIfRunning(readPort(argv.graphql)).catch(() => {});
         const logStream = createWriteStream(
           resolvePath(argv, `./logs/${id}-gateway.log`),
           {
             flags: "w+",
-          }
+          },
         );
 
         const gatewayExit = Promise.withResolvers<void>();
@@ -469,22 +469,22 @@ yargs(hideBin(process.argv))
       process.stdout.write("-----------\n");
       process.stdout.write(`Total:  ${total}\n`);
       process.stdout.write(
-        `Passed: ${styleText("greenBright", passed + "")}\n`
+        `Passed: ${styleText("greenBright", passed + "")}\n`,
       );
       if (failed > 0) {
         process.stdout.write(
-          `Failed: ${styleText("redBright", failed + "")}\n`
+          `Failed: ${styleText("redBright", failed + "")}\n`,
         );
       }
       process.stdout.write("\n");
 
       if (failed > 0) {
         process.stdout.write(
-          styleText("redBright", "Your gateway is not fully compatible\n")
+          styleText("redBright", "Your gateway is not fully compatible\n"),
         );
       } else {
         process.stdout.write(
-          styleText("greenBright", "Your gateway is fully compatible\n")
+          styleText("greenBright", "Your gateway is fully compatible\n"),
         );
       }
 
@@ -499,14 +499,14 @@ yargs(hideBin(process.argv))
             `Passed: ${passed}`,
             `Failed: ${failed}`,
           ])
-          .join("\n")
+          .join("\n"),
       );
 
       if (argv["exit-on-fail"] && failed > 0) {
         process.exit(1);
       }
       process.exit(0);
-    }
+    },
   )
   .demandCommand(1)
   .parse();
@@ -529,7 +529,7 @@ async function runTest(args: {
     resolvePath({ cwd: args.cwd }, `./logs/${args.test}-tests.log`),
     {
       flags: "w+",
-    }
+    },
   );
 
   if (args.healthcheck) {
@@ -560,16 +560,10 @@ async function runTest(args: {
     if (!existsSync(reportsDir)) {
       mkdirSync(reportsDir, { recursive: true });
     }
-    const junitPath = join(
-      reportsDir,
-      `${args.test}.xml`
-    );
-    const junitStream = createWriteStream(
-      junitPath,
-      {
-        flags: "w+",
-      }
-    );
+    const junitPath = join(reportsDir, `${args.test}.xml`);
+    const junitStream = createWriteStream(junitPath, {
+      flags: "w+",
+    });
     testStream.compose(junit).pipe(junitStream);
   }
 
@@ -580,7 +574,7 @@ function createDotReporter(resolve: (value: Array<"." | "X">) => void) {
   const report: Array<"." | "X"> = [];
   return async function* dot(source: Parameters<typeof tap>[0]) {
     for await (const { type, data } of source) {
-      if (data != null && 'details' in data && data.details?.type === "suite") {
+      if (data != null && "details" in data && data.details?.type === "suite") {
         continue;
       }
       if (type === "test:pass") {
@@ -599,7 +593,7 @@ async function* dot(source: Parameters<typeof tap>[0]) {
   let columns = getLineLength();
   const failedTests = [];
   for await (const { type, data } of source) {
-    if (data != null && 'details' in data && data.details?.type === "suite") {
+    if (data != null && "details" in data && data.details?.type === "suite") {
       continue;
     }
     if (type === "test:pass") {

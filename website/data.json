@@ -3,13 +3,26 @@
     "name": "Hive Gateway",
     "cases": {
       "total": 189,
-      "passed": 187,
-      "failed": 2
+      "passed": 189,
+      "failed": 0
     },
     "suites": {
       "total": 42,
-      "passed": 41,
-      "failed": 1
+      "passed": 42,
+      "failed": 0
+    }
+  },
+  {
+    "name": "Hive Router",
+    "cases": {
+      "total": 189,
+      "passed": 189,
+      "failed": 0
+    },
+    "suites": {
+      "total": 42,
+      "passed": 42,
+      "failed": 
     }
   },
   {
@@ -39,7 +52,7 @@
     }
   },
   {
-    "name": "Cosmo Router",
+    "name": "Grafbase Gateway",
     "cases": {
       "total": 189,
       "passed": 180,
@@ -52,7 +65,7 @@
     }
   },
   {
-    "name": "Grafbase Gateway",
+    "name": "Cosmo Router",
     "cases": {
       "total": 189,
       "passed": 172,

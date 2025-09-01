@@ -114,7 +114,7 @@ export const agencies = [
     id: "a1",
     companyName: "Agency 1",
     email: {
-      address: 'a1@example.com'
-    }
+      address: "a1@example.com",
+    },
   },
 ] as const;

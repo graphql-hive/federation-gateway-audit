@@ -24,12 +24,14 @@ include-skip
 ....
 input-object-intersection
 .XX
+interface-object-indirect-extension
+X
 interface-object-with-requires
 XXXXXXX
 keys-mashup
 X
 mutations
-..X
+..X.
 mysterious-external
 ..
 nested-provides

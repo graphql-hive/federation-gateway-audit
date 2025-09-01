@@ -71,5 +71,24 @@ export default () => {
         },
       },
     ),
+    // shared-root (mutation)
+    createTest(
+      /* GraphQL */ `
+        mutation {
+          addCategory(name: "new", requestId: "${randomId}") {
+            id
+            name
+          }
+        }
+      `,
+      {
+        data: {
+          addCategory: {
+            id: "c-added-" + randomId,
+            name: "new",
+          },
+        },
+      },
+    ),
   ];
 };

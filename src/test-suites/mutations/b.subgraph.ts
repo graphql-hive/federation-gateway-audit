@@ -1,12 +1,18 @@
 import { createSubgraph } from "../../subgraph.js";
-import { deleteNumber, deleteProduct, getProducts } from "./data.js";
+import {
+  addCategory,
+  deleteNumber,
+  deleteProduct,
+  getCategories,
+  getProducts,
+} from "./data.js";
 
 export default createSubgraph("b", {
   typeDefs: /* GraphQL */ `
     extend schema
       @link(
         url: "https://specs.apollo.dev/federation/v2.3"
-        import: ["@key", "@external", "@requires"]
+        import: ["@key", "@external", "@requires", "@shareable"]
       )
 
     type Product @key(fields: "id") {
@@ -18,6 +24,12 @@ export default createSubgraph("b", {
 
     type Mutation {
       delete(requestId: String!): Int!
+      addCategory(name: String!, requestId: String!): Category! @shareable
+    }
+
+    type Category @key(fields: "id") {
+      id: ID!
+      name: String!
     }
   `,
   resolvers: {
@@ -29,6 +41,18 @@ export default createSubgraph("b", {
         },
       ) {
         return deleteNumber(args.requestId);
+      },
+      async addCategory(
+        _: {},
+        {
+          name,
+          requestId,
+        }: {
+          name: string;
+          requestId: string;
+        },
+      ) {
+        return addCategory(name, requestId);
       },
     },
     Product: {
@@ -62,6 +86,21 @@ export default createSubgraph("b", {
         }
 
         return product.price > 100;
+      },
+    },
+    Category: {
+      __resolveReference(key: { id: string }) {
+        const categories = getCategories();
+        const category = categories.find((p) => p.id === key.id);
+
+        if (!category) {
+          return null;
+        }
+
+        return {
+          id: category.id,
+          name: category.name,
+        };
       },
     },
   },

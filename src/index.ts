@@ -22,6 +22,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/child-type-mismatch/index.js"),
       import("./test-suites/non-resolvable-interface-object/index.js"),
       import("./test-suites/interface-object-with-requires/index.js"),
+      import("./test-suites/interface-object-indirect-extension/index.js"),
       import("./test-suites/requires-interface/index.js"),
       import("./test-suites/fed1-external-extends/index.js"),
       import("./test-suites/fed2-external-extends/index.js"),
@@ -98,7 +99,7 @@ export function serve(port: number) {
             resolve();
           }
         });
-      })
+      });
     }
   }
 
@@ -166,7 +167,7 @@ export function createRouter() {
       },
       handler() {
         return testCases$.then((testCases) =>
-          Response.json(testCases.map((t) => t.id))
+          Response.json(testCases.map((t) => t.id)),
         );
       },
     })
@@ -188,8 +189,10 @@ export function createRouter() {
       handler(req) {
         return testCases$.then((testCases) =>
           Response.json(
-            testCases.map(({ id }) => `${req.parsedUrl.origin}/${id}/supergraph`)
-          )
+            testCases.map(
+              ({ id }) => `${req.parsedUrl.origin}/${id}/supergraph`,
+            ),
+          ),
         );
       },
     })
@@ -211,8 +214,8 @@ export function createRouter() {
       handler(req) {
         return testCases$.then((testCases) =>
           Response.json(
-            testCases.map(({ id }) => `${req.parsedUrl.origin}/${id}/tests`)
-          )
+            testCases.map(({ id }) => `${req.parsedUrl.origin}/${id}/tests`),
+          ),
         );
       },
     })
@@ -234,8 +237,10 @@ export function createRouter() {
       handler(req) {
         return testCases$.then((testCases) =>
           Response.json(
-            testCases.map(({ id }) => `${req.parsedUrl.origin}/${id}/subgraphs`)
-          )
+            testCases.map(
+              ({ id }) => `${req.parsedUrl.origin}/${id}/subgraphs`,
+            ),
+          ),
         );
       },
     });

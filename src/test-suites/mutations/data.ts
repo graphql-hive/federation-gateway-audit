@@ -4,11 +4,21 @@ interface Product {
   price: number;
 }
 
+interface Category {
+  id: string;
+  name: string;
+}
+
 let products: Product[] = [];
+let categories: Category[] = [];
 const numbers: Record<string, number> = {};
 
 export async function getProducts(): Promise<Product[]> {
   return products;
+}
+
+export function getCategories(): Category[] {
+  return categories;
 }
 
 export async function addProduct(name: string, price: number) {
@@ -19,6 +29,19 @@ export async function addProduct(name: string, price: number) {
   };
   products.push(newProduct);
   return newProduct;
+}
+
+export async function addCategory(name: string, requestId: string) {
+  if (categories.some((c) => c.id === "c-added-" + requestId)) {
+    throw new Error("Category with this requestId was already added");
+  }
+
+  const newCategory = {
+    id: "c-added-" + requestId,
+    name: name,
+  };
+  categories.push(newCategory);
+  return newCategory;
 }
 
 export async function deleteProduct(id: string) {
