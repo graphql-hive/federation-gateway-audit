@@ -46,7 +46,8 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/requires-with-argument/index.js"),
       import("./test-suites/keys-mashup/index.js"),
       import("./test-suites/null-keys/index.js"),
-    ].map((i) => i.then((e) => e.default)),
+      import("./test-suites/requires-circular/index.js"),
+    ].map((i) => i.then((e) => e.default))
   );
 
   testCases.sort((a, b) => a.id.localeCompare(b.id));

@@ -22,7 +22,7 @@
     "suites": {
       "total": 42,
       "passed": 42,
-      "failed": 0
+      "failed": 
     }
   },
   {
@@ -55,8 +55,8 @@
     "name": "Grafbase Gateway",
     "cases": {
       "total": 189,
-      "passed": 174,
-      "failed": 15
+      "passed": 180,
+      "failed": 9
     },
     "suites": {
       "total": 42,
@@ -73,16 +73,16 @@
     },
     "suites": {
       "total": 42,
-      "passed": 35,
-      "failed": 7
+      "passed": 36,
+      "failed": 6
     }
   },
   {
     "name": "Inigo Gateway",
     "cases": {
       "total": 189,
-      "passed": 92,
-      "failed": 97
+      "passed": 91,
+      "failed": 98
     },
     "suites": {
       "total": 42,
