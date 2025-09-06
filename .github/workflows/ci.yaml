@@ -60,6 +60,9 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
+      - name: Checkout to branch
+        run: git checkout -t origin/${{ github.head_ref }}
+
       - name: publish report
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
         with:
