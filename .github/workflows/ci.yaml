@@ -36,7 +36,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
         with:
-          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: the-guild-org/shared-config/setup@v1
         name: set up env
@@ -76,18 +76,6 @@ jobs:
           header: "Test Results"
           message: ${{ env.summary }}
 
-  deploy:
-    needs: [gateways]
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
-
-      - uses: the-guild-org/shared-config/setup@v1
-        name: set up env
-        with:
-          node-version-file: .node-version
-
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@f0a1cd58cd66095dee69bfa18fa5efd1dde93bca # v1
         with:
@@ -97,3 +85,5 @@ jobs:
           directory: ./website
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.event.pull_request.number != '' && format('pr-{0}', github.event.pull_request.number) || 'main' }}
+
+
