@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 2
 
@@ -32,13 +32,13 @@ jobs:
         run: make install
 
       - name: Test
-        run: npm start -- test --cwd ./gateways/hive-gateway --run-script ./run.sh  --reporter tap --graphql http://127.0.0.1:4000/graphql --healthcheck http://127.0.0.1:4000/healthcheck --exit-on-fail
+        run: npm start -- test --cwd ./gateways/hive-router --run-script ./run.sh  --reporter tap --graphql http://127.0.0.1:4000/graphql --healthcheck http://127.0.0.1:4000/health --exit-on-fail
 
   gateways:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 2
 
@@ -72,7 +72,7 @@ jobs:
     name: Deploy
     steps:
       - name: checkout
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: setup node
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
