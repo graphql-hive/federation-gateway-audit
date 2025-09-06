@@ -22,11 +22,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Setup Node
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+      - uses: the-guild-org/shared-config/setup@v1
+        name: set up env
         with:
-          node-version: 22
-          cache: "npm"
+          node-version-file: .node-version
 
       - name: Install
         run: make install
@@ -42,11 +41,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Setup Node
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+      - uses: the-guild-org/shared-config/setup@v1
+        name: set up env
         with:
-          node-version: 22
-          cache: "npm"
+          node-version-file: .node-version
 
       - name: Prepare
         run: make install
@@ -82,20 +80,16 @@ jobs:
           message: ${{ env.summary }}
 
   deploy:
+    needs: [gateways]
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
-      - name: setup node
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+      - uses: the-guild-org/shared-config/setup@v1
+        name: set up env
         with:
-          node-version: 22
-          cache: "npm"
-
-      - name: install
-        run: npm ci
+          node-version-file: .node-version
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@f0a1cd58cd66095dee69bfa18fa5efd1dde93bca # v1
