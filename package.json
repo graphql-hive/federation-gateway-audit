@@ -84,5 +84,5 @@
   "overrides": {
     "cross-spawn": "7.0.6"
   },
-  "packageManager": "npm@11.6.0"
+  "packageManager": "npm@11.6.1"
 }
