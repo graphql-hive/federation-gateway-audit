@@ -54,6 +54,8 @@ provides-on-interface
 XX
 provides-on-union
 XX
+requires-circular
+XX
 requires-interface
 XXXXX
 requires-requires
@@ -85,5 +87,5 @@ XXXXXXXXX.XX
 
 ---
 Total: 189
-Passed: 92
-Failed: 97
+Passed: 91
+Failed: 98

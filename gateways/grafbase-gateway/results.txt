@@ -53,6 +53,8 @@ parent-entity-call-complex
 provides-on-interface
 ..
 provides-on-union
+.X
+requires-circular
 ..
 requires-interface
 .....

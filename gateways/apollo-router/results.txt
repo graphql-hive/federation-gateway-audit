@@ -54,6 +54,8 @@ provides-on-interface
 ..
 provides-on-union
 ..
+requires-circular
+..
 requires-interface
 .....
 requires-requires

@@ -23,7 +23,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 ### Hive Gateway
 
 - [Repository](https://github.com/graphql-hive/gateway)
-- [Website](https://the-guild.dev/graphql/hive/docs/gateway)
+- [Website](https://the-guild.dev/graphql/hive/gateway)
 
 <details>
 <summary>Results</summary>
@@ -83,6 +83,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>❌❌</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -177,6 +179,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
@@ -273,6 +277,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-requires">requires-requires</a>
@@ -367,6 +373,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>❌❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
@@ -557,6 +565,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>🟢🟢🟢🟢🟢</pre>
@@ -652,6 +662,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>❌❌</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/requires-interface">requires-interface</a>
 <pre>❌❌❌❌❌</pre>
