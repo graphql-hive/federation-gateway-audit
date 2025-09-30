@@ -44,6 +44,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/abstract-types/index.js"),
       import("./test-suites/fed1-external-extends-resolvable/index.js"),
       import("./test-suites/requires-with-argument/index.js"),
+      import("./test-suites/requires-with-argument-conflict/index.js"),
       import("./test-suites/keys-mashup/index.js"),
       import("./test-suites/null-keys/index.js"),
     ].map((i) => i.then((e) => e.default)),
