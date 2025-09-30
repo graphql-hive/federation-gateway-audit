@@ -22,7 +22,7 @@
     "suites": {
       "total": 42,
       "passed": 42,
-      "failed": 
+      "failed": 0
     }
   },
   {
@@ -52,24 +52,11 @@
     }
   },
   {
-    "name": "Grafbase Gateway",
-    "cases": {
-      "total": 189,
-      "passed": 180,
-      "failed": 9
-    },
-    "suites": {
-      "total": 42,
-      "passed": 37,
-      "failed": 5
-    }
-  },
-  {
     "name": "Cosmo Router",
     "cases": {
       "total": 189,
-      "passed": 172,
-      "failed": 17
+      "passed": 179,
+      "failed": 10
     },
     "suites": {
       "total": 42,
@@ -78,11 +65,24 @@
     }
   },
   {
+    "name": "Grafbase Gateway",
+    "cases": {
+      "total": 189,
+      "passed": 174,
+      "failed": 15
+    },
+    "suites": {
+      "total": 42,
+      "passed": 37,
+      "failed": 5
+    }
+  },
+  {
     "name": "Inigo Gateway",
     "cases": {
       "total": 189,
-      "passed": 91,
-      "failed": 98
+      "passed": 92,
+      "failed": 97
     },
     "suites": {
       "total": 42,
