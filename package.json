@@ -72,13 +72,13 @@
     "@as-integrations/express5": "1.1.2",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.3",
-    "@types/node": "22.18.7",
+    "@types/node": "22.18.8",
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.33",
     "express": "5.1.0",
     "prettier": "3.6.2",
     "tsx": "4.20.6",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "wgc": "0.93.3"
   },
   "overrides": {
