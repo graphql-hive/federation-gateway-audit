@@ -63,16 +63,12 @@ export default createSubgraph("a", {
           category: product.category,
         };
       },
-      shippingEstimate(
-        product: { price: number; weight: number },
-        args: { currency?: string },
-      ) {
+      shippingEstimate(product: { price: number; weight: number }) {
         const value = product.price * product.weight * 10;
-
-        if (args.currency === "EUR") {
-          return value * 1.5;
-        }
-
+        return value;
+      },
+      shippingEstimateEUR(product: { price: number; weight: number }) {
+        const value = product.price * product.weight * 10;
         return value;
       },
       isExpensiveCategory(product: { category: { averagePrice: number } }) {
