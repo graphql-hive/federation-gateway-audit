@@ -50,6 +50,11 @@ export default createSubgraph("b", {
           category: product.category,
         };
       },
+      price(parent: { price: number }, args: { currency: string }) {
+        if (args.currency === "EUR") return parent.price * 2;
+        if (args.currency === "USD") return parent.price;
+        throw new Error("Unsupported currency " + args.currency);
+      },
     },
   },
 });

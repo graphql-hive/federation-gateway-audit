@@ -19,15 +19,15 @@ export default [
           {
             upc: "p1",
             name: "p-name-1",
-            shippingEstimate: 110,
-            shippingEstimateEUR: 165,
+            shippingEstimate: 110, // 11 * 1 * 10
+            shippingEstimateEUR: 220, // (11 * 2) * 1 * 10
             isExpensiveCategory: false,
           },
           {
             upc: "p2",
             name: "p-name-2",
-            shippingEstimate: 440,
-            shippingEstimateEUR: 660,
+            shippingEstimate: 440, // 22 * 2 * 10
+            shippingEstimateEUR: 880, // (22 * 2) * 2 * 10
             isExpensiveCategory: true,
           },
         ],
