@@ -3,13 +3,13 @@
     "name": "Hive Router",
     "cases": {
       "total": 192,
-      "passed": 191,
-      "failed": 1
+      "passed": 192,
+      "failed": 0
     },
     "suites": {
       "total": 44,
-      "passed": 43,
-      "failed": 1
+      "passed": 44,
+      "failed": 0
     }
   },
   {
