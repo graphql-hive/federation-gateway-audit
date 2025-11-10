@@ -1,4 +1,4 @@
-# Contributing guide
+# CONTRIBUTING
 
 1. Create a new directory in the `gateways` folder with the name of the new gateway.
 2. Prepare the `install.sh` script that will install the necessary dependencies, the gateway itself.
