@@ -1,18 +1,5 @@
 [
   {
-    "name": "Hive Router",
-    "cases": {
-      "total": 192,
-      "passed": 192,
-      "failed": 0
-    },
-    "suites": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0
-    }
-  },
-  {
     "name": "Hive Gateway",
     "cases": {
       "total": 192,
@@ -88,6 +75,19 @@
       "total": 44,
       "passed": 12,
       "failed": 32
+    }
+  },
+  {
+    "name": "Hive Router",
+    "cases": {
+      "total": 192,
+      "passed": 0,
+      "failed": 192
+    },
+    "suites": {
+      "total": 44,
+      "passed": 0,
+      "failed": 44
     }
   }
 ]
