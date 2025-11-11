@@ -16,8 +16,8 @@
     "name": "Hive Gateway",
     "cases": {
       "total": 192,
-      "passed": 189,
-      "failed": 3
+      "passed": 190,
+      "failed": 2
     },
     "suites": {
       "total": 44,

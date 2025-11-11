@@ -11,7 +11,7 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 |                          Gateway                           | Compatibility |  Test Cases  | Test Suites |
 | :--------------------------------------------------------: | :-----------: | :----------: | :---------: |
 |   [Hive Router](https://github.com/graphql-hive/router)    |    100.00%    |    🟢 192    |    🟢 44    |
-| [Hive Gateway](https://the-guild.dev/graphql/hive/gateway) |    98.44%     | 🟢 189 ❌ 3  | 🟢 42 ❌ 2  |
+| [Hive Gateway](https://the-guild.dev/graphql/hive/gateway) |    98.96%     | 🟢 190 ❌ 2  | 🟢 42 ❌ 2  |
 |      [Apollo Router](https://www.apollographql.com/)       |    97.40%     | 🟢 187 ❌ 5  | 🟢 41 ❌ 3  |
 |      [Apollo Gateway](https://www.apollographql.com/)      |    96.88%     | 🟢 186 ❌ 6  | 🟢 40 ❌ 4  |
 |          [Cosmo Router](https://wundergraph.com)           |    94.27%     | 🟢 181 ❌ 11 | 🟢 37 ❌ 7  |
