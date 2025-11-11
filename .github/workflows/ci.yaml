@@ -51,6 +51,12 @@ jobs:
       - name: Test Gateways
         run: make test-all
 
+      - name: Upload Logs
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: gateways-logs
+          path: gateways/*/logs/*.log
+
       - name: Summary
         run: |
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
@@ -66,7 +72,7 @@ jobs:
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
         if: github.event_name == 'pull_request'
         with:
-          add: ./REPORT.md ./README.md ./website/index.html ./website/data.json 
+          add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
           message: "Update results"
           pull: "--rebase --autostash"
           author_email: github-actions@github.com
@@ -89,5 +95,3 @@ jobs:
           directory: ./website
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.event.pull_request.number != '' && format('pr-{0}', github.event.pull_request.number) || 'main' }}
-
-
