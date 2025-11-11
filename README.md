@@ -87,6 +87,7 @@ make test-[name of the gateway]
 make test-grafbase-gateway
 make test-cosmo-router
 make test-hive-gateway
+make test-hive-gateway-router-runtime
 make test-apollo-router
 ```
 
