@@ -84,8 +84,7 @@
     "wgc": "0.94.0"
   },
   "overrides": {
-    "cross-spawn": "7.0.6",
-    "tar": "7.5.2"
+    "cross-spawn": "7.0.6"
   },
   "packageManager": "npm@11.6.2"
 }
