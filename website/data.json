@@ -1,5 +1,18 @@
 [
   {
+    "name": "Hive Gateway (Router Runtime)",
+    "cases": {
+      "total": 192,
+      "passed": 192,
+      "failed": 0
+    },
+    "suites": {
+      "total": 44,
+      "passed": 44,
+      "failed": 0
+    }
+  },
+  {
     "name": "Hive Router",
     "cases": {
       "total": 192,
@@ -16,8 +29,8 @@
     "name": "Hive Gateway",
     "cases": {
       "total": 192,
-      "passed": 189,
-      "failed": 3
+      "passed": 190,
+      "failed": 2
     },
     "suites": {
       "total": 44,
