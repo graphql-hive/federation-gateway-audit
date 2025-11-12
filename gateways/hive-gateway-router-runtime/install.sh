@@ -1,1 +1,1 @@
-npm ci
+echo "OK"
