@@ -1,6 +1,6 @@
 [
   {
-    "name": "Hive Gateway (Router Runtime)",
+    "name": "Hive Gateway (Rust QP)",
     "cases": {
       "total": 192,
       "passed": 192,
