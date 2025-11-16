@@ -1,6 +1,14 @@
 import { createTest } from "../../testkit.js";
 
 export default [
+  // Test complex multi-entity resolution with nested relationships
+  // Verifies that complex entity graphs can be resolved across multiple subgraphs
+  // - topProducts query involves multiple entity types: Product, Category, Price
+  // - Tests circular relationships: Category -> mainProduct -> Category
+  // - Validates that nested entity resolution works correctly
+  // - price field uses object wrapper pattern
+  // - category.mainProduct creates a circular reference back to Product
+  // This represents real-world complex data relationships in federated systems
   createTest(
     /* GraphQL */ `
       query {
