@@ -14,10 +14,10 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 |                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 192    |    🟢 44    |
 |                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.96%     | 🟢 190 ❌ 2  | 🟢 42 ❌ 2  |
 |                               [Apollo Router](https://www.apollographql.com/)                               |    97.40%     | 🟢 187 ❌ 5  | 🟢 41 ❌ 3  |
+|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.88%     | 🟢 186 ❌ 6  | 🟢 40 ❌ 4  |
 |                                   [Cosmo Router](https://wundergraph.com)                                   |    94.27%     | 🟢 181 ❌ 11 | 🟢 37 ❌ 7  |
 |                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.67%     | 🟢 176 ❌ 16 | 🟢 38 ❌ 6  |
 |                                      [Inigo Gateway](https://inigo.io)                                      |    47.92%     | 🟢 92 ❌ 100 | 🟢 12 ❌ 32 |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |     3.65%     | 🟢 7 ❌ 185  |    ❌ 44    |
 
 <!-- gateways:end -->
 

@@ -52,6 +52,19 @@
     }
   },
   {
+    "name": "Apollo Gateway",
+    "cases": {
+      "total": 192,
+      "passed": 186,
+      "failed": 6
+    },
+    "suites": {
+      "total": 44,
+      "passed": 40,
+      "failed": 4
+    }
+  },
+  {
     "name": "Cosmo Router",
     "cases": {
       "total": 192,
@@ -88,19 +101,6 @@
       "total": 44,
       "passed": 12,
       "failed": 32
-    }
-  },
-  {
-    "name": "Apollo Gateway",
-    "cases": {
-      "total": 192,
-      "passed": 7,
-      "failed": 185
-    },
-    "suites": {
-      "total": 44,
-      "passed": 0,
-      "failed": 44
     }
   }
 ]
