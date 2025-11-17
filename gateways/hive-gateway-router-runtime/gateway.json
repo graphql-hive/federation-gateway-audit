@@ -1,0 +1,7 @@
+{
+  "name": "Hive Gateway (Rust QP)",
+  "repository": "https://github.com/graphql-hive/gateway",
+  "website": "https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner",
+  "graphql": "http://127.0.0.1:4000/graphql",
+  "health": "http://127.0.0.1:4000/healthcheck"
+}
