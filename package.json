@@ -69,7 +69,7 @@
   "devDependencies": {
     "@apollo/gateway": "2.12.1",
     "@apollo/server": "5.2.0",
-    "@graphql-hive/gateway": "2.1.18",
+    "@graphql-hive/gateway": "2.1.19",
     "@graphql-hive/router-runtime": "1.0.1",
     "@as-integrations/express5": "1.1.2",
     "@types/async-retry": "1.4.9",
@@ -81,10 +81,11 @@
     "prettier": "3.6.2",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
-    "wgc": "0.97.1"
+    "wgc": "0.98.0"
   },
   "overrides": {
-    "cross-spawn": "7.0.6"
+    "cross-spawn": "7.0.6",
+    "graphql": "16.12.0"
   },
   "packageManager": "npm@11.6.3"
 }
