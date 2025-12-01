@@ -29,13 +29,13 @@
     "name": "Hive Gateway",
     "cases": {
       "total": 192,
-      "passed": 190,
-      "failed": 2
+      "passed": 191,
+      "failed": 1
     },
     "suites": {
       "total": 44,
-      "passed": 42,
-      "failed": 2
+      "passed": 43,
+      "failed": 1
     }
   },
   {
