@@ -26,6 +26,19 @@
     }
   },
   {
+    "name": "Hive Gateway",
+    "cases": {
+      "total": 192,
+      "passed": 191,
+      "failed": 1
+    },
+    "suites": {
+      "total": 44,
+      "passed": 43,
+      "failed": 1
+    }
+  },
+  {
     "name": "Apollo Router",
     "cases": {
       "total": 192,
@@ -44,19 +57,6 @@
       "total": 192,
       "passed": 186,
       "failed": 6
-    },
-    "suites": {
-      "total": 44,
-      "passed": 40,
-      "failed": 4
-    }
-  },
-  {
-    "name": "Hive Gateway",
-    "cases": {
-      "total": 192,
-      "passed": 184,
-      "failed": 8
     },
     "suites": {
       "total": 44,
