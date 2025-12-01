@@ -69,8 +69,8 @@
   "devDependencies": {
     "@apollo/gateway": "2.12.1",
     "@apollo/server": "5.2.0",
-    "@graphql-hive/gateway": "2.1.19",
-    "@graphql-hive/router-runtime": "1.0.1",
+    "@graphql-hive/gateway": "2.1.20",
+    "@graphql-hive/router-runtime": "1.1.0",
     "@as-integrations/express5": "1.1.2",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.5",
