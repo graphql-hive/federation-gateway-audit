@@ -77,7 +77,7 @@ jobs:
           pull: "--rebase --autostash"
           author_email: github-actions@github.com
           author_name: github-actions
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN }}
 
       - name: Publish Summary
         if: github.event_name == 'pull_request'
