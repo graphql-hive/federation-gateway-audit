@@ -90,5 +90,5 @@
     "tmp": "0.2.5",
     "@modelcontextprotocol/sdk": "1.25.3"
   },
-  "packageManager": "npm@11.7.0"
+  "packageManager": "npm@11.8.0"
 }
