@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@apollo/gateway": "2.13.0",
-    "@apollo/server": "5.2.0",
+    "@apollo/server": "5.3.0",
     "@graphql-hive/gateway": "2.3.0",
     "@graphql-hive/router-runtime": "1.1.7",
     "@as-integrations/express5": "1.1.2",
@@ -78,7 +78,7 @@
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "wgc": "0.104.1"
