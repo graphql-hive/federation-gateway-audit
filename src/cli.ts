@@ -648,6 +648,7 @@ async function waitOnGraphQL(endpoints: {
   await waitOn({
     // Make sure the health check is a GET request
     resources: [endpoints.healthcheck.replace("http://", "http-get://")],
+    timeout: 30_000,
     httpTimeout: 200,
     log: false,
     verbose: false,
