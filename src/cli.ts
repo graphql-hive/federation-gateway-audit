@@ -645,9 +645,11 @@ async function waitOnGraphQL(endpoints: {
   healthcheck: string;
   graphql: string;
 }) {
+  const timeout = process.env['GATEWAY_TIMEOUT'] ? parseInt(process.env['GATEWAY_TIMEOUT']) : 5000;
   await waitOn({
     // Make sure the health check is a GET request
     resources: [endpoints.healthcheck.replace("http://", "http-get://")],
+    timeout,
     httpTimeout: 200,
     log: false,
     verbose: false,
