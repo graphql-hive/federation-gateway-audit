@@ -81,7 +81,7 @@
     "prettier": "3.8.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "wgc": "0.105.3"
+    "wgc": "0.105.4"
   },
   "overrides": {
     "cross-spawn": "7.0.6",
@@ -90,5 +90,5 @@
     "tmp": "0.2.5",
     "@modelcontextprotocol/sdk": "1.26.0"
   },
-  "packageManager": "npm@11.10.0"
+  "packageManager": "npm@11.10.1"
 }
