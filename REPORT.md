@@ -9,7 +9,7 @@
 |                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    99.48%     | 🟢 191 ❌ 1  | 🟢 43 ❌ 1  |
 |                               [Apollo Router](https://www.apollographql.com/)                               |    97.40%     | 🟢 187 ❌ 5  | 🟢 41 ❌ 3  |
 |                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.88%     | 🟢 186 ❌ 6  | 🟢 40 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    91.67%     | 🟢 176 ❌ 16 | 🟢 36 ❌ 8  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    94.27%     | 🟢 181 ❌ 11 | 🟢 37 ❌ 7  |
 |                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.67%     | 🟢 176 ❌ 16 | 🟢 38 ❌ 6  |
 |                                      [Inigo Gateway](https://inigo.io)                                      |    47.92%     | 🟢 92 ❌ 100 | 🟢 12 ❌ 32 |
 
@@ -586,7 +586,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/requires-requires">requires-requires</a>
 <pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
-<pre>❌❌❌❌❌</pre>
+<pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
 <pre>❌</pre>
 <a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
