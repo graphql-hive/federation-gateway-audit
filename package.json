@@ -58,7 +58,7 @@
     "dotenv": "17.3.1",
     "fets": "0.8.5",
     "get-port": "7.1.0",
-    "graphql": "16.13.0",
+    "graphql": "16.13.1",
     "graphql-yoga": "5.18.0",
     "jest-diff": "30.2.0",
     "kill-port-process": "4.0.2",
@@ -81,11 +81,11 @@
     "prettier": "3.8.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "wgc": "0.105.7"
+    "wgc": "0.106.0"
   },
   "overrides": {
     "cross-spawn": "7.0.6",
-    "graphql": "16.13.0",
+    "graphql": "16.13.1",
     "js-yaml": "4.1.1",
     "tmp": "0.2.5",
     "@modelcontextprotocol/sdk": "1.27.1"
