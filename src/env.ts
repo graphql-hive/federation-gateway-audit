@@ -1,4 +1,8 @@
-process.loadEnvFile();
+try {
+  process.loadEnvFile();
+} catch (e) {
+  // Ignore if `.env` is not available
+}
 
 export const env = {
   PUNISH_FOR_POOR_PLANS: "1",
