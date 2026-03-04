@@ -1,7 +1,8 @@
-import { config } from "dotenv";
+process.loadEnvFile();
 
-export const env = config().parsed ?? {
+export const env = {
   PUNISH_FOR_POOR_PLANS: "1",
+  ...process.env,
 };
 
 export interface Env {
