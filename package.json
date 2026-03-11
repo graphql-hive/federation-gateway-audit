@@ -60,7 +60,7 @@
     "get-port": "7.1.0",
     "graphql": "16.13.1",
     "graphql-yoga": "5.18.1",
-    "jest-diff": "30.2.0",
+    "jest-diff": "30.3.0",
     "kill-port-process": "4.0.2",
     "wait-on": "9.0.4",
     "detect-port": "2.1.0",
@@ -69,8 +69,8 @@
   "devDependencies": {
     "@apollo/gateway": "2.13.1",
     "@apollo/server": "5.4.0",
-    "@graphql-hive/gateway": "2.5.3",
-    "@graphql-hive/router-runtime": "1.1.13",
+    "@graphql-hive/gateway": "2.5.5",
+    "@graphql-hive/router-runtime": "1.1.15",
     "@as-integrations/express5": "1.1.2",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.6",
@@ -81,7 +81,7 @@
     "prettier": "3.8.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "wgc": "0.107.1"
+    "wgc": "0.109.0"
   },
   "overrides": {
     "cross-spawn": "7.0.6",
