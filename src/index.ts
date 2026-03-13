@@ -1,4 +1,10 @@
-import { createRouter as createFetsRouter, Response } from "fets";
+import {
+  createRouter as createFetsRouter,
+  Response,
+  Router,
+  RouterComponentsBase,
+  RouterSDK,
+} from "fets";
 import { createServer } from "node:http";
 
 async function getTestCases(router: ReturnType<typeof createRouter>) {
@@ -48,7 +54,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/keys-mashup/index.js"),
       import("./test-suites/null-keys/index.js"),
       import("./test-suites/requires-circular/index.js"),
-    ].map((i) => i.then((e) => e.default))
+    ].map((i) => i.then((e) => e.default)),
   );
 
   testCases.sort((a, b) => a.id.localeCompare(b.id));
@@ -123,7 +129,11 @@ export function serve(port: number) {
   return promise;
 }
 
-export function createRouter() {
+export function createRouter<TServerContext>(): Router<
+  TServerContext,
+  RouterComponentsBase,
+  RouterSDK
+> {
   const router = createFetsRouter({
     landingPage: false,
     swaggerUI: {

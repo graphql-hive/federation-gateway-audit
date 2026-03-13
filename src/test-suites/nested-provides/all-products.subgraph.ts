@@ -17,8 +17,8 @@ export default createSubgraph("all-products", {
   `,
   resolvers: {
     Product: {
-      __resolveReference(key: { id: string }, context: any) {
-        if (shouldPunishForPoorPlans(context)) {
+      __resolveReference(key: { id: string }) {
+        if (shouldPunishForPoorPlans()) {
           throw new Error("You should be using the categories subgraph!");
         }
 

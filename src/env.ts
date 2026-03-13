@@ -1,13 +1,13 @@
-import { config } from "dotenv";
+let env_loaded = false;
 
-export const env = config().parsed ?? {
-  PUNISH_FOR_POOR_PLANS: "1",
-};
-
-export interface Env {
-  PUNISH_FOR_POOR_PLANS?: "1" | "0";
-}
-
-export function shouldPunishForPoorPlans(context: { env: Env }) {
-  return context.env.PUNISH_FOR_POOR_PLANS === "1";
+export function shouldPunishForPoorPlans() {
+  if (!env_loaded) {
+    try {
+      process.loadEnvFile();
+    } catch (e) {
+      // Ignore if `.env` is not available
+    }
+    env_loaded = true;
+  }
+  return process.env.PUNISH_FOR_POOR_PLANS === "1";
 }
