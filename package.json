@@ -93,7 +93,7 @@
     "pkgroll": "2.27.0",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "wgc": "0.110.0"
+    "wgc": "0.110.1"
   },
   "overrides": {
     "cross-spawn": "^7.0.6",
