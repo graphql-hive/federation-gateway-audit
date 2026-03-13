@@ -1,11 +1,11 @@
 {
-  "name": "@graphql-hive/federation-audit",
+  "name": "@graphql-hive/federation-gateway-audit",
   "version": "0.0.0",
   "private": true,
   "description": "Audit tool for Apollo Federation Gateway",
   "repository": {
     "type": "git",
-    "url": "graphql-hive/federation-gateway-audit"
+    "url": "https://github.com/graphql-hive/federation-gateway-audit"
   },
   "homepage": "https://the-guild.dev/graphql/hive/federation-gateway-audit",
   "author": {
