@@ -2,7 +2,6 @@ import { createRouter, Response } from "fets";
 import { parse } from "graphql";
 import { buildSubgraphSchema } from "@apollo/subgraph";
 import { createYoga } from "graphql-yoga";
-import { env } from "./env.js";
 
 export function createSubgraph(
   name: string,
@@ -59,7 +58,7 @@ export function createSubgraph(
           },
         },
         handler(req) {
-          return lazyYoga()(req, { env }) as Promise<Response>;
+          return lazyYoga()(req) as Promise<Response>;
         },
       });
 
@@ -104,7 +103,7 @@ export function createSubgraph(
           },
         },
         handler(req) {
-          return lazyYoga()(req, { env }) as Promise<any>;
+          return lazyYoga()(req) as Promise<any>;
         },
       });
     },

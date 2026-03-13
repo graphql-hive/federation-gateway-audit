@@ -1,8 +1,7 @@
 {
-  "name": "graphql-federation-gateway-audit",
-  "version": "1.0.0",
+  "name": "@graphql-hive/federation-audit",
+  "version": "0.0.0",
   "private": true,
-  "type": "module",
   "description": "Audit tool for Apollo Federation Gateway",
   "repository": {
     "type": "git",
@@ -18,8 +17,10 @@
   "bin": {
     "graphql-federation-audit": "./dist/cli.js"
   },
-  "main": "dist/cli.js",
-  "module": "dist/cli.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": {
@@ -33,23 +34,18 @@
     },
     "./package.json": "./package.json"
   },
-  "typings": "dist/index.d.ts",
-  "typescript": {
-    "definition": "dist/index.d.ts"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public",
-    "directory": "dist"
+    "provenance": true
   },
   "sideEffects": false,
   "scripts": {
     "start": "tsx ./src/cli.ts",
     "summary": "tsx ./src/summary.ts",
-    "build": "tsc",
+    "build": "pkgroll",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write .",
-    "postinstall": "npx tsc --project tsconfig.json --noCheck --noResolve"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@apollo/composition": "2.13.1",
@@ -68,6 +64,8 @@
   "devDependencies": {
     "@apollo/gateway": "2.13.1",
     "@apollo/server": "5.4.0",
+    "@changesets/changelog-github": "0.6.0",
+    "@changesets/cli": "2.30.0",
     "@graphql-hive/gateway": "2.5.5",
     "@graphql-hive/router-runtime": "1.1.15",
     "@as-integrations/express5": "1.1.2",
@@ -78,6 +76,7 @@
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
     "prettier": "3.8.1",
+    "pkgroll": "2.27.0",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "wgc": "0.109.0"
