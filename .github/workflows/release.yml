@@ -22,7 +22,7 @@ jobs:
     with:
       node-version-file: .node-version
     secrets:
-      githubToken: ${{ secrets.BOT_GITHUB_TOKEN }}
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
   snapshot:
     name: Snapshot
     concurrency:
@@ -38,7 +38,7 @@ jobs:
       buildScript: build
       node-version-file: .node-version
     secrets:
-      githubToken: ${{ secrets.BOT_GITHUB_TOKEN }}
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
       npmToken: ${{ secrets.NPM_TOKEN }}
   stable:
     if: github.ref == 'refs/heads/main'
@@ -54,5 +54,5 @@ jobs:
       releaseScript: run release
       versionScript: run version
     secrets:
-      githubToken: ${{ secrets.BOT_GITHUB_TOKEN }}
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
       npmToken: ${{ secrets.NPM_TOKEN }}

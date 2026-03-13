@@ -20,3 +20,9 @@ tsconfig.json
 tslint.json
 .circleci
 .env
+.gitignore
+.node-version
+.npmignore
+renove.json
+tsconfig.json
+website

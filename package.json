@@ -4,7 +4,7 @@
   "description": "Audit tool for Apollo Federation Gateway",
   "repository": {
     "type": "git",
-    "url": "https://github.com/graphql-hive/federation-gateway-audit"
+    "url": "git+https://github.com/graphql-hive/federation-gateway-audit.git"
   },
   "homepage": "https://the-guild.dev/graphql/hive/federation-gateway-audit",
   "author": {
@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "bin": {
-    "graphql-federation-audit": "./dist/cli.js"
+    "graphql-federation-audit": "dist/cli.js"
   },
   "type": "module",
   "main": "./dist/index.cjs",
