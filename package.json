@@ -43,7 +43,10 @@
     "summary": "tsx ./src/summary.ts",
     "build": "pkgroll",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prerelease": "npm run build",
+    "release": "changeset publish",
+    "version": "changeset version"
   },
   "dependencies": {
     "@apollo/composition": "2.13.1",
