@@ -58,21 +58,24 @@
     "release": "changeset publish",
     "version": "changeset version"
   },
+  "peerDependencies": {
+    "graphql": "*"
+  },
   "dependencies": {
-    "@apollo/composition": "2.13.2",
-    "@apollo/subgraph": "2.13.2",
-    "async-retry": "1.3.3",
-    "fets": "0.8.5",
-    "get-port": "7.1.0",
-    "graphql": "16.13.1",
-    "graphql-yoga": "5.18.1",
-    "jest-diff": "30.3.0",
-    "kill-port-process": "4.0.2",
-    "wait-on": "9.0.4",
-    "detect-port": "2.1.0",
-    "yargs": "18.0.0"
+    "@apollo/composition": "^2.13.2",
+    "@apollo/subgraph": "^2.13.2",
+    "async-retry": "^1.3.3",
+    "fets": "^0.8.5",
+    "get-port": "^7.1.0",
+    "graphql-yoga": "^5.18.1",
+    "jest-diff": "^30.3.0",
+    "kill-port-process": "^4.0.2",
+    "wait-on": "^9.0.4",
+    "detect-port": "^2.1.0",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "graphql": "16.13.1",
     "@apollo/gateway": "2.13.2",
     "@apollo/server": "5.4.0",
     "@changesets/changelog-github": "0.6.0",
