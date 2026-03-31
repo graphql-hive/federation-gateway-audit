@@ -66,7 +66,7 @@ export default createSubgraph("category", {
     },
     Product: {
       __resolveReference(key: { id: string }, context: any) {
-        if (shouldPunishForPoorPlans(context)) {
+        if (shouldPunishForPoorPlans()) {
           throw new Error("You should be using the categories subgraph!");
         }
 
@@ -83,7 +83,7 @@ export default createSubgraph("category", {
     },
     Category: {
       __resolveReference(key: { id: string }, context: any) {
-        if (shouldPunishForPoorPlans(context)) {
+        if (shouldPunishForPoorPlans()) {
           throw new Error("You should be using the categories subgraph!");
         }
 
