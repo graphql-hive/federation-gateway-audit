@@ -69,7 +69,7 @@ jobs:
           git config user.email github-actions@github.com
 
       - name: publish report
-        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
+        uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10
         if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes'
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
