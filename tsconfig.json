@@ -5,6 +5,7 @@
     "target": "ESNext",
     "module": "esnext",
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "skipLibCheck": true,

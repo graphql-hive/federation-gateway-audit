@@ -21,7 +21,7 @@ endef
 
 # Install all dependencies of the project and the gateways
 install:
-	npm install
+	npm install --legacy-peer-deps
 	@for dir in ./gateways/*; do \
 		if [ -d $$dir ]; then \
 			echo "Installing $$dir"; \

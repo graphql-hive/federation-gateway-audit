@@ -27,7 +27,7 @@ export default createSubgraph("a", {
   resolvers: {
     Query: {
       media(_p: unknown, _a: unknown, context: any) {
-        if (shouldPunishForPoorPlans(context)) {
+        if (shouldPunishForPoorPlans()) {
           throw new Error("You should not be using the 'a' subgraph!");
         }
 
