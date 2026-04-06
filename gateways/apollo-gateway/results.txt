@@ -62,6 +62,8 @@ requires-requires
 .....
 requires-with-argument
 ..XXX
+requires-with-argument-conflict
+X
 requires-with-fragments
 ......
 shared-root
@@ -86,6 +88,6 @@ union-intersection
 ............
 
 ---
-Total: 189
-Passed: 184
-Failed: 5
+Total: 192
+Passed: 186
+Failed: 6
