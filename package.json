@@ -80,8 +80,8 @@
     "@as-integrations/express5": "1.1.2",
     "@changesets/changelog-github": "0.6.0",
     "@changesets/cli": "2.31.0",
-    "@graphql-hive/gateway": "2.5.27",
-    "@graphql-hive/router-runtime": "1.4.3",
+    "@graphql-hive/gateway": "2.5.28",
+    "@graphql-hive/router-runtime": "1.4.4",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.6",
     "@types/node": "24.12.2",
@@ -93,7 +93,7 @@
     "prettier": "3.8.3",
     "tsx": "4.21.0",
     "typescript": "6.0.3",
-    "wgc": "0.115.0"
+    "wgc": "0.117.0"
   },
   "overrides": {
     "cross-spawn": "^7.0.6",
