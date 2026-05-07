@@ -65,11 +65,11 @@
     }
   },
   {
-    "name": "Grafbase Gateway",
+    "name": "Cosmo Router",
     "cases": {
       "total": 192,
-      "passed": 175,
-      "failed": 17
+      "passed": 181,
+      "failed": 11
     },
     "suites": {
       "total": 44,
@@ -78,16 +78,16 @@
     }
   },
   {
-    "name": "Cosmo Router",
+    "name": "Grafbase Gateway",
     "cases": {
       "total": 192,
-      "passed": 174,
-      "failed": 18
+      "passed": 176,
+      "failed": 16
     },
     "suites": {
       "total": 44,
-      "passed": 36,
-      "failed": 8
+      "passed": 38,
+      "failed": 6
     }
   },
   {
