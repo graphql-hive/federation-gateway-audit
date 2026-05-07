@@ -55,13 +55,15 @@ provides-on-interface
 provides-on-union
 ..
 requires-circular
-XX
+..
 requires-interface
 .....
 requires-requires
 .....
 requires-with-argument
 .....
+requires-with-argument-conflict
+X
 requires-with-fragments
 ......
 shared-root
@@ -86,6 +88,6 @@ union-intersection
 ............
 
 ---
-Total: 189
-Passed: 187
-Failed: 2
+Total: 192
+Passed: 191
+Failed: 1
