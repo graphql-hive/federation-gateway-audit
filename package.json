@@ -103,6 +103,7 @@
     "@modelcontextprotocol/sdk": "^1.27.1",
     "tar": "^7.5.11",
     "hono": "^4.12.7",
+    "axios": "1.15.1"
     "undici": "^6.24.0"
   },
   "packageManager": "npm@11.13.0"
