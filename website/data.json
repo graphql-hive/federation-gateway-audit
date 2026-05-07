@@ -1,5 +1,18 @@
 [
   {
+    "name": "Hive Gateway",
+    "cases": {
+      "total": 192,
+      "passed": 192,
+      "failed": 0
+    },
+    "suites": {
+      "total": 44,
+      "passed": 44,
+      "failed": 0
+    }
+  },
+  {
     "name": "Hive Gateway (Rust QP)",
     "cases": {
       "total": 192,
@@ -26,32 +39,6 @@
     }
   },
   {
-    "name": "Hive Gateway",
-    "cases": {
-      "total": 192,
-      "passed": 191,
-      "failed": 1
-    },
-    "suites": {
-      "total": 44,
-      "passed": 43,
-      "failed": 1
-    }
-  },
-  {
-    "name": "Apollo Router",
-    "cases": {
-      "total": 192,
-      "passed": 187,
-      "failed": 5
-    },
-    "suites": {
-      "total": 44,
-      "passed": 41,
-      "failed": 3
-    }
-  },
-  {
     "name": "Apollo Gateway",
     "cases": {
       "total": 192,
@@ -65,42 +52,55 @@
     }
   },
   {
-    "name": "Cosmo Router",
+    "name": "Apollo Router",
     "cases": {
-      "total": 192,
-      "passed": 181,
-      "failed": 11
+      "total": 189,
+      "passed": 185,
+      "failed": 4
     },
     "suites": {
-      "total": 44,
-      "passed": 37,
+      "total": 43,
+      "passed": 41,
+      "failed": 2
+    }
+  },
+  {
+    "name": "Cosmo Router",
+    "cases": {
+      "total": 189,
+      "passed": 180,
+      "failed": 9
+    },
+    "suites": {
+      "total": 43,
+      "passed": 36,
       "failed": 7
     }
   },
   {
     "name": "Grafbase Gateway",
     "cases": {
-      "total": 192,
-      "passed": 176,
-      "failed": 16
+      "total": 189,
+      "passed": 174,
+      "failed": 15
     },
     "suites": {
-      "total": 44,
-      "passed": 38,
+      "total": 43,
+      "passed": 37,
       "failed": 6
     }
   },
   {
     "name": "Inigo Gateway",
     "cases": {
-      "total": 192,
-      "passed": 92,
-      "failed": 100
+      "total": 189,
+      "passed": 91,
+      "failed": 98
     },
     "suites": {
-      "total": 44,
+      "total": 43,
       "passed": 12,
-      "failed": 32
+      "failed": 31
     }
   }
 ]
