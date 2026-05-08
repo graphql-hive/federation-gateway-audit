@@ -84,7 +84,7 @@
     "@graphql-hive/router-runtime": "1.4.7",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.6",
-    "@types/node": "24.12.2",
+    "@types/node": "24.12.3",
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
@@ -103,8 +103,8 @@
     "@modelcontextprotocol/sdk": "^1.27.1",
     "tar": "^7.5.11",
     "hono": "^4.12.7",
-    "axios": "1.15.2",
+    "axios": "1.16.0",
     "undici": "^8.0.0"
   },
-  "packageManager": "npm@11.13.0"
+  "packageManager": "npm@11.14.0"
 }
