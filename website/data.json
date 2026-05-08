@@ -39,6 +39,19 @@
     }
   },
   {
+    "name": "Apollo Router",
+    "cases": {
+      "total": 192,
+      "passed": 187,
+      "failed": 5
+    },
+    "suites": {
+      "total": 44,
+      "passed": 41,
+      "failed": 3
+    }
+  },
+  {
     "name": "Apollo Gateway",
     "cases": {
       "total": 192,
@@ -88,19 +101,6 @@
       "total": 44,
       "passed": 12,
       "failed": 32
-    }
-  },
-  {
-    "name": "Apollo Router",
-    "cases": {
-      "total": 192,
-      "passed": 0,
-      "failed": 192
-    },
-    "suites": {
-      "total": 44,
-      "passed": 0,
-      "failed": 44
     }
   }
 ]
