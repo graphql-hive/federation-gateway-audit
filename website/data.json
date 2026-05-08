@@ -1,5 +1,18 @@
 [
   {
+    "name": "Hive Gateway",
+    "cases": {
+      "total": 192,
+      "passed": 192,
+      "failed": 0
+    },
+    "suites": {
+      "total": 44,
+      "passed": 44,
+      "failed": 0
+    }
+  },
+  {
     "name": "Hive Gateway (Rust QP)",
     "cases": {
       "total": 192,
@@ -23,19 +36,6 @@
       "total": 44,
       "passed": 44,
       "failed": 0
-    }
-  },
-  {
-    "name": "Hive Gateway",
-    "cases": {
-      "total": 192,
-      "passed": 191,
-      "failed": 1
-    },
-    "suites": {
-      "total": 44,
-      "passed": 43,
-      "failed": 1
     }
   },
   {

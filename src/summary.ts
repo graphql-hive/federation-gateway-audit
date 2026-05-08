@@ -2,6 +2,25 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import prettier from "prettier";
 
+type DotResult = {
+  group: string;
+  raw: string;
+};
+
+const PASSED_TEST_MARKER = ".";
+const FAILED_TEST_MARKER = "X";
+
+const expectedTestSuites = readdirSync("./src/test-suites")
+  .filter((file) => statSync(join("./src/test-suites", file)).isDirectory())
+  .map((file) => ({
+    name: file,
+    cases: 0,
+  }));
+
+const suiteNameToIndexMap = new Map(
+  expectedTestSuites.map((suite, index) => [suite.name, index]),
+);
+
 const gatewayResults = readdirSync("./gateways")
   .filter((file) => statSync(join("./gateways", file)).isDirectory())
   .map((id) => {
@@ -14,55 +33,28 @@ const gatewayResults = readdirSync("./gateways")
       "utf-8",
     ).split("\n");
 
-    const groups = {
-      total: 0,
-      passed: 0,
-      failed: 0,
-    };
-    const tests = {
-      total: 0,
-      passed: 0,
-      failed: 0,
-    };
-    const dot: Array<{
-      group: string;
-      results: string;
-    }> = [];
+    const dot: DotResult[] = [];
 
     let collectingDetails = true;
     let previousGroupName: string | null = null;
     for (const line of lines) {
       if (collectingDetails) {
-        if (line.charAt(0) === "." || line.charAt(0) === "X") {
-          groups.total++;
-
-          if (!line.includes("X")) {
-            groups.passed++;
-          }
-
+        if (
+          line.charAt(0) === PASSED_TEST_MARKER ||
+          line.charAt(0) === FAILED_TEST_MARKER
+        ) {
           if (!previousGroupName) {
             throw new Error("No previous group found");
           }
 
-          dot.push({
-            group: previousGroupName,
-            results: line.replaceAll(".", "🟢").replaceAll("X", "❌"),
-          });
+          dot.push({ group: previousGroupName, raw: line });
         } else if (line.trim() === "" || line === "---") {
           collectingDetails = false;
         } else {
           previousGroupName = line;
         }
-      } else if (line.startsWith("Passed:")) {
-        tests.passed = parseInt(line.replace("Passed:", "").trim());
-      } else if (line.startsWith("Failed:")) {
-        tests.failed = parseInt(line.replace("Failed:", "").trim());
-      } else if (line.startsWith("Total:")) {
-        tests.total = parseInt(line.replace("Total:", "").trim());
       }
     }
-
-    groups.failed = groups.total - groups.passed;
 
     const name = gatewayDetails?.name ?? id;
 
@@ -71,13 +63,78 @@ const gatewayResults = readdirSync("./gateways")
       name,
       repository: gatewayDetails.repository,
       website: gatewayDetails.website,
-      groups,
-      tests,
       dot,
     };
   });
 
-gatewayResults.sort((a, b) => {
+for (const gateway of gatewayResults) {
+  for (const { group, raw } of gateway.dot) {
+    const expectedSuiteIndex = suiteNameToIndexMap.get(group);
+
+    if (expectedSuiteIndex === undefined) {
+      throw new Error(`Unknown test suite "${group}" in ${gateway.id}`);
+    }
+
+    expectedTestSuites[expectedSuiteIndex].cases = Math.max(
+      expectedTestSuites[expectedSuiteIndex].cases,
+      raw.length,
+    );
+  }
+}
+
+const missingSuiteCaseCounts = expectedTestSuites.filter(
+  (suite) => suite.cases === 0,
+);
+
+if (missingSuiteCaseCounts.length > 0) {
+  throw new Error(
+    `Missing case counts for suites: ${missingSuiteCaseCounts.map((suite) => suite.name).join(", ")}`,
+  );
+}
+
+const normalizedGatewayResults = gatewayResults.map((gateway) => {
+  const dotByGroup = new Map(gateway.dot.map((dot) => [dot.group, dot.raw]));
+  const dot = expectedTestSuites.map(({ name, cases }) => {
+    const raw = dotByGroup.get(name) ?? FAILED_TEST_MARKER.repeat(cases);
+
+    return {
+      group: name,
+      results: raw
+        .replaceAll(PASSED_TEST_MARKER, "🟢")
+        .replaceAll(FAILED_TEST_MARKER, "❌"),
+      passed: !raw.includes(FAILED_TEST_MARKER),
+      passedCases: raw
+        .split("")
+        .filter((char) => char === PASSED_TEST_MARKER).length,
+      totalCases: raw.length,
+    };
+  });
+
+  const tests = dot.reduce(
+    (result, suite) => {
+      result.total += suite.totalCases;
+      result.passed += suite.passedCases;
+      return result;
+    },
+    { total: 0, passed: 0, failed: 0 },
+  );
+  tests.failed = tests.total - tests.passed;
+
+  const groups = {
+    total: dot.length,
+    passed: dot.filter((suite) => suite.passed).length,
+    failed: dot.filter((suite) => !suite.passed).length,
+  };
+
+  return {
+    ...gateway,
+    dot,
+    groups,
+    tests,
+  };
+});
+
+normalizedGatewayResults.sort((a, b) => {
   const diff = b.tests.passed - a.tests.passed;
 
   if (diff !== 0) {
@@ -127,7 +184,7 @@ const jsonReport: Array<{
   suites: { passed: number; failed: number };
 }> = [];
 
-for (const gateway of gatewayResults) {
+for (const gateway of normalizedGatewayResults) {
   jsonReport.push({
     name: gateway.name,
     cases: gateway.tests,
