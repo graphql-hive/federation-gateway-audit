@@ -106,5 +106,5 @@
     "axios": "1.16.0",
     "undici": "^8.0.0"
   },
-  "packageManager": "npm@11.14.0"
+  "packageManager": "npm@11.14.1"
 }
