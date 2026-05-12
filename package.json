@@ -84,7 +84,7 @@
     "@graphql-hive/router-runtime": "1.4.7",
     "@types/async-retry": "1.4.9",
     "@types/express": "5.0.6",
-    "@types/node": "24.12.3",
+    "@types/node": "24.12.4",
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
@@ -93,7 +93,7 @@
     "prettier": "3.8.3",
     "tsx": "4.21.0",
     "typescript": "6.0.3",
-    "wgc": "0.117.3"
+    "wgc": "0.118.0"
   },
   "overrides": {
     "cross-spawn": "^7.0.6",
