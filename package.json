@@ -91,7 +91,7 @@
     "graphql": "^16.13.1",
     "pkgroll": "2.27.0",
     "prettier": "3.8.3",
-    "tsx": "4.21.0",
+    "tsx": "4.22.0",
     "typescript": "6.0.3",
     "wgc": "0.118.0"
   },
@@ -103,7 +103,7 @@
     "@modelcontextprotocol/sdk": "^1.27.1",
     "tar": "^7.5.11",
     "hono": "^4.12.7",
-    "axios": "1.16.0",
+    "axios": "1.16.1",
     "undici": "^8.0.0"
   },
   "packageManager": "npm@11.14.1"
