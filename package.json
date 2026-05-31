@@ -89,11 +89,11 @@
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
     "graphql": "^16.13.1",
-    "pkgroll": "2.27.0",
+    "pkgroll": "2.27.1",
     "prettier": "3.8.3",
-    "tsx": "4.22.1",
+    "tsx": "4.22.4",
     "typescript": "6.0.3",
-    "wgc": "0.118.0"
+    "wgc": "0.121.2"
   },
   "overrides": {
     "cross-spawn": "^7.0.6",
@@ -106,5 +106,5 @@
     "axios": "1.16.1",
     "undici": "^8.0.0"
   },
-  "packageManager": "npm@11.14.1"
+  "packageManager": "npm@11.16.0"
 }
