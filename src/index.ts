@@ -41,6 +41,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/nested-provides/index.js"),
       import("./test-suites/provides-on-interface/index.js"),
       import("./test-suites/provides-on-union/index.js"),
+      import("./test-suites/provides-only-requested-fields/index.js"),
       import("./test-suites/requires-requires/index.js"),
       import("./test-suites/include-skip/index.js"),
       import("./test-suites/circular-reference-interface/index.js"),

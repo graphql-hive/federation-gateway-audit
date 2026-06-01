@@ -1,106 +1,106 @@
 [
   {
-    "name": "Hive Gateway",
-    "cases": {
-      "total": 192,
-      "passed": 192,
-      "failed": 0
-    },
-    "suites": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0
-    }
-  },
-  {
     "name": "Hive Gateway (Rust QP)",
     "cases": {
-      "total": 192,
-      "passed": 192,
+      "total": 203,
+      "passed": 203,
       "failed": 0
     },
     "suites": {
-      "total": 44,
-      "passed": 44,
+      "total": 45,
+      "passed": 45,
       "failed": 0
     }
   },
   {
     "name": "Hive Router",
     "cases": {
-      "total": 192,
-      "passed": 192,
+      "total": 203,
+      "passed": 203,
       "failed": 0
     },
     "suites": {
-      "total": 44,
-      "passed": 44,
+      "total": 45,
+      "passed": 45,
       "failed": 0
+    }
+  },
+  {
+    "name": "Hive Gateway",
+    "cases": {
+      "total": 203,
+      "passed": 202,
+      "failed": 1
+    },
+    "suites": {
+      "total": 45,
+      "passed": 44,
+      "failed": 1
     }
   },
   {
     "name": "Apollo Router",
     "cases": {
-      "total": 192,
-      "passed": 187,
+      "total": 203,
+      "passed": 198,
       "failed": 5
     },
     "suites": {
-      "total": 44,
-      "passed": 41,
+      "total": 45,
+      "passed": 42,
       "failed": 3
     }
   },
   {
     "name": "Apollo Gateway",
     "cases": {
-      "total": 192,
-      "passed": 186,
+      "total": 203,
+      "passed": 197,
       "failed": 6
     },
     "suites": {
-      "total": 44,
-      "passed": 40,
+      "total": 45,
+      "passed": 41,
       "failed": 4
     }
   },
   {
     "name": "Cosmo Router",
     "cases": {
-      "total": 192,
-      "passed": 181,
+      "total": 203,
+      "passed": 192,
       "failed": 11
     },
     "suites": {
-      "total": 44,
-      "passed": 37,
+      "total": 45,
+      "passed": 38,
       "failed": 7
     }
   },
   {
     "name": "Grafbase Gateway",
     "cases": {
-      "total": 192,
-      "passed": 176,
+      "total": 203,
+      "passed": 187,
       "failed": 16
     },
     "suites": {
-      "total": 44,
-      "passed": 38,
+      "total": 45,
+      "passed": 39,
       "failed": 6
     }
   },
   {
     "name": "Inigo Gateway",
     "cases": {
-      "total": 192,
-      "passed": 92,
-      "failed": 100
+      "total": 203,
+      "passed": 102,
+      "failed": 101
     },
     "suites": {
-      "total": 44,
+      "total": 45,
       "passed": 12,
-      "failed": 32
+      "failed": 33
     }
   }
 ]

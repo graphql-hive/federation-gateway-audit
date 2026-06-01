@@ -8,16 +8,16 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 <!-- gateways:start -->
 
-|                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
-| :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    100.00%    |    🟢 192    |    🟢 44    |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    100.00%    |    🟢 192    |    🟢 44    |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 192    |    🟢 44    |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.40%     | 🟢 187 ❌ 5  | 🟢 41 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.88%     | 🟢 186 ❌ 6  | 🟢 40 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    94.27%     | 🟢 181 ❌ 11 | 🟢 37 ❌ 7  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.67%     | 🟢 176 ❌ 16 | 🟢 38 ❌ 6  |
-|                                      [Inigo Gateway](https://inigo.io)                                      |    47.92%     | 🟢 92 ❌ 100 | 🟢 12 ❌ 32 |
+|                                                   Gateway                                                   | Compatibility |  Test Cases   | Test Suites |
+| :---------------------------------------------------------------------------------------------------------: | :-----------: | :-----------: | :---------: |
+| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    100.00%    |    🟢 203     |    🟢 45    |
+|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 203     |    🟢 45    |
+|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    99.51%     |  🟢 202 ❌ 1  | 🟢 44 ❌ 1  |
+|                               [Apollo Router](https://www.apollographql.com/)                               |    97.54%     |  🟢 198 ❌ 5  | 🟢 42 ❌ 3  |
+|                              [Apollo Gateway](https://www.apollographql.com/)                               |    97.04%     |  🟢 197 ❌ 6  | 🟢 41 ❌ 4  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    94.58%     | 🟢 192 ❌ 11  | 🟢 38 ❌ 7  |
+|                                  [Grafbase Gateway](https://grafbase.com)                                   |    92.12%     | 🟢 187 ❌ 16  | 🟢 39 ❌ 6  |
+|                                      [Inigo Gateway](https://inigo.io)                                      |    50.25%     | 🟢 102 ❌ 101 | 🟢 12 ❌ 33 |
 
 <!-- gateways:end -->
 
