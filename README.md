@@ -10,13 +10,13 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 |                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
 | :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    100.00%    |    🟢 192    |    🟢 44    |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    100.00%    |    🟢 192    |    🟢 44    |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 192    |    🟢 44    |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.40%     | 🟢 187 ❌ 5  | 🟢 41 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.88%     | 🟢 186 ❌ 6  | 🟢 40 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    93.75%     | 🟢 180 ❌ 12 | 🟢 36 ❌ 8  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.67%     | 🟢 176 ❌ 16 | 🟢 38 ❌ 6  |
+|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    100.00%    |    🟢 194    |    🟢 45    |
+| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.97%     | 🟢 192 ❌ 2  | 🟢 44 ❌ 1  |
+|                            [Hive Router](https://github.com/graphql-hive/router)                            |    98.97%     | 🟢 192 ❌ 2  | 🟢 44 ❌ 1  |
+|                               [Apollo Router](https://www.apollographql.com/)                               |    97.42%     | 🟢 189 ❌ 5  | 🟢 42 ❌ 3  |
+|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.91%     | 🟢 188 ❌ 6  | 🟢 41 ❌ 4  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    93.81%     | 🟢 182 ❌ 12 | 🟢 37 ❌ 8  |
+|                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.75%     | 🟢 178 ❌ 16 | 🟢 39 ❌ 6  |
 
 <!-- gateways:end -->
 
