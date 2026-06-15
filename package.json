@@ -88,7 +88,7 @@
     "@types/wait-on": "5.3.4",
     "@types/yargs": "17.0.35",
     "express": "5.2.1",
-    "graphql": "^16.13.1",
+    "graphql": "^17.0.0",
     "pkgroll": "2.27.1",
     "prettier": "3.8.3",
     "tsx": "4.22.4",
@@ -97,7 +97,7 @@
   },
   "overrides": {
     "cross-spawn": "^7.0.6",
-    "graphql": "^16.13.1",
+    "graphql": "^17.0.0",
     "js-yaml": "^4.1.1",
     "tmp": "^0.2.5",
     "@modelcontextprotocol/sdk": "^1.27.1",
