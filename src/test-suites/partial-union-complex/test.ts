@@ -34,7 +34,7 @@ export default [
               },
               {
                 __typename: onlyA.__typename,
-                a: onlyA.a,
+                a: null,
               },
             ],
           },
@@ -74,7 +74,7 @@ export default [
               },
               {
                 __typename: onlyB.__typename,
-                b: onlyB.b,
+                b: null,
               },
             ],
           },
