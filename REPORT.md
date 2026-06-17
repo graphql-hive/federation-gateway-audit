@@ -4,13 +4,13 @@
 
 |                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
 | :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    100.00%    |    🟢 194    |    🟢 45    |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.97%     | 🟢 192 ❌ 2  | 🟢 44 ❌ 1  |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    98.97%     | 🟢 192 ❌ 2  | 🟢 44 ❌ 1  |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.42%     | 🟢 189 ❌ 5  | 🟢 42 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.91%     | 🟢 188 ❌ 6  | 🟢 41 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    93.81%     | 🟢 182 ❌ 12 | 🟢 37 ❌ 8  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    91.75%     | 🟢 178 ❌ 16 | 🟢 39 ❌ 6  |
+|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.99%     | 🟢 197 ❌ 2  | 🟢 45 ❌ 1  |
+| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
+|                            [Hive Router](https://github.com/graphql-hive/router)                            |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
+|                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
+|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.98%     | 🟢 193 ❌ 6  | 🟢 42 ❌ 4  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    91.96%     | 🟢 183 ❌ 16 | 🟢 37 ❌ 9  |
+|                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.45%     | 🟢 180 ❌ 19 | 🟢 39 ❌ 7  |
 
 ## Detailed Results
 
@@ -81,6 +81,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>❌❌🟢🟢🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -182,6 +184,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>❌❌</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢❌</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -283,6 +287,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>❌❌</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢❌</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -384,6 +390,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -485,6 +493,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -586,6 +596,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>❌</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>❌❌❌❌🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>❌❌</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -687,6 +699,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>❌❌❌🟢🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
