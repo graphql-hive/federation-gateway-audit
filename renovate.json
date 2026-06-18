@@ -5,10 +5,10 @@
     "github>the-guild-org/shared-config:renovate"
   ],
   "rebaseWhen": "behind-base-branch",
-  "automerge": true,
+  "automerge": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": false
   },
   "packageRules": [
     {
