@@ -1,5 +1,15 @@
 # @graphql-hive/federation-gateway-audit
 
+## 0.0.3
+
+### Patch Changes
+
+- [#345](https://github.com/graphql-hive/federation-gateway-audit/pull/345) [`f8108df`](https://github.com/graphql-hive/federation-gateway-audit/commit/f8108df29f110f01af226b825ebf5bd93e3f93bc) Thanks [@dotansimha](https://github.com/dotansimha)! - dependencies updates:
+  - Updated dependency [`@apollo/composition@2.14.1` ↗︎](https://www.npmjs.com/package/@apollo/composition/v/2.14.1) (from `^2.13.2`, in `dependencies`)
+  - Updated dependency [`@apollo/subgraph@2.14.1` ↗︎](https://www.npmjs.com/package/@apollo/subgraph/v/2.14.1) (from `^2.13.2`, in `dependencies`)
+
+- [`5f38191`](https://github.com/graphql-hive/federation-gateway-audit/commit/5f38191a9ad2ae07c1694aee8ca2ce5b95addbbe) Thanks [@dotansimha](https://github.com/dotansimha)! - Adds 2 new test suites: `partial-union`, `partial-union-complex`
+
 ## 0.0.2
 
 ### Patch Changes
