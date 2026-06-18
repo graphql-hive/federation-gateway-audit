@@ -1,6 +1,6 @@
 {
   "name": "@graphql-hive/federation-gateway-audit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Audit tool for Apollo Federation Gateway",
   "repository": {
     "type": "git",
