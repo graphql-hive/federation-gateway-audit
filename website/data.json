@@ -13,32 +13,6 @@
     }
   },
   {
-    "name": "Hive Gateway",
-    "cases": {
-      "total": 199,
-      "passed": 197,
-      "failed": 2
-    },
-    "suites": {
-      "total": 46,
-      "passed": 45,
-      "failed": 1
-    }
-  },
-  {
-    "name": "Hive Gateway (Rust QP)",
-    "cases": {
-      "total": 199,
-      "passed": 196,
-      "failed": 3
-    },
-    "suites": {
-      "total": 46,
-      "passed": 44,
-      "failed": 2
-    }
-  },
-  {
     "name": "Apollo Router",
     "cases": {
       "total": 199,
@@ -65,19 +39,6 @@
     }
   },
   {
-    "name": "Cosmo Router",
-    "cases": {
-      "total": 199,
-      "passed": 183,
-      "failed": 16
-    },
-    "suites": {
-      "total": 46,
-      "passed": 37,
-      "failed": 9
-    }
-  },
-  {
     "name": "Grafbase Gateway",
     "cases": {
       "total": 199,
@@ -88,6 +49,45 @@
       "total": 46,
       "passed": 39,
       "failed": 7
+    }
+  },
+  {
+    "name": "Cosmo Router",
+    "cases": {
+      "total": 199,
+      "passed": 0,
+      "failed": 199
+    },
+    "suites": {
+      "total": 46,
+      "passed": 0,
+      "failed": 46
+    }
+  },
+  {
+    "name": "Hive Gateway",
+    "cases": {
+      "total": 199,
+      "passed": 0,
+      "failed": 199
+    },
+    "suites": {
+      "total": 46,
+      "passed": 0,
+      "failed": 46
+    }
+  },
+  {
+    "name": "Hive Gateway (Rust QP)",
+    "cases": {
+      "total": 199,
+      "passed": 0,
+      "failed": 199
+    },
+    "suites": {
+      "total": 46,
+      "passed": 0,
+      "failed": 46
     }
   }
 ]
