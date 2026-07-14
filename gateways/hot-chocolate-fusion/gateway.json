@@ -1,0 +1,7 @@
+{
+  "name": "Hot Chocolate Fusion",
+  "repository": "https://github.com/ChilliCream/graphql-platform",
+  "website": "https://chillicream.com/docs/hotchocolate/v16/fusion",
+  "graphql": "http://127.0.0.1:4000/graphql",
+  "health": "http://127.0.0.1:4000/health"
+}
