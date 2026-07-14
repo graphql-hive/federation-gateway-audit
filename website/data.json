@@ -13,6 +13,19 @@
     }
   },
   {
+    "name": "Hot Chocolate Fusion",
+    "cases": {
+      "total": 199,
+      "passed": 199,
+      "failed": 0
+    },
+    "suites": {
+      "total": 46,
+      "passed": 46,
+      "failed": 0
+    }
+  },
+  {
     "name": "Hive Gateway",
     "cases": {
       "total": 199,
