@@ -11,6 +11,7 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 |                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
 | :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
 |                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 199    |    🟢 46    |
+|                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                 |    100.00%    |    🟢 199    |    🟢 46    |
 |                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.99%     | 🟢 197 ❌ 2  | 🟢 45 ❌ 1  |
 | [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
 |                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
