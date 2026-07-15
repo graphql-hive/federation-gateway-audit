@@ -4,6 +4,11 @@ export default () => {
   const randomId = Math.random().toString(16).substr(2);
 
   return [
+    // Test mutations that modify data and resolve entity fields across subgraphs
+    // Verifies that a product can be added and its computed fields are resolved correctly
+    // - addProduct mutation creates a new product in subgraph A
+    // - isExpensive field is computed in subgraph B using @requires(fields: "price")
+    // - isAvailable field is provided by subgraph B
     createTest(
       /* GraphQL */ `
         mutation {
@@ -26,6 +31,11 @@ export default () => {
         },
       },
     ),
+    // Test querying existing products with cross-subgraph field resolution
+    // Verifies that entity resolution works correctly for existing data
+    // - product query fetches from subgraph A (name, price)
+    // - isExpensive computed in subgraph B using @requires(fields: "price")
+    // - isAvailable provided by subgraph B
     createTest(
       /* GraphQL */ `
         query {
@@ -50,9 +60,11 @@ export default () => {
         },
       },
     ),
-    // Test correct order of execution
-    // It obviously does not solve a problem with shared state and race conditions,
-    // but at least it reduces the risk a bit
+    // Test correct order of execution for sequential mutations
+    // Verifies that mutations execute in the specified order across subgraphs
+    // This tests mutation sequencing to maintain data consistency
+    // - add(5) -> 5, multiply(2) -> 10, add(2) -> 12, delete() -> 12
+    // It demonstrates that mutations with shared state execute in sequence
     createTest(
       /* GraphQL */ `
       mutation {
@@ -71,7 +83,10 @@ export default () => {
         },
       },
     ),
-    // shared-root (mutation)
+    // Test @shareable mutations across multiple subgraphs
+    // Verifies that the same mutation can be defined in multiple subgraphs
+    // and the gateway correctly routes to the appropriate implementation
+    // - addCategory is marked @shareable in both subgraphs A and B
     createTest(
       /* GraphQL */ `
         mutation {
