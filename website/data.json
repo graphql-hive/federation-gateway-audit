@@ -2,91 +2,104 @@
   {
     "name": "Hive Router",
     "cases": {
-      "total": 199,
-      "passed": 199,
+      "total": 200,
+      "passed": 200,
       "failed": 0
     },
     "suites": {
-      "total": 46,
-      "passed": 46,
+      "total": 47,
+      "passed": 47,
       "failed": 0
+    }
+  },
+  {
+    "name": "Hot Chocolate Fusion",
+    "cases": {
+      "total": 200,
+      "passed": 199,
+      "failed": 1
+    },
+    "suites": {
+      "total": 47,
+      "passed": 46,
+      "failed": 1
     }
   },
   {
     "name": "Hive Gateway",
     "cases": {
-      "total": 199,
+      "total": 200,
       "passed": 197,
-      "failed": 2
+      "failed": 3
     },
     "suites": {
-      "total": 46,
+      "total": 47,
       "passed": 45,
-      "failed": 1
+      "failed": 2
     }
   },
   {
     "name": "Hive Gateway (Rust QP)",
     "cases": {
-      "total": 199,
-      "passed": 196,
+      "total": 200,
+      "passed": 197,
       "failed": 3
     },
     "suites": {
-      "total": 46,
-      "passed": 44,
+      "total": 47,
+      "passed": 45,
       "failed": 2
     }
   },
   {
     "name": "Apollo Router",
     "cases": {
-      "total": 199,
+      "total": 200,
       "passed": 194,
-      "failed": 5
+      "failed": 6
     },
     "suites": {
-      "total": 46,
+      "total": 47,
       "passed": 43,
-      "failed": 3
+      "failed": 4
     }
   },
   {
     "name": "Apollo Gateway",
     "cases": {
-      "total": 199,
+      "total": 200,
       "passed": 193,
-      "failed": 6
+      "failed": 7
     },
     "suites": {
-      "total": 46,
+      "total": 47,
       "passed": 42,
-      "failed": 4
+      "failed": 5
     }
   },
   {
     "name": "Cosmo Router",
     "cases": {
-      "total": 199,
+      "total": 200,
       "passed": 183,
-      "failed": 16
+      "failed": 17
     },
     "suites": {
-      "total": 46,
+      "total": 47,
       "passed": 37,
-      "failed": 9
+      "failed": 10
     }
   },
   {
     "name": "Grafbase Gateway",
     "cases": {
-      "total": 199,
-      "passed": 180,
+      "total": 200,
+      "passed": 181,
       "failed": 19
     },
     "suites": {
-      "total": 46,
-      "passed": 39,
+      "total": 47,
+      "passed": 40,
       "failed": 7
     }
   }

@@ -10,13 +10,14 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 |                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
 | :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 199    |    🟢 46    |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.99%     | 🟢 197 ❌ 2  | 🟢 45 ❌ 1  |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.98%     | 🟢 193 ❌ 6  | 🟢 42 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    91.96%     | 🟢 183 ❌ 16 | 🟢 37 ❌ 9  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.45%     | 🟢 180 ❌ 19 | 🟢 39 ❌ 7  |
+|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 200    |    🟢 47    |
+|                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                 |    99.50%     | 🟢 199 ❌ 1  | 🟢 46 ❌ 1  |
+|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.50%     | 🟢 197 ❌ 3  | 🟢 45 ❌ 2  |
+| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.50%     | 🟢 197 ❌ 3  | 🟢 45 ❌ 2  |
+|                               [Apollo Router](https://www.apollographql.com/)                               |    97.00%     | 🟢 194 ❌ 6  | 🟢 43 ❌ 4  |
+|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.50%     | 🟢 193 ❌ 7  | 🟢 42 ❌ 5  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    91.50%     | 🟢 183 ❌ 17 | 🟢 37 ❌ 10 |
+|                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.50%     | 🟢 181 ❌ 19 | 🟢 40 ❌ 7  |
 
 <!-- gateways:end -->
 
