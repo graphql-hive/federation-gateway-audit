@@ -1,0 +1,12 @@
+sandbox:
+  enabled: true
+homepage:
+  enabled: false
+supergraph:
+  listen: "0.0.0.0:4000"
+  introspection: true
+  query_planning:
+    incremental_planner:
+      enabled: true
+# Enable with the header, Apollo-Expose-Query-Plan: true
+expose_query_plan: true
