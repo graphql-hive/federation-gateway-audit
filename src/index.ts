@@ -56,6 +56,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/requires-circular/index.js"),
       import("./test-suites/partial-union/index.js"),
       import("./test-suites/partial-union-complex/index.js"),
+      import("./test-suites/skip-entity-fetch/index.js"),
     ].map((i) => i.then((e) => e.default)),
   );
 
