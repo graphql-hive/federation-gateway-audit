@@ -1,2 +1,5 @@
 /router
+/.router-ref
+/.router-src
+/.protoc
 supergraph.graphql

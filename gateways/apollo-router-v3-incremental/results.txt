@@ -83,7 +83,7 @@ simple-override
 simple-requires-provides
 ............
 skip-entity-fetch
-..XX...
+.......
 typename
 ......
 unavailable-override
@@ -95,5 +95,5 @@ union-intersection
 
 ---
 Total: 206
-Passed: 198
-Failed: 8
+Passed: 200
+Failed: 6
