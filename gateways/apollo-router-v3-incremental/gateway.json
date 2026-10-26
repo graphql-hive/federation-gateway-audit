@@ -1,5 +1,5 @@
 {
-  "name": "Apollo Router v3 (preview, incremental planner)",
+  "name": "Apollo Router v3 (dev-v3.x, incremental planner)",
   "repository": "https://github.com/apollographql/router",
   "website": "https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx",
   "graphql": "http://127.0.0.1:4000/",

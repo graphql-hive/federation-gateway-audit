@@ -1,2 +1,2 @@
-# https://github.com/apollographql/router/releases
-curl -sSL https://router.apollo.dev/download/nix/v3.0.0-preview.0 | sh
+# https://github.com/apollographql/router/tree/dev-v3.x
+../apollo-router-v3/build.sh
