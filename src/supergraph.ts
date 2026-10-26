@@ -34,10 +34,12 @@ export function serve(
     | (() => Array<{
         query: string;
         expected: any;
+        variables?: Record<string, unknown>;
       }>)
     | Array<{
         query: string;
         expected: any;
+        variables?: Record<string, unknown>;
       }>,
 ) {
   return {
@@ -157,6 +159,10 @@ export function serve(
                 type: "object",
                 properties: {
                   query: { type: "string" },
+                  variables: {
+                    type: "object",
+                    description: "Variables to send with the query",
+                  },
                   expected: {
                     type: "object",
                     properties: {

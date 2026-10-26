@@ -38,9 +38,9 @@ const tests = await fetchTests(TESTS_ENDPOINT);
 
 let index = 0;
 describe(TEST_SUITE, () => {
-  for (const { query, expected: expectedResult } of tests) {
+  for (const { query, variables, expected: expectedResult } of tests) {
     it(`${TEST_SUITE}_${index++}`, async () => {
-      const response = await graphql(GRAPHQL_ENDPOINT, query);
+      const response = await graphql(GRAPHQL_ENDPOINT, query, variables);
 
       const errorsOptional = typeof expectedResult.errors !== "boolean";
 
@@ -79,14 +79,18 @@ describe(TEST_SUITE, () => {
   }
 });
 
-function graphql(endpoint: string, query: string) {
+function graphql(
+  endpoint: string,
+  query: string,
+  variables?: Record<string, unknown>,
+) {
   return fetch(endpoint, {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ query }),
+    body: JSON.stringify({ query, variables }),
     signal: AbortSignal.timeout(10_000),
   }).then((response) => response.json()) as Promise<ExecutionResult>;
 }
