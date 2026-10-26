@@ -1,2 +1,4 @@
 /router
+/.router-commit
+/.router-src
 supergraph.graphql
