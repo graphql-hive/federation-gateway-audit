@@ -65,19 +65,6 @@
     }
   },
   {
-    "name": "Cosmo Router",
-    "cases": {
-      "total": 199,
-      "passed": 183,
-      "failed": 16
-    },
-    "suites": {
-      "total": 46,
-      "passed": 37,
-      "failed": 9
-    }
-  },
-  {
     "name": "Grafbase Gateway",
     "cases": {
       "total": 199,
@@ -88,6 +75,32 @@
       "total": 46,
       "passed": 39,
       "failed": 7
+    }
+  },
+  {
+    "name": "Cosmo Router",
+    "cases": {
+      "total": 199,
+      "passed": 173,
+      "failed": 26
+    },
+    "suites": {
+      "total": 46,
+      "passed": 36,
+      "failed": 10
+    }
+  },
+  {
+    "name": "Hot Chocolate Fusion",
+    "cases": {
+      "total": 199,
+      "passed": 0,
+      "failed": 199
+    },
+    "suites": {
+      "total": 46,
+      "passed": 0,
+      "failed": 46
     }
   }
 ]
