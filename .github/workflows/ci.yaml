@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-        with:
-          token: ${{ secrets.BOT_GITHUB_TOKEN }}
 
       - uses: the-guild-org/shared-config/setup@v1
         name: set up env
