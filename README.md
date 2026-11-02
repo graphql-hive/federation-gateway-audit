@@ -15,8 +15,9 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 | [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
 |                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
 |                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.98%     | 🟢 193 ❌ 6  | 🟢 42 ❌ 4  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    91.96%     | 🟢 183 ❌ 16 | 🟢 37 ❌ 9  |
 |                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.45%     | 🟢 180 ❌ 19 | 🟢 39 ❌ 7  |
+|                                   [Cosmo Router](https://wundergraph.com)                                   |    86.93%     | 🟢 173 ❌ 26 | 🟢 36 ❌ 10 |
+|                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                 |     0.00%     |    ❌ 199    |    ❌ 46    |
 
 <!-- gateways:end -->
 
