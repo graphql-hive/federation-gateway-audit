@@ -35,6 +35,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        if: ${{ !github.event.repository.fork }}
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        if: github.event.repository.fork
 
       - uses: the-guild-org/shared-config/setup@v1
         name: set up env
@@ -79,7 +88,7 @@ jobs:
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
           message: "Update results"
-          pull: "--rebase --autostash"
+          pull: "--autostash"
           author_email: github-actions@github.com
           author_name: github-actions
           github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
