@@ -1,0 +1,13 @@
+# Local build output of the gateways
+gateways/*/bin
+gateways/*/obj
+gateways/*/.tools
+gateways/*/.work
+gateways/*/.router-src
+gateways/*/.protoc
+gateways/*/logs
+gateways/*/reports
+gateways/*/subgraphs
+gateways/*/compose.yaml
+gateways/*/config.json
+gateways/*/subgraphs.json

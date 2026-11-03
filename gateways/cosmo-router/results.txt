@@ -1,7 +1,7 @@
 abstract-types
 ..................
 child-type-mismatch
-XXX.
+....
 circular-reference-interface
 ..
 complex-entity-call
@@ -25,9 +25,9 @@ include-skip
 input-object-intersection
 ...
 interface-object-indirect-extension
-X
+.
 interface-object-with-requires
-XXXXXXX
+.......
 keys-mashup
 .
 mutations
@@ -50,10 +50,14 @@ parent-entity-call
 .
 parent-entity-call-complex
 X
+partial-union
+..
+partial-union-complex
+.....
 provides-on-interface
-XX
+..
 provides-on-union
-XX
+..
 requires-circular
 ..
 requires-interface
@@ -62,6 +66,8 @@ requires-requires
 .....
 requires-with-argument
 .....
+requires-with-argument-conflict
+.
 requires-with-fragments
 ......
 shared-root
@@ -76,6 +82,8 @@ simple-override
 ..
 simple-requires-provides
 ............
+skip-entity-fetch
+.......
 typename
 ......
 unavailable-override
@@ -84,8 +92,10 @@ union-interface-distributed
 ..........
 union-intersection
 ............
+union-overfetching
+....
 
 ---
-Total: 189
-Passed: 180
-Failed: 9
+Total: 210
+Passed: 208
+Failed: 2

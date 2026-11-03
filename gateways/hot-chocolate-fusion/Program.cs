@@ -19,7 +19,10 @@ builder.WebHost.ConfigureKestrel(options => options.Listen(IPAddress.Loopback, 4
 builder.Services.AddHttpClient();
 builder.Services
     .AddGraphQLGatewayServer()
-    .AddFileSystemConfiguration(fusionArchivePath);
+    .AddFileSystemConfiguration(fusionArchivePath)
+    // The audit queries have no cost limits in mind, so disable the cost
+    // analysis that stable Hot Chocolate 16 enforces by default (HC0047).
+    .ModifyCostOptions(options => options.EnforceCostLimits = false);
 
 var app = builder.Build();
 app.MapGet("/health", () => Results.Text("OK"));

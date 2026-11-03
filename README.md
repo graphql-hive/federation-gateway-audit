@@ -8,16 +8,18 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 
 <!-- gateways:start -->
 
-|                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
-| :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 199    |    🟢 46    |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.99%     | 🟢 197 ❌ 2  | 🟢 45 ❌ 1  |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.98%     | 🟢 193 ❌ 6  | 🟢 42 ❌ 4  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.45%     | 🟢 180 ❌ 19 | 🟢 39 ❌ 7  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    86.93%     | 🟢 173 ❌ 26 | 🟢 36 ❌ 10 |
-|                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                 |     0.00%     |    ❌ 199    |    ❌ 46    |
+|                                                                                  Gateway                                                                                   | Compatibility |  Test Cases  | Test Suites |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
+|                                                           [Hive Router](https://github.com/graphql-hive/router)                                                            |    100.00%    |    🟢 210    |    🟢 48    |
+|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.05%     | 🟢 208 ❌ 2  | 🟢 46 ❌ 2  |
+|                                                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                                                         |    99.05%     | 🟢 208 ❌ 2  | 🟢 47 ❌ 1  |
+|                                [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner)                                 |    97.62%     | 🟢 205 ❌ 5  | 🟢 46 ❌ 2  |
+| [Apollo Router v3 (dev-v3.x, incremental planner)](https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx) |    97.14%     | 🟢 204 ❌ 6  | 🟢 45 ❌ 3  |
+|                                                              [Apollo Router](https://www.apollographql.com/)                                                               |    95.24%     | 🟢 200 ❌ 10 | 🟢 43 ❌ 5  |
+|                                                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                                                |    95.24%     | 🟢 200 ❌ 10 | 🟢 44 ❌ 4  |
+|                                                              [Apollo Gateway](https://www.apollographql.com/)                                                              |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
+|                                                       [Apollo Router v3 (dev-v3.x)](https://www.apollographql.com/)                                                        |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
+|                                                                  [Grafbase Gateway](https://grafbase.com)                                                                  |    88.57%     | 🟢 186 ❌ 24 | 🟢 40 ❌ 8  |
 
 <!-- gateways:end -->
 
@@ -68,7 +70,11 @@ make install
 ```
 
 > [!IMPORTANT]
-> Be aware that `Node` and `npm` are required to run the whole setup.
+> `Node`, `npm` and `jq` are required to run the whole setup. Some gateways need
+> extra toolchains: `rustup`/`cargo` to build Apollo Router v3 from source
+> (`apollo-router-v3`, `apollo-router-v3-incremental`) and the .NET 10 SDK for
+> Hot Chocolate Fusion (`hot-chocolate-fusion`). Gateways whose `install.sh`
+> fails are skipped by `make install` and show up as failing in the report.
 
 ### Testing all gateways
 
@@ -85,11 +91,16 @@ You can run the tests for a specific gateway by running the following command:
 ```bash
 make test-[name of the gateway]
 
-make test-grafbase-gateway
+make test-apollo-gateway
+make test-apollo-router
+make test-apollo-router-v3
+make test-apollo-router-v3-incremental
 make test-cosmo-router
+make test-grafbase-gateway
 make test-hive-gateway
 make test-hive-gateway-router-runtime
-make test-apollo-router
+make test-hive-router
+make test-hot-chocolate-fusion
 ```
 
 ### Running a gateway for a single test suite
