@@ -1,52 +1,52 @@
 [
   {
-    "name": "Hive Router",
-    "cases": { "total": 210, "passed": 210, "failed": 0 },
-    "suites": { "total": 48, "passed": 48, "failed": 0 }
-  },
-  {
     "name": "Cosmo Router",
-    "cases": { "total": 210, "passed": 208, "failed": 2 },
-    "suites": { "total": 48, "passed": 46, "failed": 2 }
+    "cases": { "total": 214, "passed": 212, "failed": 2 },
+    "suites": { "total": 49, "passed": 47, "failed": 2 }
   },
   {
     "name": "Hive Gateway",
-    "cases": { "total": 210, "passed": 208, "failed": 2 },
-    "suites": { "total": 48, "passed": 47, "failed": 1 }
+    "cases": { "total": 214, "passed": 212, "failed": 2 },
+    "suites": { "total": 49, "passed": 48, "failed": 1 }
   },
   {
-    "name": "Hive Gateway (Rust QP)",
-    "cases": { "total": 210, "passed": 205, "failed": 5 },
-    "suites": { "total": 48, "passed": 46, "failed": 2 }
+    "name": "Hive Router",
+    "cases": { "total": 214, "passed": 211, "failed": 3 },
+    "suites": { "total": 49, "passed": 48, "failed": 1 }
   },
   {
     "name": "Apollo Router v3 (dev-v3.x, incremental planner)",
-    "cases": { "total": 210, "passed": 204, "failed": 6 },
-    "suites": { "total": 48, "passed": 45, "failed": 3 }
+    "cases": { "total": 214, "passed": 208, "failed": 6 },
+    "suites": { "total": 49, "passed": 46, "failed": 3 }
+  },
+  {
+    "name": "Hive Gateway (Rust QP)",
+    "cases": { "total": 214, "passed": 206, "failed": 8 },
+    "suites": { "total": 49, "passed": 46, "failed": 3 }
   },
   {
     "name": "Apollo Router",
-    "cases": { "total": 210, "passed": 200, "failed": 10 },
-    "suites": { "total": 48, "passed": 43, "failed": 5 }
+    "cases": { "total": 214, "passed": 204, "failed": 10 },
+    "suites": { "total": 49, "passed": 44, "failed": 5 }
   },
   {
     "name": "Hot Chocolate Fusion",
-    "cases": { "total": 210, "passed": 200, "failed": 10 },
-    "suites": { "total": 48, "passed": 44, "failed": 4 }
+    "cases": { "total": 214, "passed": 204, "failed": 10 },
+    "suites": { "total": 49, "passed": 45, "failed": 4 }
   },
   {
     "name": "Apollo Gateway",
-    "cases": { "total": 210, "passed": 199, "failed": 11 },
-    "suites": { "total": 48, "passed": 42, "failed": 6 }
+    "cases": { "total": 214, "passed": 203, "failed": 11 },
+    "suites": { "total": 49, "passed": 43, "failed": 6 }
   },
   {
     "name": "Apollo Router v3 (dev-v3.x)",
-    "cases": { "total": 210, "passed": 199, "failed": 11 },
-    "suites": { "total": 48, "passed": 42, "failed": 6 }
+    "cases": { "total": 214, "passed": 203, "failed": 11 },
+    "suites": { "total": 49, "passed": 43, "failed": 6 }
   },
   {
     "name": "Grafbase Gateway",
-    "cases": { "total": 210, "passed": 186, "failed": 24 },
-    "suites": { "total": 48, "passed": 40, "failed": 8 }
+    "cases": { "total": 214, "passed": 187, "failed": 27 },
+    "suites": { "total": 49, "passed": 40, "failed": 9 }
   }
 ]
