@@ -68,7 +68,7 @@ jobs:
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
           message: "Update results"
-          pull: "--rebase --autostash"
+          pull: "--autostash"
           author_email: github-actions@github.com
           author_name: github-actions
           github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
