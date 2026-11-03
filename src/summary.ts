@@ -103,9 +103,8 @@ const normalizedGatewayResults = gatewayResults.map((gateway) => {
         .replaceAll(PASSED_TEST_MARKER, "🟢")
         .replaceAll(FAILED_TEST_MARKER, "❌"),
       passed: !raw.includes(FAILED_TEST_MARKER),
-      passedCases: raw
-        .split("")
-        .filter((char) => char === PASSED_TEST_MARKER).length,
+      passedCases: raw.split("").filter((char) => char === PASSED_TEST_MARKER)
+        .length,
       totalCases: raw.length,
     };
   });
@@ -211,7 +210,7 @@ for (const gateway of normalizedGatewayResults) {
       <td class="p-4 align-middle">
         ${printResult(gateway.groups, "html")}
       </td>
-      <td class="p-4 align-middle"><a href="https://github.com/the-guild-org/federation-compatibility/tree/main/REPORT.md#${gateway.id}" class="text-sky-700 hover:underline">View report</a></td>
+      <td class="p-4 align-middle"><a href="https://github.com/graphql-hive/federation-gateway-audit/blob/main/REPORT.md#${gateway.id}" class="text-sky-700 hover:underline">View report</a></td>
     </tr>
   `;
 
@@ -278,11 +277,7 @@ const newIndexHtml =
 
 writeFormatted("./website/index.html", newIndexHtml);
 
-writeFileSync(
-  "./website/data.json",
-  JSON.stringify(jsonReport, null, 2),
-  "utf-8",
-);
+await writeFormatted("./website/data.json", JSON.stringify(jsonReport));
 
 async function writeFormatted(filename: string, content: string) {
   writeFileSync(

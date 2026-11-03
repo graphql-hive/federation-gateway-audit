@@ -2,16 +2,18 @@
 
 ## Summary
 
-|                                                   Gateway                                                   | Compatibility |  Test Cases  | Test Suites |
-| :---------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                            [Hive Router](https://github.com/graphql-hive/router)                            |    100.00%    |    🟢 199    |    🟢 46    |
-|                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                          |    98.99%     | 🟢 197 ❌ 2  | 🟢 45 ❌ 1  |
-| [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner) |    98.49%     | 🟢 196 ❌ 3  | 🟢 44 ❌ 2  |
-|                               [Apollo Router](https://www.apollographql.com/)                               |    97.49%     | 🟢 194 ❌ 5  | 🟢 43 ❌ 3  |
-|                              [Apollo Gateway](https://www.apollographql.com/)                               |    96.98%     | 🟢 193 ❌ 6  | 🟢 42 ❌ 4  |
-|                                  [Grafbase Gateway](https://grafbase.com)                                   |    90.45%     | 🟢 180 ❌ 19 | 🟢 39 ❌ 7  |
-|                                   [Cosmo Router](https://wundergraph.com)                                   |    86.93%     | 🟢 173 ❌ 26 | 🟢 36 ❌ 10 |
-|                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                 |     0.00%     |    ❌ 199    |    ❌ 46    |
+|                                                                                  Gateway                                                                                   | Compatibility |  Test Cases  | Test Suites |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
+|                                                           [Hive Router](https://github.com/graphql-hive/router)                                                            |    100.00%    |    🟢 210    |    🟢 48    |
+|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.05%     | 🟢 208 ❌ 2  | 🟢 46 ❌ 2  |
+|                                                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                                                         |    99.05%     | 🟢 208 ❌ 2  | 🟢 47 ❌ 1  |
+|                                [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner)                                 |    97.62%     | 🟢 205 ❌ 5  | 🟢 46 ❌ 2  |
+| [Apollo Router v3 (dev-v3.x, incremental planner)](https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx) |    97.14%     | 🟢 204 ❌ 6  | 🟢 45 ❌ 3  |
+|                                                              [Apollo Router](https://www.apollographql.com/)                                                               |    95.24%     | 🟢 200 ❌ 10 | 🟢 43 ❌ 5  |
+|                                                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                                                |    95.24%     | 🟢 200 ❌ 10 | 🟢 44 ❌ 4  |
+|                                                              [Apollo Gateway](https://www.apollographql.com/)                                                              |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
+|                                                       [Apollo Router v3 (dev-v3.x)](https://www.apollographql.com/)                                                        |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
+|                                                                  [Grafbase Gateway](https://grafbase.com)                                                                  |    88.57%     | 🟢 186 ❌ 24 | 🟢 40 ❌ 8  |
 
 ## Detailed Results
 
@@ -112,6 +114,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -120,6 +124,115 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢🟢🟢🟢</pre>
+</details>
+
+<a id="cosmo-router"></a>
+
+### Cosmo Router
+
+- [Repository](https://github.com/wundergraph/cosmo)
+- [Website](https://wundergraph.com)
+
+<details>
+<summary>Results</summary>
+<a href="./src/test-suites/abstract-types">abstract-types</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
+<pre>❌</pre>
+<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/enum-intersection">enum-intersection</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/include-skip">include-skip</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
+<pre>🟢🟢🟢</pre>
+<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/keys-mashup">keys-mashup</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/mutations">mutations</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/mysterious-external">mysterious-external</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/nested-provides">nested-provides</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/node">node</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/null-keys">null-keys</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/override-type-interface">override-type-interface</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/override-with-requires">override-with-requires</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
+<pre>❌</pre>
+<a href="./src/test-suites/partial-union">partial-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-interface">requires-interface</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-requires">requires-requires</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/shared-root">shared-root</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-override">simple-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/typename">typename</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/unavailable-override">unavailable-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-intersection">union-intersection</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢🟢🟢🟢</pre>
 </details>
 
 <a id="hive-gateway"></a>
@@ -215,6 +328,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -223,6 +338,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢🟢🟢🟢</pre>
 </details>
 
 <a id="hive-gateway-router-runtime"></a>
@@ -287,9 +404,9 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
-<pre>❌❌</pre>
+<pre>🟢🟢</pre>
 <a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
-<pre>🟢🟢🟢🟢❌</pre>
+<pre>🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/provides-on-union">provides-on-union</a>
@@ -318,6 +435,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢❌❌🟢🟢🟢</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -326,6 +445,115 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌❌❌🟢</pre>
+</details>
+
+<a id="apollo-router-v3-incremental"></a>
+
+### Apollo Router v3 (dev-v3.x, incremental planner)
+
+- [Repository](https://github.com/apollographql/router)
+- [Website](https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx)
+
+<details>
+<summary>Results</summary>
+<a href="./src/test-suites/abstract-types">abstract-types</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/enum-intersection">enum-intersection</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/include-skip">include-skip</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
+<pre>🟢🟢🟢</pre>
+<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/keys-mashup">keys-mashup</a>
+<pre>❌</pre>
+<a href="./src/test-suites/mutations">mutations</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/mysterious-external">mysterious-external</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/nested-provides">nested-provides</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/node">node</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
+<pre>🟢❌🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/null-keys">null-keys</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/override-type-interface">override-type-interface</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/override-with-requires">override-with-requires</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/partial-union">partial-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>❌❌❌❌🟢</pre>
+<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-interface">requires-interface</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-requires">requires-requires</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/shared-root">shared-root</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-override">simple-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/typename">typename</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/unavailable-override">unavailable-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-intersection">union-intersection</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢🟢🟢🟢</pre>
 </details>
 
 <a id="apollo-router"></a>
@@ -421,6 +649,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢❌❌🟢🟢🟢</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -429,6 +659,115 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌❌❌🟢</pre>
+</details>
+
+<a id="hot-chocolate-fusion"></a>
+
+### Hot Chocolate Fusion
+
+- [Repository](https://github.com/ChilliCream/graphql-platform)
+- [Website](https://chillicream.com/docs/hotchocolate/v16/fusion)
+
+<details>
+<summary>Results</summary>
+<a href="./src/test-suites/abstract-types">abstract-types</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/enum-intersection">enum-intersection</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
+<pre>❌</pre>
+<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/include-skip">include-skip</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
+<pre>🟢🟢🟢</pre>
+<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/keys-mashup">keys-mashup</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/mutations">mutations</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/mysterious-external">mysterious-external</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/nested-provides">nested-provides</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/node">node</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/null-keys">null-keys</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/override-type-interface">override-type-interface</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/override-with-requires">override-with-requires</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/partial-union">partial-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>❌❌</pre>
+<a href="./src/test-suites/requires-interface">requires-interface</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-requires">requires-requires</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
+<pre>❌❌❌❌❌</pre>
+<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/shared-root">shared-root</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-override">simple-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢❌❌🟢🟢🟢</pre>
+<a href="./src/test-suites/typename">typename</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/unavailable-override">unavailable-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-intersection">union-intersection</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>🟢🟢🟢🟢</pre>
 </details>
 
 <a id="apollo-gateway"></a>
@@ -524,6 +863,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢❌❌🟢🟢🟢</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -532,6 +873,115 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌❌❌🟢</pre>
+</details>
+
+<a id="apollo-router-v3"></a>
+
+### Apollo Router v3 (dev-v3.x)
+
+- [Repository](https://github.com/apollographql/router)
+- [Website](https://www.apollographql.com/)
+
+<details>
+<summary>Results</summary>
+<a href="./src/test-suites/abstract-types">abstract-types</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/enum-intersection">enum-intersection</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/include-skip">include-skip</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
+<pre>🟢🟢🟢</pre>
+<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/keys-mashup">keys-mashup</a>
+<pre>❌</pre>
+<a href="./src/test-suites/mutations">mutations</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/mysterious-external">mysterious-external</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/nested-provides">nested-provides</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/node">node</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
+<pre>🟢❌🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/null-keys">null-keys</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/override-type-interface">override-type-interface</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/override-with-requires">override-with-requires</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/partial-union">partial-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/provides-on-union">provides-on-union</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-circular">requires-circular</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/requires-interface">requires-interface</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-requires">requires-requires</a>
+<pre>🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
+<pre>🟢🟢❌❌❌</pre>
+<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
+<pre>❌</pre>
+<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/shared-root">shared-root</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
+<pre>🟢</pre>
+<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
+<pre>🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/simple-override">simple-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>🟢🟢❌❌🟢🟢🟢</pre>
+<a href="./src/test-suites/typename">typename</a>
+<pre>🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/unavailable-override">unavailable-override</a>
+<pre>🟢🟢</pre>
+<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-intersection">union-intersection</a>
+<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
+<pre>❌❌❌🟢</pre>
 </details>
 
 <a id="grafbase-gateway"></a>
@@ -627,6 +1077,8 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
+<a href="./src/test-suites/skip-entity-fetch">skip-entity-fetch</a>
+<pre>❌❌❌❌🟢🟢❌</pre>
 <a href="./src/test-suites/typename">typename</a>
 <pre>🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/unavailable-override">unavailable-override</a>
@@ -635,210 +1087,6 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
 <a href="./src/test-suites/union-intersection">union-intersection</a>
 <pre>🟢🟢🟢🟢🟢🟢🟢🟢❌🟢🟢❌</pre>
-</details>
-
-<a id="cosmo-router"></a>
-
-### Cosmo Router
-
-- [Repository](https://github.com/wundergraph/cosmo)
-- [Website](https://wundergraph.com)
-
-<details>
-<summary>Results</summary>
-<a href="./src/test-suites/abstract-types">abstract-types</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
-<pre>❌❌❌🟢</pre>
-<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
-<pre>❌</pre>
-<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
-<pre>❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/enum-intersection">enum-intersection</a>
-<pre>🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
+<a href="./src/test-suites/union-overfetching">union-overfetching</a>
 <pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/include-skip">include-skip</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
-<pre>🟢🟢🟢</pre>
-<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
-<pre>❌</pre>
-<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/keys-mashup">keys-mashup</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/mutations">mutations</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/mysterious-external">mysterious-external</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/nested-provides">nested-provides</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/node">node</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
-<pre>🟢❌🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/null-keys">null-keys</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/override-type-interface">override-type-interface</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/override-with-requires">override-with-requires</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
-<pre>❌</pre>
-<a href="./src/test-suites/partial-union">partial-union</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
-<pre>❌❌❌❌🟢</pre>
-<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/provides-on-union">provides-on-union</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/requires-circular">requires-circular</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/requires-interface">requires-interface</a>
-<pre>🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/requires-requires">requires-requires</a>
-<pre>🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
-<pre>🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
-<pre>❌</pre>
-<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
-<pre>🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/shared-root">shared-root</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
-<pre>🟢</pre>
-<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
-<pre>🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/simple-override">simple-override</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/typename">typename</a>
-<pre>🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/unavailable-override">unavailable-override</a>
-<pre>🟢🟢</pre>
-<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
-<a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</pre>
-</details>
-
-<a id="hot-chocolate-fusion"></a>
-
-### Hot Chocolate Fusion
-
-- [Repository](https://github.com/ChilliCream/graphql-platform)
-- [Website](https://chillicream.com/docs/hotchocolate/v16/fusion)
-
-<details>
-<summary>Results</summary>
-<a href="./src/test-suites/abstract-types">abstract-types</a>
-<pre>❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/child-type-mismatch">child-type-mismatch</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/circular-reference-interface">circular-reference-interface</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/complex-entity-call">complex-entity-call</a>
-<pre>❌</pre>
-<a href="./src/test-suites/corrupted-supergraph-node-id">corrupted-supergraph-node-id</a>
-<pre>❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/enum-intersection">enum-intersection</a>
-<pre>❌❌❌❌❌</pre>
-<a href="./src/test-suites/fed1-external-extends">fed1-external-extends</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/fed1-external-extends-resolvable">fed1-external-extends-resolvable</a>
-<pre>❌</pre>
-<a href="./src/test-suites/fed1-external-extension">fed1-external-extension</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/fed2-external-extends">fed2-external-extends</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/fed2-external-extension">fed2-external-extension</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/include-skip">include-skip</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/input-object-intersection">input-object-intersection</a>
-<pre>❌❌❌</pre>
-<a href="./src/test-suites/interface-object-indirect-extension">interface-object-indirect-extension</a>
-<pre>❌</pre>
-<a href="./src/test-suites/interface-object-with-requires">interface-object-with-requires</a>
-<pre>❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/keys-mashup">keys-mashup</a>
-<pre>❌</pre>
-<a href="./src/test-suites/mutations">mutations</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/mysterious-external">mysterious-external</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/nested-provides">nested-provides</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/node">node</a>
-<pre>❌</pre>
-<a href="./src/test-suites/non-resolvable-interface-object">non-resolvable-interface-object</a>
-<pre>❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/null-keys">null-keys</a>
-<pre>❌</pre>
-<a href="./src/test-suites/override-type-interface">override-type-interface</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/override-with-requires">override-with-requires</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
-<pre>❌</pre>
-<a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
-<pre>❌</pre>
-<a href="./src/test-suites/partial-union">partial-union</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
-<pre>❌❌❌❌❌</pre>
-<a href="./src/test-suites/provides-on-interface">provides-on-interface</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/provides-on-union">provides-on-union</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/requires-circular">requires-circular</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/requires-interface">requires-interface</a>
-<pre>❌❌❌❌❌</pre>
-<a href="./src/test-suites/requires-requires">requires-requires</a>
-<pre>❌❌❌❌❌</pre>
-<a href="./src/test-suites/requires-with-argument">requires-with-argument</a>
-<pre>❌❌❌❌❌</pre>
-<a href="./src/test-suites/requires-with-argument-conflict">requires-with-argument-conflict</a>
-<pre>❌</pre>
-<a href="./src/test-suites/requires-with-fragments">requires-with-fragments</a>
-<pre>❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/shared-root">shared-root</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/simple-entity-call">simple-entity-call</a>
-<pre>❌</pre>
-<a href="./src/test-suites/simple-inaccessible">simple-inaccessible</a>
-<pre>❌❌❌❌</pre>
-<a href="./src/test-suites/simple-interface-object">simple-interface-object</a>
-<pre>❌❌❌❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/simple-override">simple-override</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/simple-requires-provides">simple-requires-provides</a>
-<pre>❌❌❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/typename">typename</a>
-<pre>❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/unavailable-override">unavailable-override</a>
-<pre>❌❌</pre>
-<a href="./src/test-suites/union-interface-distributed">union-interface-distributed</a>
-<pre>❌❌❌❌❌❌❌❌❌❌</pre>
-<a href="./src/test-suites/union-intersection">union-intersection</a>
-<pre>❌❌❌❌❌❌❌❌❌❌❌❌</pre>
 </details>

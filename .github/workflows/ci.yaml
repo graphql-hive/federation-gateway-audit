@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - uses: the-guild-org/shared-config/setup@v1
         name: set up env
@@ -34,7 +34,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         if: ${{ !github.event.repository.fork }}
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         if: github.event.repository.fork
 
       - uses: the-guild-org/shared-config/setup@v1
@@ -57,7 +57,7 @@ jobs:
         run: make test-all
 
       - name: Upload Logs
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: gateways-logs
           path: gateways/*/logs/*.log
@@ -72,7 +72,7 @@ jobs:
 
       - name: Publish Summary
         if: github.event_name == 'pull_request'
-        uses: marocchino/sticky-pull-request-comment@70d2764d1a7d5d9560b100cbea0077fc8f633987 # v3
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
         with:
           header: "Test Results"
           message: ${{ env.summary }}
@@ -83,7 +83,7 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && !github.event.repository.fork
 
       - name: publish report
-        uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10
+        uses: EndBug/add-and-commit@cc9c08ba6c8df3b93a8f2db63e89b98368ae2ae8 # v11.1.1
         if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && !github.event.repository.fork
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json

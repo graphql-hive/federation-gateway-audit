@@ -1,0 +1,53 @@
+# Dependabot keeps the npm packages, the GitHub Actions and the NuGet packages
+# of the Hot Chocolate Fusion gateway up to date.
+#
+# Not covered by Dependabot (bump by hand):
+# - gateway binaries pinned in gateways/*/install.sh (Apollo Router, Cosmo
+#   Router, Grafbase Gateway, Hive Router, protoc)
+# - the Apollo Router dev-v3.x commit in gateways/apollo-router-v3/install.sh
+# - the Nitro CLI version in gateways/hot-chocolate-fusion/install.sh
+# - the Node.js version in .node-version
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      # One PR for every minor and patch update, major updates get their own PR
+      all-minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+    ignore:
+      # Apollo Federation libraries and Hive Gateway only support graphql@16
+      - dependency-name: graphql
+        update-types:
+          - version-update:semver-major
+      # changesets 3 changed the `changeset publish` output; the shared Guild
+      # release actions (snapshot + stable) still parse the 2.x "New tag:" lines
+      # and stop detecting published packages.
+      - dependency-name: "@changesets/*"
+        update-types:
+          - version-update:semver-major
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: nuget
+    directory: /gateways/hot-chocolate-fusion
+    schedule:
+      interval: weekly
+    groups:
+      hot-chocolate:
+        patterns:
+          - "*"

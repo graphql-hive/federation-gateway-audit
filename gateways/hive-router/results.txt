@@ -50,6 +50,10 @@ parent-entity-call
 .
 parent-entity-call-complex
 .
+partial-union
+..
+partial-union-complex
+.....
 provides-on-interface
 ..
 provides-on-union
@@ -78,6 +82,8 @@ simple-override
 ..
 simple-requires-provides
 ............
+skip-entity-fetch
+.......
 typename
 ......
 unavailable-override
@@ -86,8 +92,10 @@ union-interface-distributed
 ..........
 union-intersection
 ............
+union-overfetching
+....
 
 ---
-Total: 192
-Passed: 192
+Total: 210
+Passed: 210
 Failed: 0

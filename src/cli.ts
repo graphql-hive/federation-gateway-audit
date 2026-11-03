@@ -48,7 +48,7 @@ function resolvePath(
 yargs(hideBin(process.argv))
   .scriptName("graphql-federation-audit")
   .epilogue(
-    "for more information, find our manual at https://github.com/the-guild-org/federation-compatibility",
+    "for more information, find our manual at https://github.com/graphql-hive/federation-gateway-audit",
   )
   .version(readVersion() ?? "local")
   .recommendCommands()

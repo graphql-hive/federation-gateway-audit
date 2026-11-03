@@ -14,10 +14,12 @@ export function createSubgraph(
 
   function lazySchema() {
     if (!schema) {
-      schema = buildSubgraphSchema({
-        typeDefs: parse(schemaParameters.typeDefs),
-        resolvers: schemaParameters.resolvers,
-      });
+      schema = buildSubgraphSchema([
+        {
+          typeDefs: parse(schemaParameters.typeDefs),
+          resolvers: schemaParameters.resolvers,
+        },
+      ]);
     }
 
     return schema;

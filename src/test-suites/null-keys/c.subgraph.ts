@@ -21,8 +21,7 @@ export default createSubgraph("c", {
       __resolveReference(reference: { id: String } | { upc: String }) {
         if (reference != null) {
           let book:
-            | { id: string; author: { id: string; name: string } }
-            | undefined;
+            { id: string; author: { id: string; name: string } } | undefined;
           if ("id" in reference && reference.id !== null) {
             book = books.find((book) => book.id === reference.id);
           }

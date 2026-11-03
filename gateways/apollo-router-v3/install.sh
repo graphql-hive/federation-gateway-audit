@@ -4,7 +4,7 @@
 # https://github.com/apollographql/router/tree/dev-v3.x
 set -eu
 
-ROUTER_REF="33a591ca8dd1994f3b5bd981a0473341aacdeb46"
+ROUTER_REF="a2b7a700f211f0481de924dc9e735a4f242fbee9"
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SRC_DIR="$SCRIPT_DIR/.router-src"

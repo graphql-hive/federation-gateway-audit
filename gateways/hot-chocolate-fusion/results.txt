@@ -13,7 +13,7 @@ enum-intersection
 fed1-external-extends
 ....
 fed1-external-extends-resolvable
-.
+X
 fed1-external-extension
 ....
 fed2-external-extends
@@ -59,13 +59,13 @@ provides-on-interface
 provides-on-union
 ..
 requires-circular
-..
+XX
 requires-interface
 .....
 requires-requires
 .....
 requires-with-argument
-.....
+XXXXX
 requires-with-argument-conflict
 .
 requires-with-fragments
@@ -82,6 +82,8 @@ simple-override
 ..
 simple-requires-provides
 ............
+skip-entity-fetch
+..XX...
 typename
 ......
 unavailable-override
@@ -90,8 +92,10 @@ union-interface-distributed
 ..........
 union-intersection
 ............
+union-overfetching
+....
 
 ---
-Total: 199
-Passed: 199
-Failed: 0
+Total: 210
+Passed: 200
+Failed: 10
