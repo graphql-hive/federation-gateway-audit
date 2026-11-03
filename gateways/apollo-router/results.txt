@@ -50,6 +50,10 @@ parent-entity-call
 .
 parent-entity-call-complex
 .
+partial-union
+..
+partial-union-complex
+.....
 provides-on-interface
 ..
 provides-on-union
@@ -62,6 +66,8 @@ requires-requires
 .....
 requires-with-argument
 ..XXX
+requires-with-argument-conflict
+X
 requires-with-fragments
 ......
 shared-root
@@ -86,6 +92,6 @@ union-intersection
 ............
 
 ---
-Total: 189
-Passed: 185
-Failed: 4
+Total: 199
+Passed: 194
+Failed: 5
