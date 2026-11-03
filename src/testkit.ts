@@ -4,10 +4,12 @@ export function createTest(
     data?: any;
     errors?: boolean;
   },
+  variables?: Record<string, unknown>,
 ) {
   return {
     query,
     expected,
+    ...(variables ? { variables } : {}),
   };
 }
 
