@@ -30,9 +30,20 @@ jobs:
 
   gateways:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        if: ${{ !github.event.repository.fork }}
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        if: github.event.repository.fork
 
       - uses: the-guild-org/shared-config/setup@v1
         name: set up env
@@ -57,6 +68,7 @@ jobs:
           echo "summary<<$EOF" >> "$GITHUB_ENV"
           cat ./REPORT.md >> "$GITHUB_ENV"
           echo "$EOF" >> "$GITHUB_ENV"
+        if: github.event_name == 'pull_request'
 
       - name: Publish Summary
         if: github.event_name == 'pull_request'
@@ -68,10 +80,11 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+        if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && !github.event.repository.fork
 
       - name: publish report
         uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10
-        if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && github.ref == 'refs/heads/main' && !github.event.repository.fork
+        if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && !github.event.repository.fork
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
           message: "Update results"
@@ -82,7 +95,7 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
-        if: github.ref == 'refs/heads/main' && !github.event.repository.fork
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
