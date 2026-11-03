@@ -58,13 +58,20 @@ jobs:
           cat ./REPORT.md >> "$GITHUB_ENV"
           echo "$EOF" >> "$GITHUB_ENV"
 
+      - name: Publish Summary
+        if: github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@70d2764d1a7d5d9560b100cbea0077fc8f633987 # v3
+        with:
+          header: "Test Results"
+          message: ${{ env.summary }}
+
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
 
       - name: publish report
         uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10
-        if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes'
+        if: github.event_name == 'pull_request' && github.event.pull_request.title != 'Upcoming Release Changes' && github.ref == 'refs/heads/main' && !github.event.repository.fork
         with:
           add: ./REPORT.md ./README.md ./website/index.html ./website/data.json
           message: "Update results"
@@ -72,13 +79,6 @@ jobs:
           author_email: github-actions@github.com
           author_name: github-actions
           github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-
-      - name: Publish Summary
-        if: github.event_name == 'pull_request'
-        uses: marocchino/sticky-pull-request-comment@70d2764d1a7d5d9560b100cbea0077fc8f633987 # v3
-        with:
-          header: "Test Results"
-          message: ${{ env.summary }}
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
