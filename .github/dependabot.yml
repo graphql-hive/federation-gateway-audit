@@ -27,6 +27,12 @@ updates:
       - dependency-name: graphql
         update-types:
           - version-update:semver-major
+      # changesets 3 changed the `changeset publish` output; the shared Guild
+      # release actions (snapshot + stable) still parse the 2.x "New tag:" lines
+      # and stop detecting published packages.
+      - dependency-name: "@changesets/*"
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: github-actions
     directory: /
