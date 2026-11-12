@@ -16,10 +16,10 @@ This repository contains a set of tests to evaluate and compare the compatibilit
 |                                [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner)                                 |    97.62%     | 🟢 205 ❌ 5  | 🟢 46 ❌ 2  |
 | [Apollo Router v3 (dev-v3.x, incremental planner)](https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx) |    97.14%     | 🟢 204 ❌ 6  | 🟢 45 ❌ 3  |
 |                                                              [Apollo Router](https://www.apollographql.com/)                                                               |    95.24%     | 🟢 200 ❌ 10 | 🟢 43 ❌ 5  |
+|                                                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                                                |    95.24%     | 🟢 200 ❌ 10 | 🟢 44 ❌ 4  |
 |                                                              [Apollo Gateway](https://www.apollographql.com/)                                                              |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
 |                                                       [Apollo Router v3 (dev-v3.x)](https://www.apollographql.com/)                                                        |    94.76%     | 🟢 199 ❌ 11 | 🟢 42 ❌ 6  |
 |                                                                  [Grafbase Gateway](https://grafbase.com)                                                                  |    88.57%     | 🟢 186 ❌ 24 | 🟢 40 ❌ 8  |
-|                                                [Hot Chocolate Fusion](https://chillicream.com/docs/hotchocolate/v16/fusion)                                                |    86.67%     | 🟢 182 ❌ 28 | 🟢 43 ❌ 5  |
 
 <!-- gateways:end -->
 
