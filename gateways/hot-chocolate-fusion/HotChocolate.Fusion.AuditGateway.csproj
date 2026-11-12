@@ -6,6 +6,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Fusion.AspNetCore" Version="16.7.3" />
+    <PackageReference Include="HotChocolate.Fusion.AspNetCore" Version="16.7.5" />
   </ItemGroup>
 </Project>
