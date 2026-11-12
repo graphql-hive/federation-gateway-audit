@@ -5,7 +5,7 @@
 |                                                                                  Gateway                                                                                   | Compatibility |  Test Cases  | Test Suites |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
 |                                                           [Hive Router](https://github.com/graphql-hive/router)                                                            |    100.00%    |    🟢 210    |    🟢 48    |
-|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.05%     | 🟢 208 ❌ 2  | 🟢 46 ❌ 2  |
+|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.52%     | 🟢 209 ❌ 1  | 🟢 47 ❌ 1  |
 |                                                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                                                         |    99.05%     | 🟢 208 ❌ 2  | 🟢 47 ❌ 1  |
 |                                [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner)                                 |    97.62%     | 🟢 205 ❌ 5  | 🟢 46 ❌ 2  |
 | [Apollo Router v3 (dev-v3.x, incremental planner)](https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx) |    97.14%     | 🟢 204 ❌ 6  | 🟢 45 ❌ 3  |
@@ -188,7 +188,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
-<pre>❌</pre>
+<pre>🟢</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
