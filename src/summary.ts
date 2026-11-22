@@ -145,28 +145,15 @@ normalizedGatewayResults.sort((a, b) => {
   return a.name.localeCompare(b.name);
 });
 
-function printResult(
-  result: { passed: number; failed: number },
-  format: "md" | "html",
-) {
+function printResult(result: { passed: number; failed: number }) {
   const scores: string[] = [];
 
   if (result.passed) {
-    if (format === "md") {
-      scores.push(`🟢 ${result.passed}`);
-    } else {
-      scores.push(
-        `<span class="text-emerald-700 mr-2">✓ ${result.passed}</span>`,
-      );
-    }
+    scores.push(`🟢 ${result.passed}`);
   }
 
   if (result.failed) {
-    if (format === "md") {
-      scores.push(`❌ ${result.failed}`);
-    } else {
-      scores.push(`<span class="text-red-700">✗ ${result.failed}</span>`);
-    }
+    scores.push(`❌ ${result.failed}`);
   }
 
   return scores.join("  ");
@@ -174,45 +161,34 @@ function printResult(
 
 let tableMd = `|  Gateway   | Compatibility | Test Cases | Test Suites |
 | :---------------------------: | :-----------: | :----------: | :---------: |`;
-let rowsHtml = ``;
 let testDetailsMd = "";
 
+// website/data.json is the contract with the-guild.dev, which renders the
+// results at https://the-guild.dev/graphql/hive/federation-gateway-audit
+// (the-guild-org/website fetches the file from main at build time). Fields
+// may be added; renaming or removing one needs a change there first.
 const jsonReport: Array<{
   name: string;
-  cases: { passed: number; failed: number };
-  suites: { passed: number; failed: number };
+  /** Anchor of the gateway's section in REPORT.md. */
+  id: string;
+  website: string;
+  repository: string;
+  cases: { total: number; passed: number; failed: number };
+  suites: { total: number; passed: number; failed: number };
 }> = [];
 
 for (const gateway of normalizedGatewayResults) {
   jsonReport.push({
     name: gateway.name,
+    id: gateway.id,
+    website: gateway.website,
+    repository: gateway.repository,
     cases: gateway.tests,
     suites: gateway.groups,
   });
 
   const score = ((gateway.tests.passed * 100) / gateway.tests.total).toFixed(2);
-  const roundedScore = Math.round(
-    (gateway.tests.passed * 100) / gateway.tests.total,
-  );
-  tableMd += `\n| [${gateway.name}](${gateway.website}) | ${score}% |  ${printResult(gateway.tests, "md")} | ${printResult(gateway.groups, "md")} |`;
-
-  rowsHtml += `
-    <tr class="border-b transition-colors hover:bg-gray-100/50">
-      <td class="p-4 align-middle font-medium  border-l-2 border-${roundedScore === 100 ? "emerald" : roundedScore >= 75 ? "yellow" : "red"}-500">
-        <a href="${gateway.website}" class="hover:underline" title="Visit ${gateway.name} website">
-          ${gateway.name}
-        </a>
-      </td>
-      <td class="p-4 align-middle font-semibold">${score}%</td>
-      <td class="p-4 align-middle">
-        ${printResult(gateway.tests, "html")}
-      </td>
-      <td class="p-4 align-middle">
-        ${printResult(gateway.groups, "html")}
-      </td>
-      <td class="p-4 align-middle"><a href="https://github.com/graphql-hive/federation-gateway-audit/blob/main/REPORT.md#${gateway.id}" class="text-sky-700 hover:underline">View report</a></td>
-    </tr>
-  `;
+  tableMd += `\n| [${gateway.name}](${gateway.website}) | ${score}% |  ${printResult(gateway.tests)} | ${printResult(gateway.groups)} |`;
 
   testDetailsMd += `\n<a id="${gateway.id}"></a>
 ### ${gateway.name}
@@ -246,14 +222,11 @@ ${testDetailsMd}`;
 await writeFormatted("./REPORT.md", reportMd);
 
 const readmeMd = readFileSync("./README.md", "utf-8");
-const indexHtml = readFileSync("./website/index.html", "utf-8");
 
 const startTag = "<!-- gateways:start -->";
 const endTag = "<!-- gateways:end -->";
 const mdStartAt = readmeMd.indexOf(startTag);
 const mdEndAt = readmeMd.indexOf(endTag);
-const htmlStartAt = indexHtml.indexOf(startTag);
-const htmlEndAt = indexHtml.indexOf(endTag);
 
 const newReadmeMd =
   readmeMd.substring(0, mdStartAt) +
@@ -265,17 +238,6 @@ const newReadmeMd =
   readmeMd.substring(mdEndAt);
 
 await writeFormatted("./README.md", newReadmeMd);
-
-const newIndexHtml =
-  indexHtml.substring(0, htmlStartAt) +
-  "\n" +
-  startTag +
-  "\n" +
-  rowsHtml +
-  "\n" +
-  indexHtml.substring(htmlEndAt);
-
-writeFormatted("./website/index.html", newIndexHtml);
 
 await writeFormatted("./website/data.json", JSON.stringify(jsonReport));
 

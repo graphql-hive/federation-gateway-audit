@@ -1,51 +1,81 @@
 [
   {
     "name": "Hive Router",
+    "id": "hive-router",
+    "website": "https://github.com/graphql-hive/router",
+    "repository": "https://github.com/graphql-hive/router",
     "cases": { "total": 210, "passed": 210, "failed": 0 },
     "suites": { "total": 48, "passed": 48, "failed": 0 }
   },
   {
     "name": "Cosmo Router",
+    "id": "cosmo-router",
+    "website": "https://wundergraph.com",
+    "repository": "https://github.com/wundergraph/cosmo",
     "cases": { "total": 210, "passed": 208, "failed": 2 },
     "suites": { "total": 48, "passed": 46, "failed": 2 }
   },
   {
     "name": "Hive Gateway",
+    "id": "hive-gateway",
+    "website": "https://the-guild.dev/graphql/hive/gateway",
+    "repository": "https://github.com/graphql-hive/gateway",
     "cases": { "total": 210, "passed": 208, "failed": 2 },
     "suites": { "total": 48, "passed": 47, "failed": 1 }
   },
   {
     "name": "Hive Gateway (Rust QP)",
+    "id": "hive-gateway-router-runtime",
+    "website": "https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner",
+    "repository": "https://github.com/graphql-hive/gateway",
     "cases": { "total": 210, "passed": 205, "failed": 5 },
     "suites": { "total": 48, "passed": 46, "failed": 2 }
   },
   {
     "name": "Apollo Router v3 (dev-v3.x, incremental planner)",
+    "id": "apollo-router-v3-incremental",
+    "website": "https://github.com/apollographql/router/blob/dev-v3.x/docs/source/routing/query-planning/incremental-query-planner.mdx",
+    "repository": "https://github.com/apollographql/router",
     "cases": { "total": 210, "passed": 204, "failed": 6 },
     "suites": { "total": 48, "passed": 45, "failed": 3 }
   },
   {
     "name": "Apollo Router",
+    "id": "apollo-router",
+    "website": "https://www.apollographql.com/",
+    "repository": "https://github.com/apollographql/router",
     "cases": { "total": 210, "passed": 200, "failed": 10 },
     "suites": { "total": 48, "passed": 43, "failed": 5 }
   },
   {
     "name": "Hot Chocolate Fusion",
+    "id": "hot-chocolate-fusion",
+    "website": "https://chillicream.com/docs/hotchocolate/v16/fusion",
+    "repository": "https://github.com/ChilliCream/graphql-platform",
     "cases": { "total": 210, "passed": 200, "failed": 10 },
     "suites": { "total": 48, "passed": 44, "failed": 4 }
   },
   {
     "name": "Apollo Gateway",
+    "id": "apollo-gateway",
+    "website": "https://www.apollographql.com/",
+    "repository": "https://github.com/apollographql/federation",
     "cases": { "total": 210, "passed": 199, "failed": 11 },
     "suites": { "total": 48, "passed": 42, "failed": 6 }
   },
   {
     "name": "Apollo Router v3 (dev-v3.x)",
+    "id": "apollo-router-v3",
+    "website": "https://www.apollographql.com/",
+    "repository": "https://github.com/apollographql/router",
     "cases": { "total": 210, "passed": 199, "failed": 11 },
     "suites": { "total": 48, "passed": 42, "failed": 6 }
   },
   {
     "name": "Grafbase Gateway",
+    "id": "grafbase-gateway",
+    "website": "https://grafbase.com",
+    "repository": "https://github.com/grafbase/grafbase",
     "cases": { "total": 210, "passed": 186, "failed": 24 },
     "suites": { "total": 48, "passed": 40, "failed": 8 }
   }
