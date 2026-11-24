@@ -10,6 +10,8 @@ corrupted-supergraph-node-id
 ..........
 enum-intersection
 .....
+executable-directive-forwarding
+XXX.
 fed1-external-extends
 ....
 fed1-external-extends-resolvable
@@ -83,7 +85,7 @@ simple-override
 simple-requires-provides
 ............
 skip-entity-fetch
-..XX...
+.......
 typename
 ......
 unavailable-override
@@ -93,9 +95,9 @@ union-interface-distributed
 union-intersection
 ............
 union-overfetching
-XXX.
+....
 
 ---
-Total: 210
-Passed: 205
-Failed: 5
+Total: 214
+Passed: 211
+Failed: 3
