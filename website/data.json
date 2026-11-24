@@ -30,6 +30,11 @@
     "suites": { "total": 48, "passed": 43, "failed": 5 }
   },
   {
+    "name": "Hot Chocolate Fusion",
+    "cases": { "total": 210, "passed": 200, "failed": 10 },
+    "suites": { "total": 48, "passed": 44, "failed": 4 }
+  },
+  {
     "name": "Apollo Gateway",
     "cases": { "total": 210, "passed": 199, "failed": 11 },
     "suites": { "total": 48, "passed": 42, "failed": 6 }
@@ -43,10 +48,5 @@
     "name": "Grafbase Gateway",
     "cases": { "total": 210, "passed": 186, "failed": 24 },
     "suites": { "total": 48, "passed": 40, "failed": 8 }
-  },
-  {
-    "name": "Hot Chocolate Fusion",
-    "cases": { "total": 210, "passed": 182, "failed": 28 },
-    "suites": { "total": 48, "passed": 43, "failed": 5 }
   }
 ]
