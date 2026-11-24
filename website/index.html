@@ -9,12 +9,8 @@
       content="Audit of various GraphQL Gateways that support acting as an Apollo Federation Gateway. Check their compatibility with Apollo Federation and read detailed test reports."
     />
     <meta
-      name="og:description"
+      property="og:description"
       content="Audit of various GraphQL Gateways that support acting as an Apollo Federation Gateway. Check their compatibility with Apollo Federation and read detailed test reports."
-    />
-    <meta
-      name="og:title"
-      content="Apollo Federation Compatibility Audit: GraphQL Gateway Implementations"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -22,6 +18,7 @@
       content="Apollo Federation Compatibility Audit: GraphQL Gateway Implementations"
     />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="The Guild" />
     <meta
       property="og:url"
       content="https://the-guild.dev/graphql/hive/federation-gateway-audit"
@@ -35,7 +32,21 @@
     />
     <meta
       property="og:image"
-      content="https://federation-gateway-compatibility.pages.dev/og-image-new.png"
+      content="https://the-guild.dev/graphql/hive/federation-gateway-audit/og-image-new.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TheGuildDev" />
+    <meta
+      name="twitter:title"
+      content="Apollo Federation Compatibility Audit: GraphQL Gateway Implementations"
+    />
+    <meta
+      name="twitter:description"
+      content="Audit of various GraphQL Gateways that support acting as an Apollo Federation Gateway. Check their compatibility with Apollo Federation and read detailed test reports."
+    />
+    <meta
+      name="twitter:image"
+      content="https://the-guild.dev/graphql/hive/federation-gateway-audit/og-image-new.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -85,6 +96,26 @@
         },
         "datePublished": "2024-09-11",
         "mainEntityOfPage": "https://the-guild.dev/graphql/hive/federation-gateway-audit"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hive",
+            "item": "https://the-guild.dev/graphql/hive"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Federation Gateway Audit",
+            "item": "https://the-guild.dev/graphql/hive/federation-gateway-audit"
+          }
+        ]
       }
     </script>
   </head>
@@ -169,17 +200,17 @@
             <h1 class="text-3xl md:text-4xl font-bold">
               Federation-Compatible Gateway Implementations
             </h1>
-            <h2 class="text-gray-500 text-lg md:text-xl">
+            <p class="text-gray-500 text-lg md:text-xl">
               The following GraphQL Gateways support acting as an
               <strong class="font-semibold">Apollo Federation Gateway</strong>.
               <br />
-              Their support is tracked in The Guilds's gateway compatibility
+              Their support is tracked in The Guild's gateway compatibility
               <a
                 href="https://github.com/graphql-hive/federation-gateway-audit"
                 class="underline"
                 >repository</a
               >.
-            </h2>
+            </p>
             <p>
               <a class="text-blue-600 hover:underline" href="#manifesto">
                 📖 Read more about our methodology and why we created this audit
@@ -188,7 +219,7 @@
             <p>
               <a
                 class="text-blue-600 hover:underline"
-                href="http://the-guild.dev/graphql/hive/federation-gateway-performance"
+                href="https://the-guild.dev/graphql/hive/federation-gateway-performance"
                 target="_blank"
               >
                 🚀 We've also benchmarked the performance of the gateways
@@ -302,6 +333,36 @@
                       class="p-4 align-middle font-medium border-l-2 border-yellow-500"
                     >
                       <a
+                        href="https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner"
+                        class="hover:underline"
+                        title="Visit Hive Gateway (Rust QP) website"
+                      >
+                        Hive Gateway (Rust QP)
+                      </a>
+                    </td>
+                    <td class="p-4 align-middle font-semibold">98.60%</td>
+                    <td class="p-4 align-middle">
+                      <span class="text-emerald-700 mr-2">✓ 211</span>
+                      <span class="text-red-700">✗ 3</span>
+                    </td>
+                    <td class="p-4 align-middle">
+                      <span class="text-emerald-700 mr-2">✓ 48</span>
+                      <span class="text-red-700">✗ 1</span>
+                    </td>
+                    <td class="p-4 align-middle">
+                      <a
+                        href="https://github.com/graphql-hive/federation-gateway-audit/blob/main/REPORT.md#hive-gateway-router-runtime"
+                        class="text-sky-700 hover:underline"
+                        >View report</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr class="border-b transition-colors hover:bg-gray-100/50">
+                    <td
+                      class="p-4 align-middle font-medium border-l-2 border-yellow-500"
+                    >
+                      <a
                         href="https://github.com/graphql-hive/router"
                         class="hover:underline"
                         title="Visit Hive Router website"
@@ -351,36 +412,6 @@
                     <td class="p-4 align-middle">
                       <a
                         href="https://github.com/graphql-hive/federation-gateway-audit/blob/main/REPORT.md#apollo-router-v3-incremental"
-                        class="text-sky-700 hover:underline"
-                        >View report</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr class="border-b transition-colors hover:bg-gray-100/50">
-                    <td
-                      class="p-4 align-middle font-medium border-l-2 border-yellow-500"
-                    >
-                      <a
-                        href="https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner"
-                        class="hover:underline"
-                        title="Visit Hive Gateway (Rust QP) website"
-                      >
-                        Hive Gateway (Rust QP)
-                      </a>
-                    </td>
-                    <td class="p-4 align-middle font-semibold">96.26%</td>
-                    <td class="p-4 align-middle">
-                      <span class="text-emerald-700 mr-2">✓ 206</span>
-                      <span class="text-red-700">✗ 8</span>
-                    </td>
-                    <td class="p-4 align-middle">
-                      <span class="text-emerald-700 mr-2">✓ 46</span>
-                      <span class="text-red-700">✗ 3</span>
-                    </td>
-                    <td class="p-4 align-middle">
-                      <a
-                        href="https://github.com/graphql-hive/federation-gateway-audit/blob/main/REPORT.md#hive-gateway-router-runtime"
                         class="text-sky-700 hover:underline"
                         >View report</a
                       >

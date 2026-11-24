@@ -85,7 +85,7 @@ simple-override
 simple-requires-provides
 ............
 skip-entity-fetch
-..XX...
+.......
 typename
 ......
 unavailable-override
@@ -95,9 +95,9 @@ union-interface-distributed
 union-intersection
 ............
 union-overfetching
-XXX.
+....
 
 ---
 Total: 214
-Passed: 206
-Failed: 8
+Passed: 211
+Failed: 3

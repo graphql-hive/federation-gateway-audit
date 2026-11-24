@@ -10,6 +10,11 @@
     "suites": { "total": 49, "passed": 48, "failed": 1 }
   },
   {
+    "name": "Hive Gateway (Rust QP)",
+    "cases": { "total": 214, "passed": 211, "failed": 3 },
+    "suites": { "total": 49, "passed": 48, "failed": 1 }
+  },
+  {
     "name": "Hive Router",
     "cases": { "total": 214, "passed": 211, "failed": 3 },
     "suites": { "total": 49, "passed": 48, "failed": 1 }
@@ -17,11 +22,6 @@
   {
     "name": "Apollo Router v3 (dev-v3.x, incremental planner)",
     "cases": { "total": 214, "passed": 208, "failed": 6 },
-    "suites": { "total": 49, "passed": 46, "failed": 3 }
-  },
-  {
-    "name": "Hive Gateway (Rust QP)",
-    "cases": { "total": 214, "passed": 206, "failed": 8 },
     "suites": { "total": 49, "passed": 46, "failed": 3 }
   },
   {
