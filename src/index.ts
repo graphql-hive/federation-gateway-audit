@@ -58,6 +58,7 @@ async function getTestCases(router: ReturnType<typeof createRouter>) {
       import("./test-suites/partial-union-complex/index.js"),
       import("./test-suites/skip-entity-fetch/index.js"),
       import("./test-suites/union-overfetching/index.js"),
+      import("./test-suites/executable-directive-definition-default-arguments/index.js"),
     ].map((i) => i.then((e) => e.default)),
   );
 
