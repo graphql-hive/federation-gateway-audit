@@ -4,7 +4,7 @@
 
 |                                                                                  Gateway                                                                                   | Compatibility |  Test Cases  | Test Suites |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------: | :---------: |
-|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.53%     | 🟢 213 ❌ 1  | 🟢 48 ❌ 1  |
+|                                                                  [Cosmo Router](https://wundergraph.com)                                                                   |    99.07%     | 🟢 212 ❌ 2  | 🟢 47 ❌ 2  |
 |                                                         [Hive Gateway](https://the-guild.dev/graphql/hive/gateway)                                                         |    99.07%     | 🟢 212 ❌ 2  | 🟢 48 ❌ 1  |
 |                                [Hive Gateway (Rust QP)](https://the-guild.dev/graphql/hive/docs/gateway/other-features/rust-query-planner)                                 |    98.60%     | 🟢 211 ❌ 3  | 🟢 48 ❌ 1  |
 |                                                           [Hive Router](https://github.com/graphql-hive/router)                                                            |    98.60%     | 🟢 211 ❌ 3  | 🟢 48 ❌ 1  |
@@ -83,7 +83,7 @@ You can look at the full list of tests [here](./src/test-suites/). Every test id
 <a href="./src/test-suites/parent-entity-call">parent-entity-call</a>
 <pre>🟢</pre>
 <a href="./src/test-suites/parent-entity-call-complex">parent-entity-call-complex</a>
-<pre>🟢</pre>
+<pre>❌</pre>
 <a href="./src/test-suites/partial-union">partial-union</a>
 <pre>🟢🟢</pre>
 <a href="./src/test-suites/partial-union-complex">partial-union-complex</a>
