@@ -1,8 +1,8 @@
 [
   {
     "name": "Cosmo Router",
-    "cases": { "total": 214, "passed": 212, "failed": 2 },
-    "suites": { "total": 49, "passed": 47, "failed": 2 }
+    "cases": { "total": 214, "passed": 213, "failed": 1 },
+    "suites": { "total": 49, "passed": 48, "failed": 1 }
   },
   {
     "name": "Hive Gateway",
